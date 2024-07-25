@@ -1,0 +1,21 @@
+.gold{
+    text-transform: capitalize;
+    background: -webkit-linear-gradient(90deg, #f5b521 0%, #f5cd8e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .silver{
+    text-transform: capitalize;
+    background: -webkit-linear-gradient(90deg, #d7d7d7 0%, #353535 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .bronze{
+    text-transform: capitalize;
+    background: -webkit-linear-gradient(90deg, #ffcea5 0%, #6e3514 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  /* color: #673208; */
+  }

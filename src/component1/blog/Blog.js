@@ -1,9 +1,12 @@
 import React from "react";
 import BlogContent from "./BlogContent";
+import SectionHeading from "../../component2/common/section-heading";
 
 const Blog = () => {
   return (
-    <div
+   <>
+   <SectionHeading title={"latest news"} subTitle={"descover the news"}/>
+   <div
       className="elementor-element elementor-element-677c98f9 e-con-full e-flex e-con e-parent"
       data-id="677c98f9"
       data-element_type="container"
@@ -46,7 +49,8 @@ const Blog = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
+   </>
   );
 };
 
