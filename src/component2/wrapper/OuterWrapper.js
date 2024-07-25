@@ -573,7 +573,7 @@ const OuterWrapper = () => {
                     src="/assets/logo.webp"
                     className="attachment-large size-large wp-image-1206"
                     alt=""
-                    srcSet="/wp-content/uploads/2024/03/off-canvas.jpg 319w, /wp-content/uploads/2024/03/off-canvas-300x204.jpg 300w"
+                    srcSet="/assets/footer_logo.webp 319w, /assets/footer_logo.webp 300w"
                     sizes="(max-width: 319px) 100vw, 319px"
                   />
                 </div>
@@ -1166,7 +1166,7 @@ const OuterWrapper = () => {
                     src="/assets/logo.webp"
                     className="attachment-large size-large wp-image-1206"
                     alt=""
-                    srcSet="/wp-content/uploads/2024/03/off-canvas.jpg 319w, /wp-content/uploads/2024/03/off-canvas-300x204.jpg 300w"
+                    srcSet="/assets/footer_logo.webp 319w, /assets/footer_logo.webp 300w"
                     sizes="(max-width: 319px) 100vw, 319px"
                   />
                 </div>
@@ -1181,15 +1181,15 @@ const OuterWrapper = () => {
                 <div className="elementor-widget-container">
                   <div className="mk-title mk-title-">
                     <div className="mk-title-subtitle swm-hide-none">
-                      north america
+                     India
                     </div>
                     <div className="mk-title-desc swm-hide-none">
                       <span>
-                        123 maple avenue, houston, tx 56034
+                      F-73, 3rd Floor,Okhla Industrial Area Ph 3,New Delhi, 110020
                         <br />
-                        +1 (888) 765 4326 / 765 4327
+                        +91 813 083 8855
                         <br />
-                        info@domainname.com
+                        SaibalGupta@xperiagroup.in
                       </span>
                     </div>
                   </div>

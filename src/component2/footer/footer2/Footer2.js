@@ -22,7 +22,7 @@ const Footer2 = () => {
                 </div>
                 <h2 className="mk-title-heading swm-hide-none">
                   <span>
-                    <a href="tel:+18884567890">+1 888 456 7890</a>
+                    <a href="tel:+918130838855">+91 813 083 8855</a>
                   </span>
                 </h2>
               </div>
@@ -42,7 +42,7 @@ const Footer2 = () => {
                 </div>
                 <h2 className="mk-title-heading swm-hide-none">
                   <span>
-                    <a href="mailto:info@loremips.com">info@loremips.com</a>
+                    <a href="mailto:SaibalGupta@xperiagroup.in">SaibalGupta@xperiagroup.in</a>
                   </span>
                 </h2>
               </div>
@@ -59,7 +59,7 @@ const Footer2 = () => {
               <div className="mk-title mk-title-default">
                 <div className="mk-title-subtitle swm-hide-none">our address</div>
                 <h2 className="mk-title-heading swm-hide-none">
-                  <span>25 Elm Drive, Riverside, TX</span>
+                  <span>F-73, 3rd Floor,Okhla Industrial Area Ph 3,New Delhi, 110020</span>
                 </h2>
               </div>
             </div>

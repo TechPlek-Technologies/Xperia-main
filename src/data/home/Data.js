@@ -34,28 +34,39 @@ export const FeatureData = {
     {
       img: { name: "zomato.webp", path: `${domain}/assets/img/projects/Zomato.webp`},
       title: "Zomato",
+      dataProjectImage: "1fir-98554",
+      dataStat: "1fir-98554"
     },
     {
       img: { name: "itc.webp", path: `${domain}/assets/img/projects/ITCmaaDurga.webp`},
       title: "ITC",
+      dataProjectImage: "2fir-64454",
+      dataStat: "2fir-64454"
     },
     {
       img: { name: "pvr.webp", path: `${domain}/assets/img/projects/pvr.webp` },
       title: "PVR",
+      dataProjectImage: "3fir-96027",
+      dataStat: "3fir-96027"
     },
     {
       img: { name: "medanta.webp", path: `${domain}/assets/img/projects/Medanta.webp` },
       title: "Medanta",
+      dataProjectImage: "4fir-83484",
+      dataStat: "4fir-83484"
     },
     {
       img: { name: "Vivo.webp", path: `${domain}/assets/img/projects/VIVO.webp` },
       title: "Vivo",
+      dataProjectImage: "1sec-25861",
+      dataStat: "1sec-25861"
     },
     {
       img: { name: "Hush.webp", path: `${domain}/assets/img/projects/hushpupp.webp`},
       title: "Hush Puppies",
+      dataProjectImage: "2sec-54161",
+      dataStat: "2sec-54161"
     },
-   
   ],
 };
 

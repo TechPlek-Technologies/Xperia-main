@@ -24,7 +24,7 @@ const LinkSection = () => {
         <div className="elementor-widget-container">
           <div className="mk-title mk-title-default">
             <h2 className="mk-title-heading swm-hide-none">
-              <span>useful links</span>
+              <span>information</span>
             </h2>
           </div>
         </div>
@@ -39,33 +39,33 @@ const LinkSection = () => {
         <div className="elementor-widget-container">
           <div className="mk-service-list-simple">
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/about-us/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                About Company
+              About Company
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/standard-list/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Our Portfolio
+              Projects
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/blog/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                News &amp; Media
+              Team
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/contact/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Contact Us
+              Blogs
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/pricing/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Pricing Plans
+              Contact Us
               </h4>
             </div>
           </div>
@@ -103,33 +103,45 @@ const LinkSection = () => {
         <div className="elementor-widget-container">
           <div className="mk-service-list-simple">
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/our-services/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Web Design
+              Out of Home
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/our-services/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Digital Printing
+              Multiplex Cinema &amp; Advertising
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/our-services/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Social Media
+              Events & Promotions
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/our-services/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Viral Marketing
+              Content Design
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://techpartner.online/orbius/our-services/" />
+              <a href="#" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Photography
+              Creative retainership
+              </h4>
+            </div>
+            <div className="mk-service-list-simple-item">
+              <a href="#" />
+              <h4 className="mk-service-list-simple-title swm-hide-none">
+              Corporate Films
+              </h4>
+            </div>
+            <div className="mk-service-list-simple-item">
+              <a href="#" />
+              <h4 className="mk-service-list-simple-title swm-hide-none">
+              Music
               </h4>
             </div>
           </div>
@@ -173,15 +185,15 @@ const LinkSection = () => {
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://www.behance.net/" />
+              <a href="https://www.youtube.com/" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Behance
+                YouTube
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
-              <a href="https://twitter.com/" />
+              <a href="https://www.linkedin.com/" />
               <h4 className="mk-service-list-simple-title swm-hide-none">
-                Twitter
+                LinkedIn
               </h4>
             </div>
             <div className="mk-service-list-simple-item">
