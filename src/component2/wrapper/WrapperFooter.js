@@ -13,11 +13,11 @@ const WrapperFooter = () => {
         <div className="mk-title mk-title-">
           <div className="mk-title-desc swm-hide-none">
             <span>
-              123 maple avenue, houston, tx 56034
+              F-73, 3rd Floor,Okhla Industrial Area Ph 3,New Delhi, 110020
               <br />
-              +1 (888) 765 4326 / 765 4327
+              +91 813 083 8855
               <br />
-              info@domainname.com
+              SaibalGupta@xperiagroup.in
             </span>
           </div>
         </div>
