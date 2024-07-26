@@ -1,6 +1,6 @@
 import React from "react";
 
-const RightContent = ({BannerData}) => {
+const RightContent = ({ BannerData }) => {
   return (
     <>
       {BannerData.map((banner, index) => (
@@ -11,7 +11,11 @@ const RightContent = ({BannerData}) => {
               decoding="async"
               width={541}
               height={724}
-              src={banner.secondary.path}
+              src={banner.secondary.main541x724}
+              srcset={`
+             ${banner.secondary.main541x724} 541w,
+             ${banner.secondary.sub224x300} 224w
+            `}
               className="attachment-full size-full"
               alt={banner.secondary.name}
               sizes="(max-width: 541px) 100vw, 541px"

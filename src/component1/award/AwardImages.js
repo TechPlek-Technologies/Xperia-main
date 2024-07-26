@@ -1,9 +1,6 @@
 import React from "react";
 
-const AwardImages = ({imageData,activeId, data }) => {
-  console.log(data);
-
-
+const AwardImages = ({ imageData, activeId }) => {
   return (
     <div className="mk-awards-images">
       <div className="mk-awards-images-holder">
@@ -21,11 +18,11 @@ const AwardImages = ({imageData,activeId, data }) => {
                 decoding="async"
                 width={750}
                 height={953}
-                src={image.src}
+                src={image.src750x953}
                 className="attachment-full size-full"
-                alt=""
-                srcSet={image.srcSet}
-                sizes={image.sizes}
+                alt={image.title}
+                srcset={`${image.src750x953} 750w,  ${image.src236x300} 236w`}
+                sizes="(max-width: 750px) 100vw, 750px"
               />
             </a>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import StickyHeader from "./stickyHeader/StickyHeader";
 import CustomHeader from "./customHeader/CustomHeader";
 
-const menuData = [
+export const menuData = [
   {
     id: 1970,
     type: "post_type",
