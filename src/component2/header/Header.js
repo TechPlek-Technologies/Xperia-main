@@ -102,6 +102,14 @@ export const menuData = [
     ],
   },
   {
+    id: 1969,
+    type: "post_type",
+    object: "page",
+    href: "/team/",
+    label: "team",
+    children: [],
+  },
+  {
     id: 1970,
     type: "post_type",
     object: "page",

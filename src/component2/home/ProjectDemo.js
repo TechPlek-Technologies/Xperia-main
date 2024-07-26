@@ -13,12 +13,12 @@ export const ProjectImages = ({ imageData }) => {
                   decoding="async"
                   width={750}
                   height={539}
-                  src={project.img.path}
-                  // src={project.img.main749x359}
+                  // src={project.img.path}
+                  src={project.img.main749x359}
                   className="attachment-full size-full"
                   alt={project.title}
-                  srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
-                  // srcSet={`${project.img.main749x359} 749w, ${project.img.sub300x216} 300w`}
+                  // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
+                  srcSet={`${project.img.main749x359} 749w, ${project.img.sub300x216} 300w`}
                   sizes="(max-width: 749px) 100vw, 749px"
                 />
               </a>
