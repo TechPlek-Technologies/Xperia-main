@@ -21,9 +21,9 @@ const AboutUs = () => {
       href: domain,
       title: "pencil box",
       text: "Pencil Box, the creative studio, where ideas are hatched, stories are crafted, designs are rendered, and films are made.",
-      icon: `${domain}/assets/img/about/120x120/pencilBox.webp`,
+      icon: `${domain}/assets/img/about/120x120/pencilbox.webp`,
       iconSrcSet:
-      `${domain}/assets/img/about/120x120/pencilBox.webp 120w, ${domain}/assets/img/about/100x100/pencilBox.webp 100w`,
+      `${domain}/assets/img/about/120x120/pencilbox.webp 120w, ${domain}/assets/img/about/100x100/pencilbox.webp 100w`,
       iconAlt: "Pencil Box Icon",
       iconSize: 120,
     },
