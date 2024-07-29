@@ -1,6 +1,5 @@
 import React from 'react';
-import Style from "./Button.module.css";
-import { Link } from 'react-router-dom';
+
 
 const Button = ({text,src}) => {
   let buttontext=text
@@ -8,11 +7,17 @@ const Button = ({text,src}) => {
     buttontext="READ MORE";
   }
   return (
-    <div className={Style.button}>
-        <Link to={src}>
-        <span className={Style.span}>{buttontext}</span>
-        </Link>
+    <div className="mk-m-pagination mk--load-more">
+    <div className="mk-m-pagination-inner">
+      <a
+        className="mk-load-more-button button submit mk-layout--filled  mk-html--link"
+        href={src}
+        target="_self"
+      >
+       {buttontext}
+      </a>
     </div>
+  </div>
   )
 }
 

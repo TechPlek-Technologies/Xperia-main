@@ -35,6 +35,7 @@ const Projects = () => {
         data-element_type="container"
         data-settings='{"mk_ext_is_sticky":"false"}'
         data-core-v316-plus="true"
+        style={{paddingBottom:"140px"}}
       >
         <div
           className="elementor-element elementor-element-629713b8 elementor-widget elementor-widget-mk_moving_projects"

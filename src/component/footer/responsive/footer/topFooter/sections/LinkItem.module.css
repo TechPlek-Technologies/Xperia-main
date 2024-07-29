@@ -1,0 +1,60 @@
+.header{
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.h2{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.span{
+    display: inline-block;
+    position: relative;
+}
+
+.body{
+    max-width: 100%;
+    width: auto;
+}
+
+.container{
+    height: 100%;
+}
+
+.list{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.listItem{
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.link{
+   
+}
+
+.h4{
+    margin: 3px 0px 3px 0px;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.h4:hover{
+    scale: 1.10;
+ }

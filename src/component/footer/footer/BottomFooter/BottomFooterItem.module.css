@@ -1,0 +1,58 @@
+.wrapper {
+  width: auto;
+}
+
+.container {
+  margin: 0% 0% 0% 0%;
+  height: 100%;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s,
+    transform var(--e-transform-transition-duration, 0.4s);
+}
+
+.title{
+    text-align: left;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle{
+    font-family: "Roboto Mono";
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 0;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.headTag{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom:0px !important ;
+    margin-top: -2px;
+
+}
+
+.span{
+    display: inline-block;
+    position: relative;
+    font-size: 100%;
+}
+
+.span:hover{
+    scale: 1.01;
+ }
+
+.anchorTag{
+    font-family: 'Poppins' !important;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 28px;
+}
+
+

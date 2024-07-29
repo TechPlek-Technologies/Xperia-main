@@ -10,6 +10,7 @@ const Testimonial = () => {
       data-element_type="container"
       data-settings='{"mk_ext_is_sticky":"false"}'
       data-core-v316-plus="true"
+      style={{paddingTop:"0px"}}
     >
       <div
         className="elementor-element elementor-element-35976ff5 e-flex e-con-boxed e-con e-child"

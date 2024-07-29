@@ -1,6 +1,7 @@
 import React from "react";
 import { domain } from "../../domain";
 import SectionHeading from "../common/section-heading";
+import Button from "../../component/home/about/about/Button";
 
 const Team = () => {
   const teamItems = [
@@ -123,20 +124,7 @@ const Team = () => {
             </article>
           ))}
           <div className="clear" />
-          <div className="mk-m-pagination mk--load-more">
-            <div className="mk-m-pagination-inner">
-              <a
-                className="mk-load-more-button button submit mk-layout--filled  mk-html--link"
-                href="#"
-                target="_self"
-              >
-                Load more
-              </a>
-            </div>
-          </div>
-          <p className="mk-pagination-spinner spinner mk-m-pagination-spinner swm-color-headings">
-            <i className="fas fa-spinner" />
-          </p>
+         <Button text={"view all"}/>
         </div>
       </div>
     </div>
