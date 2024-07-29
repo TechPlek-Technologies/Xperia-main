@@ -24,6 +24,7 @@
 .mk-elementor-grid { display: flex; flex-wrap: wrap; position: relative; }
 .mk-elementor-grid .mk-grid-item { position: relative; }
 .mk-elementor-grid .mk-grid-item-wrap { float: left; margin-bottom: 0; margin-left: 0; }
+
 @media only screen and (min-width:1025px) {
     .elementor-element.elementor-grid-1,
     .elementor-element.elementor-grid-2,
@@ -1746,7 +1747,7 @@ a.mk-image-link { position: absolute; top: 0; left: 0; width: 100%; height: 100%
 .mk-portfolio-modern .content-position--hover-over:hover .mk-portfolio-content:after { -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); transition-delay: .0s; }
 
 .mk-portfolio-modern .content-position--hover-over .mk-portfolio-title,
-.mk-portfolio-modern .content-position--hover-over .mk-portfolio-subtitle { opacity:0; transition: all .2s cubic-bezier(.25, .46, .45, .94); -o-transition: all .1s cubic-bezier(.25, .46, .45, .94); -webkit-transition: all .1s cubic-bezier(.25, .46, .45, .94); transition-delay: 0.1s; margin-left:10px; }
+.mk-portfolio-modern .content-position--hover-over .mk-portfolio-subtitle,.mk-portfolio-modern .content-position--hover-over .mk-portfolio-description { opacity:0; transition: all .2s cubic-bezier(.25, .46, .45, .94); -o-transition: all .1s cubic-bezier(.25, .46, .45, .94); -webkit-transition: all .1s cubic-bezier(.25, .46, .45, .94); transition-delay: 0.1s; margin-left:10px; }
 
 .mk-portfolio-modern .mk-grid-item:hover .content-position--hover-over .mk-portfolio-title,
 .mk-portfolio-modern .mk-grid-item:hover .content-position--hover-over .mk-portfolio-subtitle { opacity:1; margin-left:0; transition: all .4s cubic-bezier(.25, .46, .45, .94); -o-transition: all .4s cubic-bezier(.25, .46, .45, .94); -webkit-transition: all .4s cubic-bezier(.25, .46, .45, .94); transition-delay: 0s; }
@@ -3466,3 +3467,7 @@ a.mk-video-icon-element:before { background: var(--swm-color-light-1); }
 @media only screen and (max-width:767px) {
     .mk-section-heading-title { font-size:42px; }
 }
+
+.description12345 ::before{
+    display: none !important;
+ }

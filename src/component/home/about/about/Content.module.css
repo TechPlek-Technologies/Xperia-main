@@ -1,0 +1,39 @@
+.contentpart{
+    display: flexbox;
+    height: initial;
+}
+
+.contentHeading{
+ font-size: 33px;
+ font-weight: 600;
+ font-family: 'Poppins';
+ line-height:45px;
+ letter-spacing: 0.5px;
+ padding-bottom: 28px;
+ text-align: center;
+}
+
+.contentpara{
+    font-size: 15px;
+    font-weight: var(--font-text-weight);
+    font-family: 'Poppins';
+    letter-spacing: 0.5px;
+    line-height: 1.2em;
+    text-align: center;
+    /* margin-bottom: 16px; */
+    text-wrap: pretty;
+}
+
+@media screen and (min-width: 1900px) {
+  
+    /* .contentHeading{
+        font-size: 44px;
+        line-height:2.2em;
+       } */
+
+       .contentpara{
+        padding: 0 100px;
+        line-height: 20px;
+        letter-spacing: 2px;
+    }
+}

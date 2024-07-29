@@ -1,0 +1,140 @@
+.wrapper {
+  /* padding-block-start: 30px; */
+  padding-block-end: 29px;
+  padding-inline-start: 5px;
+  padding-inline-end: 20px;
+}
+
+.container {
+  min-height: 0px;
+  width: 100%;
+  flex-grow: 1;
+  align-self: stretch;
+  text-align: center;
+  position: relative;
+}
+
+.widget {
+  margin-block-end: 0;
+  max-width: 100%;
+}
+
+.widgetContainer {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team {
+  display: block;
+  position: relative;
+  margin: 12px 0px;
+  padding: 10px 0px 0px;
+  justify-content: center;
+}
+
+.position {
+  font-size: 22px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 9px;
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 500;
+}
+
+.position::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 100%;
+  background: currentColor;
+  margin-right: 9px;
+}
+
+.image {
+  position: relative;
+  display: block;
+}
+
+.image img {
+  height: 290px;
+  width:280px;
+}
+
+.imageinner {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 30px;
+}
+
+.content {
+  padding-top: 20px;
+  position: relative;
+  padding: 14px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  margin-bottom: 2px;
+  font-size: 22px;
+  line-height: 33px;
+  font-family: "Poppins";
+  letter-spacing: 0em;
+  font-style: normal;
+  text-wrap: wrap;
+  font-weight: 800;
+}
+
+.description {
+  font-size: 20px;
+  z-index: 1;
+  display: flex;
+  margin-top: 3px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: var(--font-text-weight);
+  text-align: -webkit-center;
+  max-width: 350px;
+}
+
+@media (max-width: 980px) {
+  .widgetContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 830px) {
+  .widgetContainer {
+    grid-template-columns: 1fr;
+  }
+  .image {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .position {
+    justify-content: center;
+    font-size: 12px;
+  }
+  .content {
+    align-items: center;
+  }
+  .description {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}

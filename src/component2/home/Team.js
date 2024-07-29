@@ -1,317 +1,147 @@
 import React from "react";
+import { domain } from "../../domain";
+import SectionHeading from "../common/section-heading";
 
 const Team = () => {
+  const teamItems = [
+    {
+      id: 1322,
+      category: "photography",
+      href: domain,
+      title: "Saibal Gupta",
+      subtitle: "ceo & co-founder",
+      imgSrc:
+        `${domain}/assets/img/team/750x820/SaibalGupta.webp`,
+      imgSrcSet:
+        `${domain}/assets/img/team/750x820/SaibalGupta.webp 750w, ${domain}/assets/img/team/274x300/SaibalGupta.webp 274w`,
+      imgAlt: "Saibal Gupta",
+      imgWidth: 750,
+      imgHeight: 820,
+      description:"passionate advertising marketing professional , working with media, ooh/dooh - experiential advertising."
+    },
+    {
+      id: 1323,
+      category: "design",
+      href: domain,
+      title: "Madhav Joshi",
+      subtitle: "Co-Founder",
+      imgSrc:
+      `${domain}/assets/img/team/750x820/MadhavJoshi.webp`,
+    imgSrcSet:
+      `${domain}/assets/img/team/750x820/MadhavJoshi.webp 750w, ${domain}/assets/img/team/274x300/MadhavJoshi.webp 274w`,
+      imgAlt: "Madhav Joshi",
+      imgWidth: 750,
+      imgHeight: 820,
+      description:"OOH & Experiential Marketing Expert | Digital Marketing Specialist."
+    },
+    {
+      id: 1324,
+      category: "photography",
+      href: domain,
+      title: "Amit Roy",
+      subtitle: "Co-Founder (Pencil Box) / Creative Head",
+      imgSrc:
+      `${domain}/assets/img/team/750x820/AmitRoy.webp`,
+    imgSrcSet:
+      `${domain}/assets/img/team/750x820/AmitRoy.webp 750w, ${domain}/assets/img/team/274x300/AmitRoy.webp 274w`,
+      imgAlt: "Amit Roy",
+      imgWidth: 750,
+      imgHeight: 820,
+      description:"Storyteller, Creative director, communication strategist, experiential marketing. An experience of 25+ years."
+    },
+  ];
   return (
-    <div
-    className="elementor-element elementor-element-d249719 e-con-full e-flex e-con e-parent XXsnipcss_extracted_selector_selectionXX snipcss0-0-0-1 tether-element-attached-top tether-element-attached-center tether-target-attached-top tether-target-attached-center"
-    data-id="d249719"
-    data-element_type="container"
-    data-settings='{"mk_ext_is_sticky":"false"}'
-    data-core-v316-plus="true"
-  >
-    <div
-      className="elementor-element elementor-element-083c61a e-con-full e-flex e-con e-child snipcss0-1-1-2"
-      data-id="083c61a"
-      data-element_type="container"
-      data-settings='{"mk_ext_is_sticky":"false"}'
-    ></div>
-    <div
-      className="elementor-element elementor-element-fda72a4 e-con-full e-flex e-con e-child snipcss0-1-1-3"
-      data-id="fda72a4"
-      data-element_type="container"
-      data-settings='{"mk_ext_is_sticky":"false"}'
+    <>
+    <SectionHeading title={"team"} subTitle={"brains behind the screen"} />
+     <div
+      className="elementor-element elementor-element-702a86e3 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 join-items-no mk-portfolio-image-zoom-no mk-portfolio-c-width-fullwidth mk-pf-excerpt-category elementor-widget elementor-widget-mk_portfolio_modern"
+      data-id="702a86e3"
+      data-element_type="widget"
+      data-settings='{"content_position":"hover-over","columns":"3","columns_tablet":"2","columns_mobile":"1","mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
+      data-widget_type="mk_portfolio_modern.default"
+      style={{maxWidth:"1400px", margin:"100px auto"}}
     >
-      <div
-        className="elementor-element elementor-element-48244b7 mk-team-align-left elementor-widget elementor-widget-mk_team snipcss0-2-3-4"
-        data-id="48244b7"
-        data-element_type="widget"
-        data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
-        data-widget_type="mk_team.default"
-      >
-        <div className="elementor-widget-container snipcss0-3-4-5">
-          <div className="mk-team snipcss0-4-5-6">
-            <div className="mk-team-item snipcss0-5-6-7">
-              <div className="mk-team-position snipcss0-6-7-8">
-                brand strategist
-              </div>
-              <div className="mk-team-image snipcss0-6-7-9">
-                <a
-                  href="https://techpartner.online/orbius/about-us/"
-                  className="mk-team-link snipcss0-7-9-10"
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    width={750}
-                    height={910}
-                    src="https://techpartner.online/orbius/wp-content/uploads/2024/03/team1.jpg"
-                    className="attachment-full size-full snipcss0-8-10-11"
-                    alt=""
-                    srcSet="https://techpartner.online/orbius/wp-content/uploads/2024/03/team1.jpg 750w, https://techpartner.online/orbius/wp-content/uploads/2024/03/team1-247x300.jpg 247w"
-                    sizes="(max-width: 750px) 100vw, 750px"
-                  />
-                </a>
-              </div>
-              <div className="mk-team-content swm-anim snipcss0-6-7-12">
-                <div className="mk-team-name snipcss0-7-12-13">
-                  <h6 className="mk-team-name-tag snipcss0-8-13-14">
-                    <a
-                      href="https://techpartner.online/orbius/about-us/"
-                      className="mk-team-link snipcss0-9-14-15"
-                    >
-                      amelia reed
-                    </a>
-                  </h6>
-                </div>
-                <div className="mk-team-social snipcss0-7-12-16">
-                  <div className="mk-team-social-holder snipcss0-8-16-17">
-                    <a
-                      href="https://www.instagram.com/"
-                      className="snipcss0-9-17-18"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-instagram snipcss0-10-18-19"
-                      />
-                    </a>
-                    <a
-                      href="https://dribbble.com/"
-                      className="snipcss0-9-17-20"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-dribbble snipcss0-10-20-21"
-                      />
-                    </a>
-                    <a
-                      href="https://www.behance.net/"
-                      className="snipcss0-9-17-22"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-behance snipcss0-10-22-23"
-                      />
-                    </a>
-                    <a
-                      href="https://pinterest.com/"
-                      className="snipcss0-9-17-24"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-pinterest snipcss0-10-24-25"
-                      />
-                    </a>
+      <div className="elementor-widget-container">
+        <div
+          className="mk-p-grid mk-portfolio-modern mk-pagination--on mk-pagination-type--load-more"
+          data-options='{"post_type":"portfolio","next_page":"2","max_pages_num":2,"hover_cursor_on":"no","portfolio_type":"modern","masonry_on":"no","enable_filter":"no","pagination_type":"load-more","loadmore_button_text":"Load more","title_tag":"h3","title_length":"100","show_subtitle":"yes","subtitle_type":"category","post_img_size":"full","taxonomy_filter":"portfolio_category","orderby":"date","order":"DESC","posts_per_page":9,"additional_params":"category","include_posts_cat":["16","18","19"],"content_position":"hover-over"}'
+        >
+          {/* filter */}
+          {/* content */}
+          {teamItems.map((item) => (
+            <article
+              key={item.id}
+              className={`mk-grid-item mk-grid-item-wrap mk-item--full post-${item.id} portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-${item.category}`}
+              style={{
+                paddingRight: "calc(40px / 2)",
+                paddingLeft: "calc(40px / 2)",
+                marginBottom: "40px",
+              }}
+            >
+              <div className="mk-portfolio-wrap content-position--hover-over">
+                <div className="mk-portfolio-image">
+                  <a
+                    href={item.href}
+                    className="mk-portfolio-modern-overlay"
+                  ></a>
+                  <div className="mk-portfolio-content">
+                    <div className="mk-portfolio-content-holder">
+                      <div className="mk-portfolio-title-subtitle">
+                        <h3 className="mk-portfolio-title">
+                          <a href={item.href} target="_self">
+                            {item.title}
+                          </a>
+                        </h3>
+                        <div className="mk-portfolio-subtitle">
+                          {item.subtitle}
+                        </div>
+                       <div  className="mk-portfolio-title" style={{fontFamily:"Roboto Mono !important", fontSize:'15px', fontWeight:400, letterSpacing:'0em', fontStyle:'normal !important',}}>
+                       {item.description}
+                       </div>
+                      </div>
+                    </div>
                   </div>
+                  <a
+                    href={item.href}
+                    className="mk-post-grid-image swm-anim"
+                    target="_self"
+                  >
+                    <img
+                      fetchpriority="high"
+                      decoding="async"
+                      width={item.imgWidth}
+                      height={item.imgHeight}
+                      src={item.imgSrc}
+                      className="attachment-full size-full"
+                      alt={item.imgAlt}
+                      srcSet={item.imgSrcSet}
+                      sizes={`(max-width: ${item.imgWidth}px) 100vw, ${item.imgWidth}px`}
+                    />
+                  </a>
                 </div>
               </div>
+            </article>
+          ))}
+          <div className="clear" />
+          <div className="mk-m-pagination mk--load-more">
+            <div className="mk-m-pagination-inner">
+              <a
+                className="mk-load-more-button button submit mk-layout--filled  mk-html--link"
+                href="#"
+                target="_self"
+              >
+                Load more
+              </a>
             </div>
-          </div>{" "}
+          </div>
+          <p className="mk-pagination-spinner spinner mk-m-pagination-spinner swm-color-headings">
+            <i className="fas fa-spinner" />
+          </p>
         </div>
       </div>
     </div>
-    <div
-      className="elementor-element elementor-element-8e54667 e-con-full e-flex e-con e-child snipcss0-1-1-26"
-      data-id="8e54667"
-      data-element_type="container"
-      data-settings='{"mk_ext_is_sticky":"false"}'
-    >
-      <div
-        className="elementor-element elementor-element-bfbda0f mk-team-align-left elementor-widget elementor-widget-mk_team snipcss0-2-26-27"
-        data-id="bfbda0f"
-        data-element_type="widget"
-        data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
-        data-widget_type="mk_team.default"
-      >
-        <div className="elementor-widget-container snipcss0-3-27-28">
-          <div className="mk-team snipcss0-4-28-29">
-            <div className="mk-team-item snipcss0-5-29-30">
-              <div className="mk-team-position snipcss0-6-30-31">
-                graphic designer
-              </div>
-              <div className="mk-team-image snipcss0-6-30-32">
-                <a
-                  href="https://techpartner.online/orbius/about-us/"
-                  className="mk-team-link snipcss0-7-32-33"
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    width={750}
-                    height={910}
-                    src="https://techpartner.online/orbius/wp-content/uploads/2024/03/team2.jpg"
-                    className="attachment-full size-full snipcss0-8-33-34"
-                    alt=""
-                    srcSet="https://techpartner.online/orbius/wp-content/uploads/2024/03/team2.jpg 750w, https://techpartner.online/orbius/wp-content/uploads/2024/03/team2-247x300.jpg 247w"
-                    sizes="(max-width: 750px) 100vw, 750px"
-                  />
-                </a>
-              </div>
-              <div className="mk-team-content swm-anim snipcss0-6-30-35">
-                <div className="mk-team-name snipcss0-7-35-36">
-                  <h6 className="mk-team-name-tag snipcss0-8-36-37">
-                    <a
-                      href="https://techpartner.online/orbius/about-us/"
-                      className="mk-team-link snipcss0-9-37-38"
-                    >
-                      scott nelson
-                    </a>
-                  </h6>
-                </div>
-                <div className="mk-team-social snipcss0-7-35-39">
-                  <div className="mk-team-social-holder snipcss0-8-39-40">
-                    <a
-                      href="https://www.instagram.com/"
-                      className="snipcss0-9-40-41"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-instagram snipcss0-10-41-42"
-                      />
-                    </a>
-                    <a
-                      href="https://dribbble.com/"
-                      className="snipcss0-9-40-43"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-dribbble snipcss0-10-43-44"
-                      />
-                    </a>
-                    <a
-                      href="https://www.behance.net/"
-                      className="snipcss0-9-40-45"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-behance snipcss0-10-45-46"
-                      />
-                    </a>
-                    <a
-                      href="https://pinterest.com/"
-                      className="snipcss0-9-40-47"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-pinterest snipcss0-10-47-48"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-        </div>
-      </div>
-    </div>
-    <div
-      className="elementor-element elementor-element-4de20ef e-con-full e-flex e-con e-child snipcss0-1-1-49"
-      data-id="4de20ef"
-      data-element_type="container"
-      data-settings='{"mk_ext_is_sticky":"false"}'
-    >
-      <div
-        className="elementor-element elementor-element-4450256 mk-team-align-left elementor-widget elementor-widget-mk_team snipcss0-2-49-50"
-        data-id={4450256}
-        data-element_type="widget"
-        data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
-        data-widget_type="mk_team.default"
-      >
-        <div className="elementor-widget-container snipcss0-3-50-51">
-          <div className="mk-team snipcss0-4-51-52">
-            <div className="mk-team-item snipcss0-5-52-53">
-              <div className="mk-team-position snipcss0-6-53-54">
-                production artist
-              </div>
-              <div className="mk-team-image snipcss0-6-53-55">
-                <a
-                  href="https://techpartner.online/orbius/about-us/"
-                  className="mk-team-link snipcss0-7-55-56"
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    width={750}
-                    height={910}
-                    src="https://techpartner.online/orbius/wp-content/uploads/2024/03/team3.jpg"
-                    className="attachment-full size-full snipcss0-8-56-57"
-                    alt=""
-                    srcSet="https://techpartner.online/orbius/wp-content/uploads/2024/03/team3.jpg 750w, https://techpartner.online/orbius/wp-content/uploads/2024/03/team3-247x300.jpg 247w"
-                    sizes="(max-width: 750px) 100vw, 750px"
-                  />
-                </a>
-              </div>
-              <div className="mk-team-content swm-anim snipcss0-6-53-58">
-                <div className="mk-team-name snipcss0-7-58-59">
-                  <h6 className="mk-team-name-tag snipcss0-8-59-60">
-                    <a
-                      href="https://techpartner.online/orbius/about-us/"
-                      className="mk-team-link snipcss0-9-60-61"
-                    >
-                      olivia smith
-                    </a>
-                  </h6>
-                </div>
-                <div className="mk-team-social snipcss0-7-58-62">
-                  <div className="mk-team-social-holder snipcss0-8-62-63">
-                    <a
-                      href="https://www.instagram.com/"
-                      className="snipcss0-9-63-64"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-instagram snipcss0-10-64-65"
-                      />
-                    </a>
-                    <a
-                      href="https://dribbble.com/"
-                      className="snipcss0-9-63-66"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-dribbble snipcss0-10-66-67"
-                      />
-                    </a>
-                    <a
-                      href="https://www.behance.net/"
-                      className="snipcss0-9-63-68"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-behance snipcss0-10-68-69"
-                      />
-                    </a>
-                    <a
-                      href="https://pinterest.com/"
-                      className="snipcss0-9-63-70"
-                      target="_blank"
-                    >
-                      <i
-                        aria-hidden="true"
-                        className="fab fa-pinterest snipcss0-10-70-71"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>{" "}
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
+    </>
+   
   );
 };
 
