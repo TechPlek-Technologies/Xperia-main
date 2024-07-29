@@ -3054,6 +3054,10 @@ a.mk-video-icon-element:before { background: var(--swm-color-light-1); }
 
 .mk-dual-slider .mk-dual-slider-right-image { width: 100%; height: 100%; object-fit: cover; }
 .mk-dual-slider .swiper-slide img { width: 100%; height:100%; object-fit: cover;  }
+.mk-dual-slider .swiper-slide img { filter: grayscale(1); }
+.mk-dual-slider .swiper-slide img:hover{
+    filter: none;
+}
 
 /* content */
 .mk-dual-slider .mk-dual-slider-item .mk-dual-slider-content { display: none !important; }
