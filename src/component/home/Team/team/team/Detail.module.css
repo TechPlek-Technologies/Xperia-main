@@ -1,0 +1,63 @@
+.Detail {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 260px;
+  width: 440px;
+  border-radius: 30px;
+  padding: 40px 24px 38px 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px; /* half of the height */
+  margin-left: -250px; /* half of the width */
+}
+
+.Detail1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 260px;
+  width: 440px;
+  border-radius: 30px;
+  padding: 40px 24px 38px 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px; /* half of the height */
+  margin-left: 220px; /* half of the width */
+}
+.Detail2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 260px;
+  width: 440px;
+  border-radius: 30px;
+  padding: 40px 24px 38px 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -180px; /* half of the height */
+  margin-left: -220px; /* half of the width */
+}
+
+.DetailHeading {
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 1.2;
+  font-family: var(--font-secondary-family);
+  margin-bottom: 8px;
+}
+
+.Detaildesign {
+  font-size: 30px;
+  line-height: 1.2;
+  font-family: var(--font-secondary-family);
+  margin-bottom: 14px;
+}
+
+.Detailpara {
+  font-size: 28px;
+  font-weight: var(--font-primary-weight);
+  line-height: 1.2;
+  font-family: var(--font-secondary-family);
+}
+

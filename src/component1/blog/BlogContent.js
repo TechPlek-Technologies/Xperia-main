@@ -40,18 +40,12 @@ const BlogContent = () => {
                               decoding="async"
                               width={939}
                               height={569}
-                              src={blog.icon.path}
+                              src={blog.img939x569}
                               className="attachment-full size-full"
                               alt={blog.name.toLowerCase()}
                               srcSet={`${
-                                blog.icon.path
-                              } 939w, ${blog.icon.path.replace(
-                                ".webp",
-                                "-300x182.webp"
-                              )} 300w, ${blog.icon.path.replace(
-                                ".webp",
-                                "-768x465.webp"
-                              )} 768w`}
+                                blog.img939x569
+                              } 939w, ${blog.img300x182} 300w, ${blog.img768x465} 768w`}
                               sizes="(max-width: 939px) 100vw, 939px"
                             />
                           </a>
