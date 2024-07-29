@@ -24,8 +24,8 @@
 
 .image {
     /* border-radius: 25px; */
-    width: 750px;
-    height: 820px;
+    width: 350px;
+    height: 438px !important;
 }
 
 .nametag {
