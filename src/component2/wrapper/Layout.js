@@ -1,10 +1,30 @@
 import React from 'react'
 import OuterWrapper from './OuterWrapper'
-import Footer from '../footer/Footer'
+// import Footer from '../footer/Footer'
 import Header from '../header/Header'
+import { Footer } from '../../component/footer/Footer'
+import { ResponsiveFooter } from '../../component/footer/responsive/Footer'
 // import { Footer } from '../../component/layout/footer/Footer'
 
 const Layout = ({ children }) => {
+  const [screenSize, setScreenSize] = React.useState(getCurrentDimension());
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  React.useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
   return (
     <>
 
@@ -28,7 +48,8 @@ const Layout = ({ children }) => {
           </div>
           {/* .swm-main-container */}
           {/* {<Footer/>} */}
-          <Footer/>
+          {/* <Footer/> */}
+          {screenSize.width <= 880 ? <ResponsiveFooter/> : <Footer />}
         </div>
         {/* #swm-wrap */}
       </div>

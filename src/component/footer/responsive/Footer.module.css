@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+  z-index: 5;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.wrapper a{
+  text-decoration: none;
+}
+
+.motion_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: initial;
+  flex-grow: 0;
+  align-self: initial;
+  gap: 0px 0px;
+  transition: border 0.3s, background 0.3s;
+  padding-block-start: 20px;
+  padding-block-end: 0px;
+  padding-inline-start: 40px;
+  padding-inline-end: 40px;
+}
+
+.main_footer {
+  display: flex;
+  flex-direction: row;
+  width: initial;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+  align-self: stretch;
+  gap: 20px 100px;
+  transition: background 0.3s;
+  padding-block-start: 0px;
+  padding-block-end: 15px;
+  padding-inline-start: 0px;
+  padding-inline-end: 0px;
+}
