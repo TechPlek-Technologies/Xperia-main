@@ -2,7 +2,6 @@ import React from "react";
 import SectionHeading from "../common/section-heading";
 import { FeaturedProjects, ProjectImages } from "./ProjectDemo";
 import { FeatureData } from "../../data/home/Data";
-
 // Helper function to split the imageData array
 const splitArray = (array) => {
   const length = array.length;

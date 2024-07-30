@@ -92,7 +92,7 @@ export const menuData = [
         children: [],
       },
       {
-        id: 1987,
+        id: 1989,
         type: "post_type",
         object: "page",
         href: "/pricing/",
@@ -110,7 +110,7 @@ export const menuData = [
     children: [],
   },
   {
-    id: 1970,
+    id: 1979,
     type: "post_type",
     object: "page",
     href: "/contact/",
