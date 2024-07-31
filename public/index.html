@@ -306,6 +306,32 @@
     ></script>
     <!--  -->
 
+    <script>
+      // Function to detect if the browser is Safari
+      function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      }
+    
+      // Load the script conditionally
+      function loadScript(src, id) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = src;
+        script.id = id;
+        document.head.appendChild(script);
+      }
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        if (isSafari()) {
+          // Load Safari-specific script
+          loadScript('assets/js/wp-content/mk-widgets-safari.min.js', 'mk-widgets-js');
+        } else {
+          // Load other browsers script
+          loadScript('assets/js/wp-content/mk-widgets.min.js', 'mk-widgets-js');
+        }
+      });
+    </script>
+
     <script
       type="text/javascript"
       src="%PUBLIC_URL%assets/js/wp-content/mk-splittext.min.js?ver=1.0.0"
