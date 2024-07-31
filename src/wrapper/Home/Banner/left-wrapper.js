@@ -1,6 +1,4 @@
 import React from 'react'
-import MainWrapper from './MainWrapper'
-import MainContainer from './MainContainer'
 
 const LeftWrapper = ({children}) => {
   return (

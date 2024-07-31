@@ -6,7 +6,7 @@ export const ProjectImages = ({ imageData }) => {
         {imageData.map((project, index) => (
           <div key={index} className={`mk-moving-projects-${index === 0 ? 'first' : 'other'}-img`}>
             <div className="mk-moving-projects-img" data-projectimage={project.dataProjectImage}>
-              <a href={`https://techpartner.online/orbius/portfolio-item/casa-mondo-2/`} className="mk-moving-projects-link">
+              <a href="#" className="mk-moving-projects-link">
                 <span className="mk-moving-projects-mobile-title">{project.title.toLowerCase()}</span>
                 <img
                   loading="lazy"

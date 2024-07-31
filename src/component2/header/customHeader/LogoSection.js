@@ -12,12 +12,12 @@ const LogoSection = () => {
     <div className="elementor-widget-container">
       <a href="/">
         <img
-          width={62}
-          height={62}
-          src="/assets/logo.webp"
+          // width={62}
+          // height={62}
+          src="/assets/newlogo.webp"
           className="attachment-full size-full wp-image-1118"
           alt=""
-          style={{ width: "62px" }}
+          style={{ width: "228px" }}
         />
       </a>
     </div>

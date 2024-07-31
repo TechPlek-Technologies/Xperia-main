@@ -5,8 +5,8 @@ const Content = ({heading,para}) => {
   return (
     <div className={Style.contentpart}>
       <div className={Style.contentHeading}>{heading}</div>
-      <div className={Style.contentpara}>
-       {para}
+      <div className={Style.contentpara} dangerouslySetInnerHTML={{ __html: para }}>
+      
       </div>
     </div>
   );

@@ -118,6 +118,28 @@ export const FeatureData = {
       dataProjectImage: "2sec-54161",
       dataStat: "2sec-54161",
     },
+    {
+      img: {
+        name: "Bata.webp",
+        path: `${domain}/assets/img/projects/bata.webp`,
+        main749x359: `${domain}/assets/img/projects/749x359/bata.webp`,
+        sub300x216: `${domain}/assets/img/projects/300x216/bata.webp`,
+      },
+      title: "Bata",
+      dataProjectImage: "3sec-56565",
+      dataStat: "3sec-56565",
+    },
+    {
+      img: {
+        name: "tvssolar.webp",
+        path: `${domain}/assets/img/projects/tvsolar.webp`,
+        main749x359: `${domain}/assets/img/projects/749x359/tvsolar.webp`,
+        sub300x216: `${domain}/assets/img/projects/300x216/tvsolar.webp`,
+      },
+      title: "TVS Solar Billboard",
+      dataProjectImage: "4sec-51234",
+      dataStat: "4sec-51234",
+    },
   ],
 };
 
@@ -238,20 +260,20 @@ export const AwardData = {
       src750x953: `${domain}/assets/img/awards/750x953/SilverE4MNeon.webp`,
        src236x300: `${domain}/assets/img/awards/236x300/SilverE4MNeon.webp`,
      },
+    // {
+    //   id: "tab-4",
+    //   href: `${domain}`,
+    //    src: `${domain}/assets/img/awards/2024/BronzeE4MNeon.webp`,
+    //   year: "2024",
+    //   span: "BRONZE",
+    //   title: "E4MNEON AWARD",
+    //    subtitle: "Most effective use of Technology ITC Sunfeast Mom’s Magic",
+
+    //   src750x953: `${domain}/assets/img/awards/750x953/BronzeE4MNeon.webp`,
+    //    src236x300: `${domain}/assets/img/awards/236x300/BronzeE4MNeon.webp`,
+    //  },
     {
       id: "tab-4",
-      href: `${domain}`,
-       src: `${domain}/assets/img/awards/2024/BronzeE4MNeon.webp`,
-      year: "2024",
-      span: "BRONZE",
-      title: "E4MNEON AWARD",
-       subtitle: "Most effective use of Technology ITC Sunfeast Mom’s Magic",
-
-      src750x953: `${domain}/assets/img/awards/750x953/BronzeE4MNeon.webp`,
-       src236x300: `${domain}/assets/img/awards/236x300/BronzeE4MNeon.webp`,
-     },
-    {
-      id: "tab-5",
       href: `${domain}`,
       src: `${domain}/assets/img/awards/2023/GoldAbby.webp`,
       year: "2023",
@@ -262,7 +284,7 @@ export const AwardData = {
       src236x300: `${domain}/assets/img/awards/236x300/GoldAbby.webp`,
     },
     {
-      id: "tab-6",
+      id: "tab-5",
       href: `${domain}`,
       src: `${domain}/assets/img/awards/2024/GoldE4MNeonHushPuppy.webp`,
       src750x953: `${domain}/assets/img/awards/750x953/GoldE4MNeonHushPuppy.webp`,
@@ -272,18 +294,18 @@ export const AwardData = {
       title: "E4MNEON AWARD",
       subtitle: "Most innovative use of Moving Media Maruti Suzuki brezza",
     },
-     {
-       id: "tab-7",
-       href: `${domain}`,
-       src: `${domain}/assets/img/awards/2024/BronzeE4MNeon.webp`,
-      year: "2023",
-      span: "BRONZE",
-      title: "E4MNEON AWARD",
-      subtitle: "Most effective use of Technology Maruti Suzuki brezza",
+    //  {
+    //    id: "tab-7",
+    //    href: `${domain}`,
+    //    src: `${domain}/assets/img/awards/2024/BronzeE4MNeon.webp`,
+    //   year: "2023",
+    //   span: "BRONZE",
+    //   title: "E4MNEON AWARD",
+    //   subtitle: "Most effective use of Technology Maruti Suzuki brezza",
 
-      src750x953: `${domain}/assets/img/awards/750x953/BronzeE4MNeon.webp`,
-       src236x300: `${domain}/assets/img/awards/236x300/BronzeE4MNeon.webp`,
-     },
+    //   src750x953: `${domain}/assets/img/awards/750x953/BronzeE4MNeon.webp`,
+    //    src236x300: `${domain}/assets/img/awards/236x300/BronzeE4MNeon.webp`,
+    //  },
   ],
 };
 
