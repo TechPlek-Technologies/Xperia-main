@@ -53,7 +53,11 @@
       type="text/css"
     />
     <!--  -->
-    <link rel="stylesheet" href="%PUBLIC_URL%assets/css/index.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%assets/css/index.css"
+      media="all"
+    />
 
     <!--  -->
     <link
@@ -73,32 +77,30 @@
 
     <!--  -->
     <link
-    rel="stylesheet"
-    id="elementor-post-1389"
-    href="%PUBLIC_URL%assets/css/elementor-post-1389.css"
-    type="text/css"
-  />
+      rel="stylesheet"
+      id="elementor-post-1389"
+      href="%PUBLIC_URL%assets/css/elementor-post-1389.css"
+      type="text/css"
+    />
 
-  <!--  -->
+    <!--  -->
 
-  <link
-  rel="stylesheet"
-  id="google-fonts-2-css"
-  href="https://fonts.googleapis.com/css?family=Roboto+Mono%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.5"
-  type="text/css"
-  media="all"
-/>
-<!--  -->
+    <link
+      rel="stylesheet"
+      id="google-fonts-2-css"
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.5"
+      type="text/css"
+      media="all"
+    />
+    <!--  -->
 
     <!-- font imports-->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
- 
 
     <!-- inline css -->
 
- 
     <link
       rel="stylesheet"
       id="classic-theme-styles-inline-css"
@@ -185,7 +187,10 @@
       media="all"
     />
     <!--  -->
-    <link rel="stylesheet" href="%PUBLIC_URL%assets/css/wp/widget-icon-list.min.css" />
+    <link
+      rel="stylesheet"
+      href="%PUBLIC_URL%assets/css/wp/widget-icon-list.min.css"
+    />
     <!--  -->
     <link
       rel="stylesheet"
@@ -202,7 +207,10 @@
       src="%PUBLIC_URL%assets/js/jquery/jquery-migrate.min.js?ver=3.4.1"
       id="jquery-migrate-js"
     ></script>
-    <script src="https://kit.fontawesome.com/7633f04f53.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7633f04f53.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -299,39 +307,35 @@
       id="swm-main-js"
     ></script>
     <!--  -->
-    <!-- <script
+    <script
       type="text/javascript"
       src="assets/js/wp-content/mk-widgets.min.js"
       id="mk-widgets-js"
-    ></script> -->
+    ></script>
     <!--  -->
 
     <script>
       // Function to detect if the browser is Safari
       function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        const ua = navigator.userAgent.toLowerCase();
+        return /safari/.test(ua) && !/chrome/.test(ua);
       }
-    
       // Load the script conditionally
-      function loadScript(src, id) {
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = src;
-        script.id = id;
-        document.head.appendChild(script);
-      }
-    
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", async function () {
         if (isSafari()) {
-          // Load Safari-specific script
-          loadScript('assets/js/wp-content/mk-widgets-safari.min.js', 'mk-widgets-js');
+          console.log("Safari detected, loading Safari-specific module.");
+          try {
+            await import("./assets/js/wp-content/mk-widgets-safari.min.js");
+            console.log("Safari-specific module loaded successfully.");
+          } catch (error) {
+            console.error("Error loading Safari-specific module:", error);
+          }
         } else {
-          // Load other browsers script
-          loadScript('assets/js/wp-content/mk-widgets.min.js', 'mk-widgets-js');
+          console.log("Non-Safari browser detected, loading general module.");
         }
+       
       });
     </script>
-
     <script
       type="text/javascript"
       src="%PUBLIC_URL%assets/js/wp-content/mk-splittext.min.js?ver=1.0.0"
