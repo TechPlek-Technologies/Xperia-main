@@ -13,17 +13,21 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <HomeBanner />
-        {/* about */}
-        <Projects />
-        <AboutSection/>
-        {/* <AboutUs/> */}
-        <Services />
-        <Award/>
-        {/* Team */}
-        <Team/>
-        <Testimonial/>
-        <Blog/>
+          <div
+            data-elementor-type="wp-page"
+            data-elementor-id={1255}
+            className="elementor elementor-1255"
+          >
+            <HomeBanner />
+
+            <Services />
+            <AboutSection />
+            <Projects />
+            <Award />
+            <Team />
+            <Testimonial />
+            <Blog />
+          </div>
       </Layout>
     </>
   );
