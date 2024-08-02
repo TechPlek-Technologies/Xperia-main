@@ -70,11 +70,11 @@ const menuData = [
     ],
   },
   {
-    href: "#",
+    href: "/team",
     label: "team",
   },
   {
-    href: "#",
+    href: "/blogs",
     label: "blog",
   },
   
