@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const MenuItem = ({ item, isActive }) => {
     return (
@@ -7,9 +6,9 @@ const MenuItem = ({ item, isActive }) => {
         id={`menu-item-${item.id}`}
         className={`menu-item menu-item-type-${item.type} menu-item-object-${item.object} ${isActive ? 'swm-m-active' : ''} ${item.children.length > 0 ? 'menu-item-has-children' : ''}`}
       >
-        <Link to={item.href}>
+        <a href={item.href}>
           <span>{item.label}</span>
-        </Link>
+        </a>
         {item.children.length > 0 && (
           <ul className="sub-menu">
             {item.children.map((child) => (

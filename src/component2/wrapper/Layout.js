@@ -1,12 +1,10 @@
 import React from 'react'
 import OuterWrapper from './OuterWrapper'
-// import Footer from '../footer/Footer'
 import Header from '../header/Header'
 import { Footer } from '../../component/footer/Footer'
 import { ResponsiveFooter } from '../../component/footer/responsive/Footer'
-// import { Footer } from '../../component/layout/footer/Footer'
 
-const Layout = ({ children }) => {
+const Layout = ({ children,type }) => {
   const [screenSize, setScreenSize] = React.useState(getCurrentDimension());
   function getCurrentDimension() {
     return {
@@ -31,7 +29,7 @@ const Layout = ({ children }) => {
     <div id="swm-page">
       <div id="swm-outer-wrap" className="clear">
         <div id="swm-wrap" className="clear">
-          <Header/>
+          <Header type={type}/>
           <div
             id="content"
             className="swm-main-container swm-site-content swm-anim"

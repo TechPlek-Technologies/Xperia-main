@@ -1,13 +1,14 @@
 import React from "react";
 import StickyHeader from "./stickyHeader/StickyHeader";
 import CustomHeader from "./customHeader/CustomHeader";
+import Header2 from "./Header2";
 
 export const menuData = [
   {
     id: 1970,
     type: "post_type",
     object: "page",
-    href: "/contact/",
+    href: "/projects/",
     label: "projects",
     children: [],
   },
@@ -15,14 +16,14 @@ export const menuData = [
     id: 1965,
     type: "custom",
     object: "custom",
-    href: "/about-us",
+    href: "#",
     label: "about",
     children: [
       {
         id: 1981,
         type: "post_type",
         object: "page",
-        href: "/",
+        href: "/xperia-group",
         label: "xperia group",
         children: [],
       },
@@ -30,7 +31,7 @@ export const menuData = [
         id: 1971,
         type: "post_type",
         object: "page",
-        href: "/creative-agency/",
+        href: "/pencil-box/",
         label: "pencil box",
         children: [],
       },
@@ -38,7 +39,7 @@ export const menuData = [
         id: 1972,
         type: "post_type",
         object: "page",
-        href: "/digital-agency/",
+        href: "/xperia-live/",
         label: "xperia live",
         children: [],
       },
@@ -113,7 +114,7 @@ export const menuData = [
     id: 1979,
     type: "post_type",
     object: "page",
-    href: "/contact/",
+    href: "/blogs/",
     label: "blog",
     children: [],
   },
@@ -128,7 +129,7 @@ export const menuData = [
         id: 1990,
         type: "post_type",
         object: "page",
-        href: "/standard-list/",
+        href: "/locations/",
         label: "locations",
         children: [],
       },
@@ -136,7 +137,7 @@ export const menuData = [
         id: 1982,
         type: "post_type",
         object: "page",
-        href: "/masonry-list/",
+        href: "/get-in-touch/",
         label: "get in touch",
         children: [],
       },
@@ -144,10 +145,10 @@ export const menuData = [
   },
 ];
 
-const Header = () => {
+const Header = ({type}) => {
   return (
     <>
-        <CustomHeader menuItems={menuData} />
+       {type==="other" ? <Header2 menuItems={menuData}/> :  <CustomHeader menuItems={menuData} /> }
         <StickyHeader menuItems={menuData} />
 
     </>

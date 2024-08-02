@@ -8,7 +8,7 @@ import BottomSection from "../component2/about/BottomSection";
 
 const About = () => {
   return (
-    <Layout>
+    <Layout type={"other"}>
         <Banner />
         <TextContent />
         <Projects/>

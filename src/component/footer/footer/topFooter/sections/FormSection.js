@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Style from './FormSection.module.css'
 import { Link } from 'react-router-dom'
 import FormPopUp from '../../../../popups/FormPopUp';
+import { domain } from '../../../../../domain';
 const FormSection = () => {
   const [open, setOpen] = useState(false);
 
@@ -24,7 +25,7 @@ const FormSection = () => {
     </div>
     
     <div className={Style.body}>
-      <img src='./assets/img/contact/icon.webp' alt='' className={Style.image}/>
+      <img src={`${domain}/assets/img/contact/icon.webp`} alt='' className={Style.image}/>
       
     </div>
     <Link to={"/get-in-touch"} className={Style.contactLink}>
