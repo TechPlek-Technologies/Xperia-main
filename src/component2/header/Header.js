@@ -15,7 +15,7 @@ export const menuData = [
     id: 1965,
     type: "custom",
     object: "custom",
-    href: "/",
+    href: "/about-us",
     label: "about",
     children: [
       {
