@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // SVG icon component
 const SvgIcon = () => (
@@ -27,10 +28,10 @@ const MenuItem = ({ href, label, subMenu, isCurrent }) => (
       isCurrent ? "current-menu-item current_page_item" : ""
     } ${subMenu ? "menu-item-has-children" : ""}`}
   >
-    <a href={href} aria-current={isCurrent ? "page" : undefined}>
+    <Link to={href} aria-current={isCurrent ? "page" : undefined}>
       {label}
       {subMenu && <SvgIcon />}
-    </a>
+    </Link>
     {subMenu && (
       <ul className="sub-menu">
         {subMenu.map((item, index) => (
