@@ -323,12 +323,10 @@
       document.addEventListener("DOMContentLoaded", async function () {
         if (isSafari()) {
           console.log("Safari detected, loading Safari-specific module.");
-          try {
+       
             await import("/assets/js/wp-content/mk-widgets-safari.min.js");
             console.log("Safari-specific module loaded successfully.");
-          } catch (error) {
-            console.error("Error loading Safari-specific module:", error);
-          }
+          
         } else {
           console.log("Non-Safari browser detected, loading general module.");
         }
