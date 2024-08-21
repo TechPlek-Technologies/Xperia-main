@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const Banner = () => {
+const Banner = ({ data, title }) => {
   return (
     <div
       className="elementor-element elementor-element-4b0b5cb5 e-con-full e-flex e-con e-parent"
@@ -12,7 +12,11 @@ const Banner = () => {
         className="elementor-element elementor-element-32580b5a e-con-full e-flex e-con e-child"
         data-id="32580b5a"
         data-element_type="container"
+        // Uncomment the next line if you want to use the settings
         data-settings='{"background_background":"classic","mk_ext_is_sticky":"false"}'
+        style={{
+          backgroundImage: `url(${process.env.REACT_APP_API_URL}${data.banner.url})`,
+        }}
       />
       <div
         className="elementor-element elementor-element-3e26eb8e e-con-full e-flex e-con e-child"
@@ -29,18 +33,18 @@ const Banner = () => {
         >
           <div className="elementor-widget-container">
             <div className="mk-title mk-title-default">
-              <div className="mk-title-subtitle swm-hide-none">
-                photography, graphics
-              </div>
               <h2 className="mk-title-heading swm-hide-none">
-                <span>casa mondo</span>
+                <span>{title}</span>
               </h2>
+              <div className="mk-title-subtitle swm-hide-none">
+                {data.shortDescription}
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

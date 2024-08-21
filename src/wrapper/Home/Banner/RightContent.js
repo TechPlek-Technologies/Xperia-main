@@ -5,19 +5,19 @@ const RightContent = ({ BannerData }) => {
     <>
       {BannerData.map((banner, index) => (
         <div key={index} className="mk-dual-slider-item swiper-slide">
-          <a href="https://yourdomain.com/about-us">
+          <a href="#">
             <img
               loading="lazy"
               decoding="async"
               width={541}
               height={724}
-              src={banner.secondary.main541x724}
+              src={`${process.env.REACT_APP_API_URL}${banner.banner541x724.url}`}
               srcset={`
-             ${banner.secondary.main541x724} 541w,
-             ${banner.secondary.sub224x300} 224w
+             ${process.env.REACT_APP_API_URL}${banner.banner541x724.url} 541w,
+             ${process.env.REACT_APP_API_URL}${banner.banner224x300.url} 224w
             `}
               className="attachment-full size-full"
-              alt={banner.secondary.name}
+              alt={banner.banner541x724.name}
               sizes="(max-width: 541px) 100vw, 541px"
             />
           </a>

@@ -1,21 +1,33 @@
-import React from "react";
-import { AwardData } from "../../data/home/Data";
+import React, { useEffect } from "react";
 import AwardImages from "./AwardImages";
 import AwardItems from "./AwardItems";
 import SectionHeading from "../../component2/common/section-heading";
+import axios from "axios";
 
 const Award = () => {
- 
-
-  const [activeId, setActiveId] = React.useState("tab-1");
+  const [activeId, setActiveId] = React.useState(0);
 
   const handleMouseEnter = (id) => {
     setActiveId(id);
   };
 
   const handleMouseLeave = () => {
-    setActiveId("tab-1");
+    setActiveId(0);
   };
+
+  const [data, setData] = React.useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/awards/all-awards`
+      );
+      console.log(response.data);
+      if (response.status === 200) {
+        setData(response.data);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <SectionHeading title={"awards"} subTitle={"notable achievements"} />
@@ -37,8 +49,15 @@ const Award = () => {
           <div className="elementor-widget-container">
             <div className="mk-awards-container">
               <div className="mk-awards">
-                <AwardImages imageData={AwardData.awardInnerData} activeId={activeId} data={AwardData.awardInnerData}/>
-                <AwardItems imageData={AwardData.awardInnerData} activeId={activeId} handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} data={AwardData.awardInnerData}/>
+                {data && <AwardImages imageData={data} activeId={activeId} />}
+                {data && (
+                  <AwardItems
+                    imageData={data}
+                    activeId={activeId}
+                    handleMouseEnter={handleMouseEnter}
+                    handleMouseLeave={handleMouseLeave}
+                  />
+                )}
               </div>
             </div>
           </div>

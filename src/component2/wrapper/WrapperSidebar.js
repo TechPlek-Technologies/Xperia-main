@@ -23,7 +23,7 @@ const WrapperSidebar = () => {
                     <img
                       width={229}
                       height={61}
-                      src="/assets/logo.webp"
+                      src="/assets/newlogo.webp"
                       className="attachment-full size-full wp-image-1047"
                       alt=""
                     />
@@ -69,7 +69,7 @@ const WrapperSidebar = () => {
                   <img
                     width={319}
                     height={217}
-                    src="/assets/logo.webp"
+                    src="/assets/newlogo.webp"
                     className="attachment-large size-large wp-image-1206"
                     alt=""
                     srcSet="/assets/footer_logo.webp 319w, /assets/footer_logo.webp 300w"

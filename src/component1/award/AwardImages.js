@@ -12,16 +12,16 @@ const AwardImages = ({ imageData, activeId }) => {
               activeId === image.id ? "active-item" : ""
             }`}
           >
-            <a className="mk-awards-link" href={image.href}>
+            <a className="mk-awards-link" href={"#"}>
               <img
                 loading="lazy"
                 decoding="async"
                 width={750}
                 height={953}
-                src={image.src750x953}
+                src={`${process.env.REACT_APP_API_URL}${image.awardImage.url}`}
                 className="attachment-full size-full"
-                alt={image.title}
-                srcset={`${image.src750x953} 750w,  ${image.src236x300} 236w`}
+                alt={image.awardImage.name}
+                srcset={`${process.env.REACT_APP_API_URL}${image.awardImage.url} 750w,  ${process.env.REACT_APP_API_URL}${image.awardImage.url} 236w`}
                 sizes="(max-width: 750px) 100vw, 750px"
               />
             </a>

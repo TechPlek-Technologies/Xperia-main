@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectDetail = () => {
+const ProjectDetail = ({data,title}) => {
   return (
     <div
     className="elementor-element elementor-element-271f502a e-flex e-con-boxed e-con e-parent"
@@ -26,16 +26,7 @@ const ProjectDetail = () => {
             <div className="mk-title mk-title-">
               <div className="mk-title-desc swm-hide-none">
                 <span>
-                  Perferendis repudiandae fugia rchitecto beatae reprederit
-                  vitae recus andae debitis facere quidem animi placeat delt
-                  maxime cuuntur at volup tatib uod numuam pariatur libero
-                  laborum laudantium non. Vitae optio, distinctio earum esse
-                  corporis dolorem! arerse. Excepturi quos conse ctetur adipi
-                  sicing elit provi dent laud atium voluptas officiis minus rer
-                  um aliquid volup tatem ullam beatae nulla amet facere cum que
-                  provident.Radiant Studios stands as a distinguished and
-                  reputable label, celebrated for its premium offerings that
-                  showcase innovation, creativity.
+                 {data.longDescription}
                 </span>
               </div>
             </div>
@@ -58,7 +49,7 @@ const ProjectDetail = () => {
           <div className="elementor-widget-container">
             <div className="mk-title mk-title-default">
               <h2 className="mk-title-heading swm-hide-none">
-                <span>project overview</span>
+                <span>{title}</span>
               </h2>
             </div>
           </div>

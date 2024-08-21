@@ -19,7 +19,7 @@ export const ServiceItem = ({ item, index }) => {
         <span className="mk-moving-services-counter">{`0${index + 1}`}</span>
         <h4 className="mk-moving-services-title">{item.title}</h4>
         <div className={`mk-moving-services-text ${Style.para}`}>
-          {item.para}
+          {item.shortDescription}
         </div>
       </article>
     </div>
@@ -27,6 +27,8 @@ export const ServiceItem = ({ item, index }) => {
 };
 
 const Services = () => {
+  const services = JSON.parse(localStorage.getItem("services"));
+  console.log(services);
   return (
     <div
       className="elementor-element elementor-element-3263df3f e-con-full e-flex e-con e-parent"
@@ -58,7 +60,7 @@ const Services = () => {
               </div>
             </div>
             <div className="mk-moving-services-items">
-              <ServiceContent InnerData={InnerData} />
+              <ServiceContent InnerData={services} />
             </div>
           </section>
         </div>

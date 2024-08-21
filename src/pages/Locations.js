@@ -4,6 +4,7 @@ import Banner from '../component2/contact/Banner'
 import Title from '../component2/contact/Title'
 import LocationContent from '../component2/contact/LocationContent'
 import Map from '../component2/contact/Map'
+import GoogleMapComponent from '../component2/contact/GoogleMapComponent'
 
 const Locations = () => {
   return (
@@ -16,7 +17,8 @@ const Locations = () => {
         <Banner/>
         <Title/>
         <LocationContent/>
-        <Map/>
+        <GoogleMapComponent/>
+        {/* <Map/> */}
       </div>
     </Layout>
   )

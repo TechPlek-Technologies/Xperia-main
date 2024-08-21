@@ -1,0 +1,12 @@
+.wrapper{
+height: auto;
+margin:20px 40px;
+filter: grayscale();
+
+}
+
+
+.container{
+     height: 600px; 
+     width: 100%; 
+}

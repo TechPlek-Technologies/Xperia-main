@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../component2/wrapper/Layout";
 import Breadcrumb from "../component2/team/Breadcrumb";
 import TeamSection from "../component2/team/TeamSection";
+import axios from "axios";
 
 const Team = () => {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/teams/all-teams`
+      );
+      console.log(response);
+      if (response.status === 200) {
+        setData(response.data);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <Layout>
       <Breadcrumb />
@@ -14,7 +28,7 @@ const Team = () => {
           data-elementor-id="1259"
           class="elementor elementor-1259"
         >
-          <TeamSection />
+          {data && <TeamSection data={data} />}
         </div>
 
         <div class="clear"></div>

@@ -1,6 +1,8 @@
-import React from 'react'
+import React from "react";
 
-const Slider = () => {
+const Slider = ({ data }) => {
+  console.log("data", data);
+
   return (
     <div
       className="elementor-element elementor-element-7b8fead8 e-flex e-con-boxed e-con e-parent"
@@ -33,15 +35,15 @@ const Slider = () => {
                           decoding="async"
                           width={1400}
                           height={720}
-                          src="https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-4.jpg"
+                          src={`${process.env.REACT_APP_API_URL}${data.carousel1.url}`}
                           className="attachment-full size-full"
                           alt=""
-                          srcSet="
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-4.jpg          1400w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-4-300x154.jpg   300w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-4-1024x527.jpg 1024w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-4-768x395.jpg   768w
-                                "
+                          srcSet={`
+                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url}          1400w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url}   300w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url} 1024w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url}   768w
+                                `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
                       </div>
@@ -58,15 +60,15 @@ const Slider = () => {
                           decoding="async"
                           width={1400}
                           height={720}
-                          src="https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-2.jpg"
+                          src={`${process.env.REACT_APP_API_URL}${data.carousel2.url}`}
                           className="attachment-full size-full"
                           alt=""
-                          srcSet="
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-2.jpg          1400w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-2-300x154.jpg   300w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-2-1024x527.jpg 1024w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-2-768x395.jpg   768w
-                                "
+                          srcSet={`
+                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url}          1400w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url}   300w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url} 1024w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url}   768w
+                                `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
                       </div>
@@ -84,15 +86,15 @@ const Slider = () => {
                           decoding="async"
                           width={1400}
                           height={720}
-                          src="https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg"
+                          src={`${process.env.REACT_APP_API_URL}${data.carousel3.url}`}
                           className="attachment-full size-full"
                           alt=""
-                          srcSet="
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-7.jpg          1400w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-7-300x154.jpg   300w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-7-1024x527.jpg 1024w,
-                                  https://techpartner.online/orbius/wp-content/uploads/2024/03/pf-horizontal-slider-7-768x395.jpg   768w
-                                "
+                          srcSet={`
+                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url}          1400w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url}   300w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url} 1024w,
+                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url}   768w
+                                `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
                       </div>
@@ -130,7 +132,7 @@ const Slider = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;
