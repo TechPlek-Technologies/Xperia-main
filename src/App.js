@@ -9,13 +9,22 @@ import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchSettings } from "./redux/slice/settings-slice";
 
 function App() {
   const [projectData, setProjectData] = useState(null);
   const [serviceData, setServiceData] = useState(null);
   const dispatch = useDispatch();
+  const { loading, settingsData, error } = useSelector(
+    (state) => state.settings
+  );
+
+  useEffect(() => {
+    console.log("Dispatching fetchSettings");
+    dispatch(fetchSettings());
+  }, [dispatch]);
+
   useEffect(() => {
     const fetchServiceData = async () => {
       const response = await axios.get(
@@ -40,16 +49,9 @@ function App() {
     fetchProjectData();
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await Promise.all([dispatch(fetchSettings())]);
-    };
-
-    fetchData();
-  }, [dispatch]);
-
-
-
+  if (!loading) {
+    return <> ...Loading</>;
+  }
   return (
     <>
       <BrowserRouter>

@@ -25,7 +25,10 @@ const Layout = ({ children, type }) => {
     };
   }, [screenSize]);
 
-  const { settingsData } = useSelector((state) => state.settings);
+  const { loading, settingsData, error } = useSelector(
+    (state) => state.settings
+  );
+
   console.log(settingsData);
   return (
     <>

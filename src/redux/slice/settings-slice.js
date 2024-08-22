@@ -10,11 +10,17 @@ const initialState = {
 
 export const fetchSettings = createAsyncThunk(
   "settings/fetchSettings",
-  async () => {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}/settings/all-settings`);
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/settings/all-settings`);
       return response.data;
+    } catch (error) {
+      // Capture and return error information
+      return rejectWithValue(error.response?.data || error.message);
+    }
   }
 );
+
 
 const settingsSlice = createSlice({
   name: "settings",

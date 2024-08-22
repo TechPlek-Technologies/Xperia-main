@@ -17,6 +17,7 @@ const persistConfig = {
     key: "xperia",
     version: 1,
     storage,
+    blacklist: ["product"],
 };
 
 const rootReducer = combineReducers({
