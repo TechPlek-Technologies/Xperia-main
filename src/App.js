@@ -7,42 +7,61 @@ import Team from "./pages/Team";
 import Blog from "./pages/Blog";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
-import Services from "./pages/Services";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { fetchSettings } from "./redux/slice/settings-slice";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [projectData, setProjectData] = useState(null);
+  const [serviceData, setServiceData] = useState(null);
+  const dispatch = useDispatch();
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchServiceData = async () => {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/services/all-services`
       );
       if (response.status === 200) {
-        console.log(response.data);
+        setServiceData(response.data);
         localStorage.setItem("services", JSON.stringify(response.data));
-        setData(response.data);
       }
     };
-    fetchData();
+    const fetchProjectData = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/projects/all-project`
+      );
+      if (response.status === 200) {
+        setProjectData(response.data);
+        localStorage.setItem("projects", JSON.stringify(response.data));
+      }
+    };
+
+    fetchServiceData();
+    fetchProjectData();
   }, []);
 
-  // if (!data) {
-  //   return (
-  //     <>
-  //       <Loader />
-  //     </>
-  //   );
-  // }
+  useEffect(() => {
+    const fetchData = async () => {
+      await Promise.all([dispatch(fetchSettings())]);
+    };
+
+    fetchData();
+  }, [dispatch]);
+
+
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path={"/"} element={<Home />} />
+          <Route path={"/"} element={<Home serviceData={serviceData} />} />
           <Route path={"/xperia-group"} element={<About />} />
           <Route path={"/pencil-box"} element={<About />} />
           <Route path={"/xperia-alive"} element={<About />} />
-          <Route path={"/projects"} element={<Projects />} />
+          <Route
+            path={"/projects"}
+            element={<Projects projectData={projectData} />}
+          />
           <Route path={"/team"} element={<Team />} />
           <Route path={"/blogs"} element={<Blog />} />
           <Route path={"/locations"} element={<Locations />} />

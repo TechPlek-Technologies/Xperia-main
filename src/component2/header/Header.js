@@ -161,11 +161,11 @@ export const menuData = [
   },
 ];
 
-const Header = ({type}) => {
+const Header = ({type,settingsData}) => {
   return (
     <>
-       {type==="other" ? <Header2 menuItems={menuData}/> :  <CustomHeader menuItems={menuData} /> }
-        <StickyHeader menuItems={menuData} />
+       {type==="other" ? <Header2 settingsData={settingsData} menuItems={menuData}/> :  <CustomHeader settingsData={settingsData} menuItems={menuData} /> }
+        <StickyHeader settingsData={settingsData} menuItems={menuData} />
 
     </>
   );

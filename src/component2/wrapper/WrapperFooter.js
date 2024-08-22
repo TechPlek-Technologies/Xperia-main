@@ -1,6 +1,6 @@
 import React from "react";
 
-const WrapperFooter = () => {
+const WrapperFooter = ({settingsData}) => {
   return (
     <div
       className="mk_sections_item elementor-element elementor-element-10f62e99 mk-title-align--left elementor-widget elementor-widget-mk_title"
@@ -13,11 +13,11 @@ const WrapperFooter = () => {
         <div className="mk-title mk-title-">
           <div className="mk-title-desc swm-hide-none">
             <span>
-              F-73, 3rd Floor,Okhla Industrial Area Ph 3,New Delhi, 110020
+              {settingsData.address}
               <br />
-              +91 813 083 8855
+              {settingsData.phoneNumber}
               <br />
-              SaibalGupta@xperiagroup.in
+              {settingsData.email}
             </span>
           </div>
         </div>
