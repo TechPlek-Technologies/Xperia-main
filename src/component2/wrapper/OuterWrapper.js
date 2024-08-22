@@ -9,7 +9,7 @@ import WrapperContent from "./WrapperContent";
 import FooterLogo from "./FooterLogo";
 import SidebarFooter from "./SidebarFooter";
 
-const OuterWrapper = () => {
+const OuterWrapper = ({settingsData}) => {
   return (
     <>
    <WrapperOpenButton/>
@@ -44,7 +44,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="image.default"
                 >
-                  <WrapperLogo/>
+                  <WrapperLogo settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-caee1ca elementor-widget__width-inherit elementor-widget elementor-widget-mk_vertical_menu"
@@ -70,7 +70,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="mk_title.default"
                 >
-                  <WrapperFooter/>
+                  <WrapperFooter settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-2942f901 elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -79,7 +79,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="icon-list.default"
                 >
-                  <MediaLinks/>
+                  <MediaLinks settingsData={settingsData}/>
                 </div>
               </div>
             </div>
@@ -99,7 +99,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="image.default"
                 >
-                  <WrapperLogo/>
+                  <WrapperLogo settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-39d5c41f mk-title-align--left elementor-widget elementor-widget-mk_title"
@@ -108,7 +108,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="mk_title.default"
                 >
-                  <WrapperContent/>
+                  <WrapperContent settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-cf6193d elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -117,7 +117,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="icon-list.default"
                 >
-                 <MediaLinks/>
+                 <MediaLinks settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-5e0ec20c elementor-widget elementor-widget-image"
@@ -126,7 +126,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="image.default"
                 >
-                 <WrapperLogo/>
+                 <WrapperLogo settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-276d74f6 mk-title-align--left elementor-widget elementor-widget-mk_title"
@@ -135,7 +135,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="mk_title.default"
                 >
-                 <WrapperFooter/>
+                 <WrapperFooter settingsData={settingsData}/>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="image.default"
                 >
-                 <WrapperLogo/>
+                 <WrapperLogo settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-caee1ca elementor-widget__width-inherit elementor-widget elementor-widget-mk_vertical_menu"
@@ -199,7 +199,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="mk_title.default"
                 >
-                 <WrapperFooter/>
+                 <WrapperFooter settingsData={settingsData} />
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-2942f901 elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -208,7 +208,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="icon-list.default"
                 >
-                <MediaLinks/>
+                <MediaLinks settingsData={settingsData} />
                 </div>
               </div>
             </div>
@@ -228,7 +228,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="image.default"
                 >
-                <WrapperLogo/>
+                <WrapperLogo settingsData={settingsData} />
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-39d5c41f mk-title-align--left elementor-widget elementor-widget-mk_title"
@@ -237,7 +237,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="mk_title.default"
                 >
-            <WrapperContent/>
+            <WrapperContent settingsData={settingsData} />
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-cf6193d elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -246,7 +246,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="icon-list.default"
                 >
-                  <MediaLinks/>
+                  <MediaLinks settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-5e0ec20c elementor-widget elementor-widget-image"
@@ -255,7 +255,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="image.default"
                 >
-                  <FooterLogo/>
+                  <FooterLogo settingsData={settingsData}/>
                 </div>
                 <div
                   className="mk_sections_item elementor-element elementor-element-276d74f6 mk-title-align--left elementor-widget elementor-widget-mk_title"
@@ -264,7 +264,7 @@ const OuterWrapper = () => {
                   data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                   data-widget_type="mk_title.default"
                 >
-                  <SidebarFooter/>
+                  <SidebarFooter settingsData={settingsData}/>
                 </div>
               </div>
             </div>

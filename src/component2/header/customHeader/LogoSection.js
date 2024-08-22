@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LogoSection = () => {
+const LogoSection = ({settingsData}) => {
   return (
     <div
     className="mk_sections_item elementor-element elementor-element-24071b19 elementor-widget elementor-widget-image"
@@ -12,11 +12,9 @@ const LogoSection = () => {
     <div className="elementor-widget-container">
       <a href="/">
         <img
-          // width={62}
-          // height={62}
-          src="/assets/newlogo.webp"
+          src={`${process.env.REACT_APP_API_URL}${settingsData.navbarLogo.url}`}
           className="attachment-full size-full wp-image-1118"
-          alt=""
+          alt="navbar logo"
           style={{ width: "228px" }}
         />
       </a>
