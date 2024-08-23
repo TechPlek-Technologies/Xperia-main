@@ -29,10 +29,10 @@ const Layout = ({ children, type }) => {
     (state) => state.settings
   );
 
-  console.log(settingsData);
+  console.log("settingsData",settingsData);
   return (
     <>
-      <div id="swm-page">
+   {  settingsData && <div id="swm-page">
         <div id="swm-outer-wrap" className="clear">
           <div id="swm-wrap" className="clear">
             <Header type={type} settingsData={settingsData[0]} />
@@ -63,7 +63,7 @@ const Layout = ({ children, type }) => {
         </div>
         {/* #swm-outer-wrap */}
         {<OuterWrapper settingsData={settingsData[0]} />}
-      </div>
+      </div>}
       {/* end #swm-page */}
     </>
   );

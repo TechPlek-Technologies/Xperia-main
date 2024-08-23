@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 const LogoSection = ({ settingsData }) => {
   const socialMediaIcons = [
     {
-      link: settingsData.instagram,
+      link: settingsData?.instagram,
       icon: "fab fa-instagram",
     },
     {
-      link: settingsData.facebook,
+      link: settingsData?.facebook,
       icon: "fa-brands fa-facebook-f",
     },
     {
-      link: settingsData.x,
+      link: settingsData?.x,
       icon: "fa-brands fa-linkedin",
     },
     {
-      link: settingsData.youtube,
+      link: settingsData?.youtube,
       icon: "fa-brands fa-youtube",
     },
   ];
@@ -26,7 +26,7 @@ const LogoSection = ({ settingsData }) => {
         <div className={Style.container}>
           <Link to={"/"} className={Style.link}>
             <img
-              src={`${process.env.REACT_APP_API_URL}${settingsData.footerLogo.url}`}
+              src={`${process.env.REACT_APP_API_URL}${settingsData?.footerLogo?.url}`}
               alt="footerLogo"
               className={Style.image}
             />

@@ -9,6 +9,7 @@ import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Test from "./Test";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSettings } from "./redux/slice/settings-slice";
 
@@ -49,14 +50,13 @@ function App() {
     fetchProjectData();
   }, []);
 
-  if (!loading) {
-    return <> ...Loading</>;
-  }
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path={"/"} element={<Home serviceData={serviceData} />} />
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/test"} element={<Test />} />
           <Route path={"/xperia-group"} element={<About />} />
           <Route path={"/pencil-box"} element={<About />} />
           <Route path={"/xperia-alive"} element={<About />} />

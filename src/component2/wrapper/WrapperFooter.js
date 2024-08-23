@@ -13,11 +13,11 @@ const WrapperFooter = ({settingsData}) => {
         <div className="mk-title mk-title-">
           <div className="mk-title-desc swm-hide-none">
             <span>
-              {settingsData.address}
+              {settingsData?.address}
               <br />
-              {settingsData.phoneNumber}
+              {settingsData?.phoneNumber}
               <br />
-              {settingsData.email}
+              {settingsData?.email}
             </span>
           </div>
         </div>

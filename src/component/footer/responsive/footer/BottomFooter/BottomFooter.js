@@ -5,17 +5,17 @@ import BottomFooterItem from "./BottomFooterItem";
 const BottomFooter = ({ settingsData }) => {
   const BottomFooterData = [
     {
-      text: settingsData.phoneNumber,
-      src: `tel:+91${settingsData.phoneNumber}`,
+      text: settingsData?.phoneNumber,
+      src: `tel:+91${settingsData?.phoneNumber}`,
       subtitle: "call our office",
     },
     {
-      text: settingsData.email,
-      src: `mailto:${settingsData.email}`,
+      text: settingsData?.email,
+      src: `mailto:${settingsData?.email}`,
       subtitle: "send a message",
     },
     {
-      text: settingsData.address,
+      text: settingsData?.address,
       src: "",
       subtitle: "our address",
     },
