@@ -86,10 +86,10 @@ const Team = () => {
                           decoding="async"
                           width={750}
                           height={820}
-                          src={`${process.env.REACT_APP_API_URL}${item.profileImage.url}`}
+                          src={`${process.env.REACT_APP_API_URL}${JSON.parse(item?.profileImage)?.url}`}
                           className="attachment-full size-full"
-                          alt={item.profileImage.name}
-                          srcSet={`${process.env.REACT_APP_API_URL}${item.profileImage.url} 750w, ${process.env.REACT_APP_API_URL}${item.profileImage.url} 274w`}
+                          alt={JSON.parse(item?.profileImage)?.name}
+                          srcSet={`${process.env.REACT_APP_API_URL}${JSON.parse(item?.profileImage)?.url} 750w, ${process.env.REACT_APP_API_URL}${JSON.parse(item?.profileImage)?.url} 274w`}
                           sizes={`(max-width: 750px) 100vw, 820px`}
                         />
                       </a>

@@ -38,15 +38,15 @@ const Banner = ({ data }) => {
                           decoding="async"
                           width={1840}
                           height={615}
-                          src={`${process.env.REACT_APP_API_URL}${data.aboutImage.url}`}
+                          src={`${process.env.REACT_APP_API_URL}${JSON.parse(data.aboutImage).url}`}
                           className="attachment-full size-full"
                           alt=""
                           srcSet={`
-                                ${process.env.REACT_APP_API_URL}${data.aboutImage.url} 1840w,
-                                ${process.env.REACT_APP_API_URL}${data.aboutImage.url} 300w,
-                                ${process.env.REACT_APP_API_URL}${data.aboutImage.url} 1024w,
-                                ${process.env.REACT_APP_API_URL}${data.aboutImage.url} 768w,
-                                ${process.env.REACT_APP_API_URL}${data.aboutImage.url} 1536w
+                                ${process.env.REACT_APP_API_URL}${JSON.parse(data.aboutImage).url} 1840w,
+                                ${process.env.REACT_APP_API_URL}${JSON.parse(data.aboutImage).url} 300w,
+                                ${process.env.REACT_APP_API_URL}${JSON.parse(data.aboutImage).url} 1024w,
+                                ${process.env.REACT_APP_API_URL}${JSON.parse(data.aboutImage).url} 768w,
+                                ${process.env.REACT_APP_API_URL}${JSON.parse(data.aboutImage).url} 1536w
                               `}
                           sizes="(max-width: 1840px) 100vw, 1840px"
                         />

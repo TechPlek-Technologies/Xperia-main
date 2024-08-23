@@ -15,9 +15,10 @@ import { fetchSettings } from "./redux/slice/settings-slice";
 
 function App() {
   const [projectData, setProjectData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [serviceData, setServiceData] = useState(null);
   const dispatch = useDispatch();
-  const { loading, settingsData, error } = useSelector(
+  const {settingsData, error } = useSelector(
     (state) => state.settings
   );
 
@@ -46,11 +47,24 @@ function App() {
       }
     };
 
+    const fetchBannerData = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/home-banner/all-banners`
+      );
+      if (response.status === 200) {
+        if (response.status === 200) {
+          setProjectData(response.data);
+          localStorage.setItem("Banner", JSON.stringify(response.data));
+        }
+      }
+    };
     fetchServiceData();
     fetchProjectData();
+    fetchBannerData();
+    setLoading(false);
   }, []);
 
-
+ 
   return (
     <>
       <BrowserRouter>

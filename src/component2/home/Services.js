@@ -28,7 +28,10 @@ export const ServiceItem = ({ item, index }) => {
 
 const Services = () => {
   const services = JSON.parse(localStorage.getItem("services"));
-  console.log(services);
+  console.log("services", services);
+  const limitedServices = services.slice(0, 6);
+  console.log("limitedServices", limitedServices);
+
   return (
     <div
       className="elementor-element elementor-element-3263df3f e-con-full e-flex e-con e-parent"
@@ -60,7 +63,7 @@ const Services = () => {
               </div>
             </div>
             <div className="mk-moving-services-items">
-              <ServiceContent InnerData={services} />
+              <ServiceContent InnerData={limitedServices} />
             </div>
           </section>
         </div>

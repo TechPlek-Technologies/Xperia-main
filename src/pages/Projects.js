@@ -6,7 +6,7 @@ import Content from "../component2/projects/Content";
 const Projects = ({ projectData }) => {
   return (
     <Layout type={"other"}>
-      {projectData && <Banner projectData={projectData} />}
+      {/* {projectData && <Banner projectData={projectData} />} */}
       {projectData && <Content projectData={projectData} />}
     </Layout>
   );

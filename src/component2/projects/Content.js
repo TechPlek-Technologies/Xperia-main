@@ -50,13 +50,27 @@ const PortfolioItem = ({ project }) => {
                 decoding="async"
                 width={750}
                 height={820}
-                src={`${process.env.REACT_APP_API_URL}${project.iconImages.url}`}
+                src={
+                  project?.iconImages
+                    ? `${process.env.REACT_APP_API_URL}${
+                        JSON.parse(project.iconImages).url
+                      }`
+                    : ""
+                }
                 className="attachment-full size-full"
                 alt=""
-                srcSet={`
-        ${process.env.REACT_APP_API_URL}${project.iconImages.url}        750w,
-       ${process.env.REACT_APP_API_URL}${project.iconImages.url} 274w
-      `}
+                srcSet={
+                  project?.iconImages
+                    ? `
+                    ${process.env.REACT_APP_API_URL}${
+                        JSON.parse(project.iconImages).url
+                      } 750w,
+                    ${process.env.REACT_APP_API_URL}${
+                        JSON.parse(project.iconImages).url
+                      } 274w
+                  `
+                    : ""
+                }
                 sizes="(max-width: 750px) 100vw, 750px"
               />
             </a>
