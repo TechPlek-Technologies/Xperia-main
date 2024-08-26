@@ -6,7 +6,6 @@ const Blog = () => {
   // Static data for blog posts
 
   const blog = JSON.parse(localStorage.getItem('Blogs'));
-  console.log(blog)
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);
     const options = { year: "numeric", month: "long", day: "numeric" };

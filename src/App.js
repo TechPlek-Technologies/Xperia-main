@@ -13,6 +13,7 @@ import axios from "axios";
 import Test from "./Test";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSettings } from "./redux/slice/settings-slice";
+import BlogDetail from "./pages/BlogDetail";
 
 function App() {
   const [projectData, setProjectData] = useState(null);
@@ -94,6 +95,7 @@ function App() {
           />
           <Route path={"/team"} element={<Team />} />
           <Route path={"/blogs"} element={<Blog />} />
+          <Route path={"/blog"} element={<BlogDetail />} />
           <Route path={"/locations"} element={<Locations />} />
           <Route path={"/services"} element={<IndividualProject />} />
           <Route path={"/out-of-home"} element={<IndividualProject />} />
