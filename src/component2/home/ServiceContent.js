@@ -4,9 +4,9 @@ import { ServiceItem } from './Services'
 const ServiceContent = ({InnerData}) => {
   return (
     <>
-        {InnerData.map((item, index) => (
-        <ServiceItem key={index} item={item} index={index} />
-      ))}
+      {InnerData && InnerData.slice(0, 6).map((item, index) => (
+  <ServiceItem key={index} item={item} index={index} />
+))}
     </>
   )
 }

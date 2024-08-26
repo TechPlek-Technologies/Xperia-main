@@ -28,7 +28,6 @@ export const ServiceItem = ({ item, index }) => {
 
 const Services = () => {
   const services = JSON.parse(localStorage.getItem("services"));
-  const limitedServices = services.slice(0, 6);
 
   return (
     <div
@@ -61,7 +60,7 @@ const Services = () => {
               </div>
             </div>
             <div className="mk-moving-services-items">
-              <ServiceContent InnerData={limitedServices} />
+              <ServiceContent InnerData={services} />
             </div>
           </section>
         </div>
