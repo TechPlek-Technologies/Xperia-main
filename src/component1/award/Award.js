@@ -5,14 +5,15 @@ import SectionHeading from "../../component2/common/section-heading";
 import axios from "axios";
 
 const Award = () => {
-  const [activeId, setActiveId] = React.useState(0);
+  const [activeId, setActiveId] = React.useState(1);
 
+  console.log(activeId)
   const handleMouseEnter = (id) => {
     setActiveId(id);
   };
 
   const handleMouseLeave = () => {
-    setActiveId(0);
+    setActiveId(1);
   };
 
   const [data, setData] = React.useState(null);
@@ -21,9 +22,9 @@ const Award = () => {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/awards/all-awards`
       );
-      console.log(response.data);
       if (response.status === 200) {
         setData(response.data);
+        setActiveId(response.data[0].id)
       }
     };
     fetchData();

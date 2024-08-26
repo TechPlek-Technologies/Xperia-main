@@ -10,7 +10,6 @@ import axios from "axios";
 const About = () => {
   const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
 
-
   const [data, setData] = React.useState(null);
   useEffect(() => {
     const fetchData = async () => {

@@ -4,7 +4,6 @@ import Menu from "./customHeader/Menu";
 import Sidebar from "./customHeader/Sidebar";
 
 const Header2 = ({ menuItems, settingsData }) => {
-  console.log("settingsData1", settingsData);
   return (
     <header className="swm_header_custom_section" id="swm-header">
       <div

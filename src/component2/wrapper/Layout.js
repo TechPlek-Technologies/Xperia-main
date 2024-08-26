@@ -29,7 +29,6 @@ const Layout = ({ children, type }) => {
     (state) => state.settings
   );
 
-  console.log("settingsData",settingsData);
   return (
     <>
    {  settingsData && <div id="swm-page">

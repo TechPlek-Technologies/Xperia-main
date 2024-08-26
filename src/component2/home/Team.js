@@ -11,7 +11,6 @@ const Team = () => {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/teams/all-teams`
       );
-      console.log(response);
       if (response.status === 200) {
         setData(response.data);
       }

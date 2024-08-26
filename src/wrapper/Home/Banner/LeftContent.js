@@ -9,8 +9,6 @@ const LeftContent = ({ BannerData }) => {
         const sub768Image = JSON.parse(banner.sub768x442);
         const banner224Image = JSON.parse(banner.banner224x300);
 
-        console.log('Banner Title:', banner.title);
-
         return (
           <div key={index} className="mk-dual-slider-item swiper-slide">
             <div className="mk-dual-slider-item-inner">

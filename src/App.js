@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import IndividualProject from "./pages/IndividualProject";
+import IndividualProject1 from "./pages/IndividualProject1";
 import Team from "./pages/Team";
 import Blog from "./pages/Blog";
 import Locations from "./pages/Locations";
@@ -23,7 +24,6 @@ function App() {
   );
 
   useEffect(() => {
-    console.log("Dispatching fetchSettings");
     dispatch(fetchSettings());
   }, [dispatch]);
 
@@ -53,14 +53,24 @@ function App() {
       );
       if (response.status === 200) {
         if (response.status === 200) {
-          setProjectData(response.data);
           localStorage.setItem("Banner", JSON.stringify(response.data));
+        }
+      }
+    };
+    const fetchBlogData = async () => {
+      const response = await axios.get(
+        `${process.env.REACT_APP_API_URL}/blogs/all-blogs`
+      );
+      if (response.status === 200) {
+        if (response.status === 200) {
+          localStorage.setItem("Blogs", JSON.stringify(response.data));
         }
       }
     };
     fetchServiceData();
     fetchProjectData();
     fetchBannerData();
+    fetchBlogData();
     setLoading(false);
   }, []);
 
@@ -77,6 +87,10 @@ function App() {
           <Route
             path={"/projects"}
             element={<Projects projectData={projectData} />}
+          />
+          <Route
+            path={"/project-description"}
+            element={<IndividualProject1 projectData={projectData} />}
           />
           <Route path={"/team"} element={<Team />} />
           <Route path={"/blogs"} element={<Blog />} />

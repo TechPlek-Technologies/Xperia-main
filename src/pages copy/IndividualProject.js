@@ -13,7 +13,6 @@ import Content2 from "../component2/IndividualProjects/Content2";
 const IndividualProject = () => {
   const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
 
-
   const [data, setData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {

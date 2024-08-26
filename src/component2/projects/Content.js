@@ -33,7 +33,6 @@ const Filter = ({ activeFilter, onFilterChange }) => {
 };
 
 const PortfolioItem = ({ project }) => {
-  console.log(project);
 
   return (
     <>
@@ -41,7 +40,7 @@ const PortfolioItem = ({ project }) => {
         <div className="mk-portfolio-wrap content-position--below">
           <div className="mk-portfolio-image">
             <a
-              href="https://techpartner.online/orbius/portfolio-item/nova-wade/"
+              href={`${domain}/project-description?title=${project.slug}`}
               className="mk-post-grid-image swm-anim mk--eye-cursor"
               target="_self"
             >

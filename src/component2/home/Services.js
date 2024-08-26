@@ -28,9 +28,7 @@ export const ServiceItem = ({ item, index }) => {
 
 const Services = () => {
   const services = JSON.parse(localStorage.getItem("services"));
-  console.log("services", services);
   const limitedServices = services.slice(0, 6);
-  console.log("limitedServices", limitedServices);
 
   return (
     <div

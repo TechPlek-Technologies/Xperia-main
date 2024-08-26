@@ -1,6 +1,7 @@
 import React from "react";
 
 const Banner = ({ data, title }) => {
+
   return (
     <div
       className="elementor-element elementor-element-4b0b5cb5 e-con-full e-flex e-con e-parent"
@@ -16,7 +17,7 @@ const Banner = ({ data, title }) => {
         data-settings='{"background_background":"classic","mk_ext_is_sticky":"false"}'
         style={{
           backgroundImage: `url(${process.env.REACT_APP_API_URL}${
-            JSON.parse(data.banner).url
+            JSON.parse(data.bannerImages).url
           })`,
         }}
       />
@@ -36,10 +37,10 @@ const Banner = ({ data, title }) => {
           <div className="elementor-widget-container">
             <div className="mk-title mk-title-default">
               <h2 className="mk-title-heading swm-hide-none">
-                <span>{title}</span>
+                <span>{data.projectTitle}</span>
               </h2>
               <div className="mk-title-subtitle swm-hide-none">
-                {data.shortDescription}
+                {data.firstName}{" "}{data.lastName}
               </div>
             </div>
           </div>
