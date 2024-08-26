@@ -21,6 +21,7 @@ const IndividualProject = () => {
         `${process.env.REACT_APP_API_URL}/services/find-by-slug${pathname}`
       );
       if (response.status === 200) {
+        console.log("response.service",response.data)
         setData(response.data);
       }
     };
