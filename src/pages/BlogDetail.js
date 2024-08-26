@@ -17,9 +17,8 @@ const BlogDetail = () => {
   const paramValue = searchParams.get("title");
   // Extract a specific query parameter
 
-  const data = blog.filter((data) => data.slug === paramValue);
+  const data = blog?.filter((data) => data.slug === paramValue);
   const singleBlog = data[0];
-  console.log("singleBlog", singleBlog);
   return (
     <Layout>
       <Breadcrumb title={singleBlog.blogTitle} />
