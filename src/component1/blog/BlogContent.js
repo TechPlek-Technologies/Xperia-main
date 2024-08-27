@@ -10,64 +10,73 @@ const BlogContent = () => {
 
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('en-US', options);
-}
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return date.toLocaleDateString("en-US", options);
+  }
   return (
     <>
-      {blogs.map((blog, index) => (
-        <article
-          className="mk-grid-item mk-grid-item-wrap mk-item--full"
-          key={index}
-        >
-          <div className="mk-post-wrap">
-            <div className="mk-post-content">
-              <div className="mk-post-meta highlight-text">
-                <div className="mk-post-meta-date-separator" />
-                <a href="#" className="entry-date published updated">
-                  {formatDate(blog.createdAt)}
-                </a>
-                <div className="mk-post-meta-separator" />
-                <a href="#" rel="tag">
-                  {blog.category}
-                </a>
-                <div className="mk-post-meta-separator" />
-              </div>
-              <h3 className="mk_post_title">
-                <a href={`${domain}/blog?title=${blog.slug}` }>
-                  {blog.blogTitle}
-                </a>
-              </h3>
-              <div className="mk-post-image">
-                <a
-                  href={`${domain}/blog?title=${blog.slug}` }
-                  className="mk-post-grid-image swm-anim"
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    width={939}
-                    height={569}
-                    src={`${process.env.REACT_APP_API_URL}/${JSON.parse(blog.iconImage).url}`}
-                    className="attachment-full size-full"
-                    alt="blog icon"
-                    srcSet={`${`${process.env.REACT_APP_API_URL}/${JSON.parse(blog.iconImage).url}`} 939w, ${`${process.env.REACT_APP_API_URL}/${JSON.parse(blog.iconImage).url}`} 300w, ${`${process.env.REACT_APP_API_URL}/${JSON.parse(blog.iconImage).url}`} 768w`}
-                    sizes="(max-width: 939px) 100vw, 939px"
-                  />
-                </a>
-              </div>
-              <div className="mk_post_excerpt">{blog.description}</div>
-              <div className="mk-post-button">
-                <a href={ `${domain}/blog?title=${blog.slug}`}>
-                  <span className="mk-post-button-arrow-start" />
-                  <span className="mk-post-button-text">read more</span>
-                  <span className="mk-post-button-arrow-end" />
-                </a>
+      {blogs &&
+        blogs.map((blog, index) => (
+          <article
+            className="mk-grid-item mk-grid-item-wrap mk-item--full"
+            key={index}
+          >
+            <div className="mk-post-wrap">
+              <div className="mk-post-content">
+                <div className="mk-post-meta highlight-text">
+                  <div className="mk-post-meta-date-separator" />
+                  <a href="#" className="entry-date published updated">
+                    {formatDate(blog.createdAt)}
+                  </a>
+                  <div className="mk-post-meta-separator" />
+                  <a href="#" rel="tag">
+                    {blog.category}
+                  </a>
+                  <div className="mk-post-meta-separator" />
+                </div>
+                <h3 className="mk_post_title">
+                  <a href={`${domain}/blog?title=${blog.slug}`}>
+                    {blog.blogTitle}
+                  </a>
+                </h3>
+                <div className="mk-post-image">
+                  <a
+                    href={`${domain}/blog?title=${blog.slug}`}
+                    className="mk-post-grid-image swm-anim"
+                  >
+                    <img
+                      loading="lazy"
+                      decoding="async"
+                      width={939}
+                      height={569}
+                      src={`${process.env.REACT_APP_API_URL}/${
+                        JSON.parse(blog.iconImage).url
+                      }`}
+                      className="attachment-full size-full"
+                      alt="blog icon"
+                      srcSet={`${`${process.env.REACT_APP_API_URL}/${
+                        JSON.parse(blog.iconImage).url
+                      }`} 939w, ${`${process.env.REACT_APP_API_URL}/${
+                        JSON.parse(blog.iconImage).url
+                      }`} 300w, ${`${process.env.REACT_APP_API_URL}/${
+                        JSON.parse(blog.iconImage).url
+                      }`} 768w`}
+                      sizes="(max-width: 939px) 100vw, 939px"
+                    />
+                  </a>
+                </div>
+                <div className="mk_post_excerpt">{blog.description}</div>
+                <div className="mk-post-button">
+                  <a href={`${domain}/blog?title=${blog.slug}`}>
+                    <span className="mk-post-button-arrow-start" />
+                    <span className="mk-post-button-text">read more</span>
+                    <span className="mk-post-button-arrow-end" />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-      ))}
+          </article>
+        ))}
     </>
   );
 };

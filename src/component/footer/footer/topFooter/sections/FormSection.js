@@ -18,11 +18,11 @@ const FormSection = () => {
   return (
     <>
     <div className={Style.Form} onClick={handleClickOpen}>
-    <div className={Style.header}>
+    {/* <div className={Style.header}>
       <h2 className={Style.h2}>
-        <span>{"Have a Project in Mind?"}</span>
+        <span>{""}</span>
       </h2>
-    </div>
+    </div> */}
     
     <div className={Style.body}>
       <img src={`${domain}/assets/img/contact/icon.webp`} alt='' className={Style.image}/>

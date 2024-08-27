@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import { Footer } from "../../component/footer/Footer";
 import { ResponsiveFooter } from "../../component/footer/responsive/Footer";
 import { useSelector } from "react-redux";
+import FooterMain from "../../component/footer/FooterMain";
 
 const Layout = ({ children, type }) => {
   const [screenSize, setScreenSize] = React.useState(getCurrentDimension());
@@ -52,11 +53,12 @@ const Layout = ({ children, type }) => {
             {/* .swm-main-container */}
             {/* {<Footer/>} */}
             {/* <Footer/> */}
-            {screenSize.width <= 880 ? (
+            {/* {screenSize.width <= 880 ? (
               <ResponsiveFooter settingsData={settingsData[0]} />
             ) : (
               <Footer settingsData={settingsData[0]} />
-            )}
+            )} */}
+            <FooterMain/>
           </div>
           {/* #swm-wrap */}
         </div>
