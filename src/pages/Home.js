@@ -8,16 +8,9 @@ import Blog from "../component1/blog/Blog";
 import Award from "../component1/award/Award";
 import AboutSection from "../component/home/AboutSection";
 import Team from "../component2/home/Team";
-import { useSelector } from "react-redux";
 
 const Home = () => {
-  const loading = useSelector((state) => state.loading.loading);
-
-  useEffect(() => {
-    if(loading){
-      window.location.reload();
-    }
-  }, []);
+  
   return (
     <>
       <Layout>

@@ -22,7 +22,6 @@ import { domain } from "./domain";
 
 function App() {
   const dispatch = useDispatch();
-
   const { projectData } = useSelector((state) => state.projects);
   const loading = useSelector((state) => state.loading.loading);
 
@@ -36,11 +35,19 @@ function App() {
         dispatch(fetchBlogs()),
       ]);
       dispatch(setLoading(false));
+      localStorage.setItem('dataLoaded',true)
     };
 
     fetchData();
-  }, [dispatch, loading]);
+  }, [dispatch]);
 
+  // useEffect(() => {
+  //   const dataLoaded= localStorage.getItem('dataLoaded')
+  //   console.log(dataLoaded)
+  //   if (!dataLoaded) {
+  //    window.location.reload(); // Redirect to the target route within the app
+  //   }
+  // }, []);
 
   return (
     <>
@@ -48,6 +55,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path={"/"} element={<Home />} />
+            <Route path={"/home"} element={<Home />} />
             <Route path={"/test"} element={<Test />} />
             <Route path={"/xperia-group"} element={<About />} />
             <Route path={"/pencil-box"} element={<About />} />
