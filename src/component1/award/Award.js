@@ -7,7 +7,6 @@ import axios from "axios";
 const Award = () => {
   const [activeId, setActiveId] = React.useState(1);
 
-  console.log(activeId)
   const handleMouseEnter = (id) => {
     setActiveId(id);
   };

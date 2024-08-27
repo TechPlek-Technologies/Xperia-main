@@ -1,11 +1,14 @@
 import React from "react";
 import Layout from "../component2/wrapper/Layout";
 import { domain } from "../domain";
+import { useSelector } from "react-redux";
 
 const Blog = () => {
   // Static data for blog posts
 
-  const blog = JSON.parse(localStorage.getItem('Blogs'));
+  // const blog = JSON.parse(localStorage.getItem('Blogs'));
+  const { blogData: blog } = useSelector((state) => state.blogs);
+
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);
     const options = { year: "numeric", month: "long", day: "numeric" };

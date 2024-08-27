@@ -1,7 +1,6 @@
 import React from "react";
 
 const Content = ({ data }) => {
-  console.log("data", data);
   return (
     <div
       className="elementor-element elementor-element-6d8ea567 e-flex e-con-boxed e-con e-parent"

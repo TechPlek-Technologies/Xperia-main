@@ -4,17 +4,18 @@ import LeftContent from "../../wrapper/Home/Banner/LeftContent";
 import LeftWrapper from "../../wrapper/Home/Banner/left-wrapper";
 import Rightwrapper from "../../wrapper/Home/Banner/Right-wrapper";
 import RightContent from "../../wrapper/Home/Banner/RightContent";
+import { useSelector } from "react-redux";
 
 const HomeBanner = () => {
-  const data = JSON.parse(localStorage.getItem("Banner"));
-  return (
-    data && (
-      <MainWrapper>
-        <LeftWrapper>{<LeftContent BannerData={data} />}</LeftWrapper>
+  // const data = JSON.parse(localStorage.getItem("Banner"));
+  const { bannerData: data } = useSelector((state) => state.banners);
 
-        <Rightwrapper>{<RightContent BannerData={data} />}</Rightwrapper>
-      </MainWrapper>
-    )
+  return (
+    <MainWrapper>
+      <LeftWrapper>{ <LeftContent BannerData={data} />}</LeftWrapper>
+
+      <Rightwrapper>{ <RightContent BannerData={data} />}</Rightwrapper>
+    </MainWrapper>
   );
 };
 

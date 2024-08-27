@@ -1,1 +1,1 @@
-export const domain='https://xperia-main.onrender.com'
+export const domain='http://localhost:3000'

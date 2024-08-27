@@ -3,7 +3,7 @@ import React from "react";
 const LeftContent = ({ BannerData }) => {
   return (
     <>
-      {BannerData.map((banner, index) => {
+      {BannerData && BannerData.map((banner, index) => {
         const mainImage = JSON.parse(banner.main1259x724);
         const sub1024Image = JSON.parse(banner.sub1024x589);
         const sub768Image = JSON.parse(banner.sub768x442);

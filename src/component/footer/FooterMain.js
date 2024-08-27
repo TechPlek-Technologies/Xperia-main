@@ -55,18 +55,7 @@ const ServiceList = () => {
 };
 const FooterMain = () => {
   const { settingsData } = useSelector((state) => state.settings);
-  console.log("settingsData", settingsData);
 
-  let footerLogoUrl = "";
-
-  try {
-    // Attempt to parse the footerLogo JSON and extract the URL
-    footerLogoUrl = JSON.parse(settingsData.footerLogo).url;
-  } catch (error) {
-    console.error("Error parsing footerLogo JSON:", error);
-    // Provide a fallback URL or handle the error as needed
-    footerLogoUrl = "assets/"; // Replace with your actual fallback URL or logic
-  }
   return (
     settingsData && (
       <footer id="footer" className="footer swm-anim">

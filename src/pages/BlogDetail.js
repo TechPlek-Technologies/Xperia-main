@@ -4,6 +4,7 @@ import Layout from "../component2/wrapper/Layout";
 import Breadcrumb from "../component2/Blog/Breadcrumb";
 import Banner from "../component2/Blog/Banner";
 import RelatedPost from "../component2/Blog/RelatedPost";
+import { useSelector } from "react-redux";
 
 function formatDate(isoDateStr) {
   const date = new Date(isoDateStr);
@@ -11,7 +12,8 @@ function formatDate(isoDateStr) {
   return date.toLocaleDateString("en-US", options);
 }
 const BlogDetail = () => {
-  const blog = JSON.parse(localStorage.getItem("Blogs"));
+  // const blog = JSON.parse(localStorage.getItem("Blogs"));
+  const { blogData: blog } = useSelector((state) => state.blogs);
 
   const [searchParams] = useSearchParams();
   const paramValue = searchParams.get("title");

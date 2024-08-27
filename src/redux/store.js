@@ -11,6 +11,11 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { settingsReducer } from './slice/settings-slice';
+import { projectsReducer } from './slice/project-slice';
+import { bannersReducer } from './slice/banner-slice';
+import { blogsReducer } from './slice/blog-slice';
+import { servicesReducer } from './slice/service-slice';
+import { loadingReducer } from './slice/loading-slice';
 
 
 const persistConfig = {
@@ -22,6 +27,11 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     settings: settingsReducer,
+    projects: projectsReducer,
+    banners: bannersReducer,
+    blogs: blogsReducer,
+    service: servicesReducer,
+    loading: loadingReducer,
     
     // product: productReducer, // Uncomment if you have a product slice
 });

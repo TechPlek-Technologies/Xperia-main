@@ -1,28 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "../common/section-heading";
 import { FeaturedProjects, ProjectImages } from "./ProjectDemo";
 import { FeatureData } from "../../data/home/Data";
+import { useSelector } from "react-redux";
 // Helper function to split the imageData array
 const splitArray = (array) => {
-  const length = array.length;
+  const length = array?.length;
   const middle = Math.floor(length / 2);
 
   if (length % 2 === 0) {
     // Even length, split equally
-    const firstHalf = array.slice(0, middle);
-    const secondHalf = array.slice(middle);
+    const firstHalf = array?.slice(0, middle);
+    const secondHalf = array?.slice(middle);
     return { topImages: firstHalf, bottomImages: secondHalf };
   } else {
     // Odd length, second array gets one more element
-    const firstHalf = array.slice(0, middle + 1);
-    const secondHalf = array.slice(middle + 1);
+    const firstHalf = array?.slice(0, middle + 1);
+    const secondHalf = array?.slice(middle + 1);
     return { topImages: firstHalf, bottomImages: secondHalf };
   }
 };
 
+function duplicateToLimit(arr) {
+  // If the array length is already 8 or more, return the original array
+  if (arr?.length >= 8) {
+    return arr.slice(0, 8);
+  }
+
+  // While the array length is less than 8, duplicate its elements
+  while (arr?.length < 8) {
+    // Calculate the number of elements needed to reach a length of 8
+    const elementsNeeded = 8 - arr.length;
+
+    // Duplicate elements from the start of the array to fill the gap
+    arr = arr.concat(arr.slice(0, elementsNeeded));
+  }
+
+  return arr;
+}
+
 const Projects = () => {
   // const [firstHalf, secondHalf] = splitData(FeatureData.imageData);
-  const { topImages, bottomImages } = splitArray(FeatureData.imageData);
+  const { projectData } = useSelector((state) => state.projects);
+  // console.log("projectData", projectData);
+
+  // const projectData = JSON.parse(localStorage.getItem("projects"));
+  console.log("projectData", projectData);
+
+  const array = duplicateToLimit(projectData);
+  const { topImages, bottomImages } = splitArray(array);
+
 
   return (
     <>
@@ -50,11 +77,11 @@ const Projects = () => {
             >
               <div className="mk-moving-projects-gap" />
               <div className="mk-moving-projects-holder">
-                <ProjectImages imageData={topImages} />
-                <ProjectImages imageData={bottomImages} />
+                {topImages && <ProjectImages imageData={topImages} />}
+                {bottomImages && <ProjectImages imageData={bottomImages} />}
                 <div className="mk-moving-project-info">
                   <div className="mk-moving-project-info-bg" />
-                  <FeaturedProjects />
+                  {array && <FeaturedProjects data={projectData} />}
                 </div>
               </div>
             </section>

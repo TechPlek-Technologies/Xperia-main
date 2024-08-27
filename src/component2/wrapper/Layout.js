@@ -53,12 +53,12 @@ const Layout = ({ children, type }) => {
             {/* .swm-main-container */}
             {/* {<Footer/>} */}
             {/* <Footer/> */}
-            {/* {screenSize.width <= 880 ? (
+            {screenSize.width <= 880 ? (
               <ResponsiveFooter settingsData={settingsData[0]} />
             ) : (
               <Footer settingsData={settingsData[0]} />
-            )} */}
-            <FooterMain/>
+            )}
+            {/* <FooterMain/> */}
           </div>
           {/* #swm-wrap */}
         </div>
