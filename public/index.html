@@ -8,6 +8,24 @@
     <title>Xperia Group &#8211; Creative Agency</title>
 
     <link
+    rel="preload"
+    href="//fonts.googleapis.com/css?family=Poppins%3A500%2C500italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CPoppins%3A600%2C600italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CRoboto+Mono%3A400%2C400"
+    as="style"
+  />
+  <link
+    rel="preload"
+    href="/assets/css/elementor-frontend-inline.css"
+    as="style"
+  />
+  <link
+    rel="preload"
+    href="/assets/js/jquery/jquery.min.js?ver=3.7.1"
+    as="script"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+    <link
       rel="stylesheet"
       id="swm-google-fonts-css"
       href="//fonts.googleapis.com/css?family=Poppins%3A500%2C500italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CPoppins%3A600%2C600italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CRoboto+Mono%3A400%2C400&#038;display=swap&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0"
@@ -520,5 +538,15 @@
       src="/assets/js/wp-content/frontend.min.js?ver=3.20.3"
       id="elementor-frontend-js"
     ></script>
+    <script>
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          if (!window.localStorage.getItem('pageReloaded')) {
+            window.localStorage.setItem('pageReloaded', 'true');
+            window.location.reload();
+          }
+        }, 3000); // 2000 milliseconds = 2 seconds
+      });
+    </script>
   </body>
 </html>
