@@ -539,6 +539,16 @@
       id="elementor-frontend-js"
       defer
     ></script>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          if (!window.localStorage.getItem("pageReloaded")) {
+            window.localStorage.setItem("pageReloaded", "true");
+            window.location.reload();
+          }
+        }, 3000); // 3000 milliseconds = 3 seconds
+      });
+    </script>
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-widgets.min.js"
