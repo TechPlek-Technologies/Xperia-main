@@ -7,19 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Xperia Group &#8211; Creative Agency</title>
 
-   
-  <link
-    rel="preload"
-    href="/assets/css/elementor-frontend-inline.css"
-    as="style"
-  />
-  <link
-    rel="preload"
-    href="/assets/js/jquery/jquery.min.js?ver=3.7.1"
-    as="script"
-  />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link
+      rel="preload"
+      href="/assets/css/elementor-frontend-inline.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="/assets/js/jquery/jquery.min.js?ver=3.7.1"
+      as="script"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
       rel="stylesheet"
@@ -66,11 +64,7 @@
       type="text/css"
     />
     <!--  -->
-    <link
-      rel="stylesheet"
-      href="/assets/css/index.css"
-      media="all"
-    />
+    <link rel="stylesheet" href="/assets/css/index.css" media="all" />
 
     <!--  -->
     <link
@@ -132,7 +126,7 @@
     <!-- wordpress css imports -->
 
     <link
-      rel="stylesheet"
+      rel="preload"
       id="mk-widget-style-css"
       href="/assets/css/wp/custom-widgets.css?ver=1.0.0"
       type="text/css"
@@ -183,13 +177,6 @@
     />
 
     <!--  -->
-    <link
-      rel="stylesheet"
-      id="mk-core-main-css"
-      href="/assets/css/wp/core-main.css"
-      type="text/css"
-      media="all"
-    />
 
     <!--  -->
     <link
@@ -200,10 +187,7 @@
       media="all"
     />
     <!--  -->
-    <link
-      rel="stylesheet"
-      href="/assets/css/wp/widget-icon-list.min.css"
-    />
+    <link rel="stylesheet" href="/assets/css/wp/widget-icon-list.min.css" />
     <!--  -->
     <link
       rel="stylesheet"
@@ -213,18 +197,15 @@
       media="all"
     />
 
-    <!-- inline js -->
+    <link
+      rel="stylesheet"
+      id="mk-core-main-css"
+      href="/assets/css/wp/core-main.css"
+      type="text/css"
+      media="all"
+    />
 
-    <script
-      type="text/javascript"
-      src="/assets/js/jquery/jquery-migrate.min.js?ver=3.4.1"
-      id="jquery-migrate-js"
-      defer
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/7633f04f53.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- inline js -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -240,6 +221,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
+    <script
+      type="text/javascript"
+      src="/assets/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      id="jquery-migrate-js"
+      defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7633f04f53.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script type="text/javascript" id="swm-main-js-extra">
       /* <![CDATA[ */
       var swmJSOptions = {
@@ -253,24 +245,28 @@
       type="text/javascript"
       src="/assets/js/wp-content/custom-functions.min.js?ver=1.0.0"
       id="mk-custom-functions-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-gsap.min.js?ver=1.0.0"
       id="mk-gsap-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-scroll-trigger.min.js?ver=1.0.0"
       id="mk-scroll-trigger-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-anime.min.js?ver=1.0.0"
       id="mk-anime-js"
+      defer
     ></script>
 
     <script
@@ -313,7 +309,6 @@
       id="imagesloaded-js"
       defer
     ></script>
- 
 
     <script
       type="text/javascript"
@@ -336,15 +331,7 @@
       defer
     ></script>
     <!--  -->
-    <script
-      type="text/javascript"
-      src="/assets/js/wp-content/mk-widgets.min.js"
-      id="mk-widgets-js"
-      defer
-    ></script>
-    <!--  -->
 
- 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-splittext.min.js?ver=1.0.0"
@@ -552,15 +539,94 @@
       id="elementor-frontend-js"
       defer
     ></script>
+    <script
+      type="text/javascript"
+      src="/assets/js/wp-content/mk-widgets.min.js"
+      id="mk-widgets-js"
+      defer
+    ></script>
     <script>
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          if (!window.localStorage.getItem('pageReloaded')) {
-            window.localStorage.setItem('pageReloaded', 'true');
-            window.location.reload();
+      document.addEventListener("DOMContentLoaded", function () {
+        var mkDualSlider = function (scope) {
+          var holders = scope.querySelectorAll(".mk-dual-slider");
+
+          // mkScrollLoad.init();
+          // mkDualSliderInit();
+
+          holders.forEach(function (holder) {
+            mkDualSliderSyncSwipers(holder);
+            mkDualSliderSyncInfo(holder);
+          });
+
+          function mkDualSliderSyncSwipers(thisHolder) {
+            var mkLeftSwiper = thisHolder.querySelector(".mk-dual-slider-left"),
+              mkRightSwiper = thisHolder.querySelector(".mk-dual-slider-right");
+
+            if (mkLeftSwiper && mkRightSwiper) {
+              var autoplay = thisHolder.classList.contains(
+                "mk-dual-slider-autoplay-yes"
+              );
+
+              if (mkLeftSwiper.swiper && mkRightSwiper.swiper) {
+                mkRightSwiper.swiper.autoplay.stop();
+                mkLeftSwiper.swiper.autoplay.stop();
+                mkRightSwiper.swiper.controller.control = mkLeftSwiper.swiper;
+                mkRightSwiper.swiper.controller.by = "slide";
+                mkRightSwiper.swiper.controller.inverse = true;
+                mkLeftSwiper.swiper.controller.control = mkRightSwiper.swiper;
+
+                if (autoplay) {
+                  mkRightSwiper.swiper.autoplay.start();
+                }
+              }
+            }
           }
-        }, 3000); // 3000 milliseconds = 3 seconds
+
+          function mkDualSliderSyncInfo(thisHolder) {
+            var mkLeftSwiper = thisHolder.querySelector(".mk-dual-slider-left"),
+              contentToPopulate = thisHolder.querySelector(
+                ".mk-dual-slider-content-large"
+              ),
+              contents = mkLeftSwiper.querySelectorAll(
+                ".mk-dual-slider-item .mk-dual-slider-content"
+              );
+
+            mkDualSliderPopulateContent(
+              mkLeftSwiper,
+              contentToPopulate,
+              contents
+            );
+
+            if (mkLeftSwiper.swiper) {
+              mkLeftSwiper.swiper.on("slideChangeTransitionStart", function () {
+                setTimeout(function () {
+                  mkDualSliderPopulateContent(
+                    mkLeftSwiper,
+                    contentToPopulate,
+                    contents
+                  );
+                }, 300);
+              });
+            }
+          }
+
+          function mkDualSliderPopulateContent(
+            mkLeftSwiper,
+            contentToPopulate,
+            contents
+          ) {
+            var activeIndex = mkLeftSwiper.swiper.activeIndex;
+
+            if (contentToPopulate) {
+              contentToPopulate.innerHTML = contents[activeIndex].innerHTML;
+            }
+          }
+        };
+
+        // Initialize your dual slider
+        mkDualSlider(document);
       });
     </script>
+    <!--  -->
   </body>
 </html>
