@@ -6,7 +6,7 @@ const WrapperLogo = ({settingsData}) => {
       <a href="/">
         <img
           width={229}
-          src={`${process.env.REACT_APP_API_URL}${JSON.parse(settingsData?.sidebarLogo).url}`}
+          src={`https://xperia.api.regalstyling.com${JSON.parse(settingsData?.sidebarLogo).url}`}
           className="attachment-full size-full wp-image-1047"
           alt="sidebar logo"
           style={{ width: "228px" }}

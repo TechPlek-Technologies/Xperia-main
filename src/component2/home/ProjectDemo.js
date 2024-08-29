@@ -25,11 +25,11 @@ export const ProjectImages = ({ imageData }) => {
                 width={750}
                 height={539}
                 // src={project.img.path}
-                src={`${process.env.REACT_APP_API_URL}/${JSON.parse(project.iconImages)?.url}`}
+                src={`https://xperia.api.regalstyling.com/${JSON.parse(project.iconImages)?.url}`}
                 className="attachment-full size-full"
                 alt="projectImage"
                 // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
-                srcSet={`${process.env.REACT_APP_API_URL}/${JSON.parse(project.iconImages)?.url} 749w, ${process.env.REACT_APP_API_URL}/${JSON.parse(project.iconImages)?.url} 300w`}
+                srcSet={`https://xperia.api.regalstyling.com/${JSON.parse(project.iconImages)?.url} 749w, https://xperia.api.regalstyling.com/${JSON.parse(project.iconImages)?.url} 300w`}
                 sizes="(max-width: 749px) 100vw, 749px"
               />
             </a>

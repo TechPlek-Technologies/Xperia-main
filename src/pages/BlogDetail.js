@@ -44,17 +44,17 @@ const BlogDetail = () => {
                                 fetchpriority="high"
                                 width={939}
                                 height={569}
-                                src={`${process.env.REACT_APP_API_URL}${
+                                src={`https://xperia.api.regalstyling.com${
                                   JSON.parse(singleBlog.bannerImage).url
                                 }`}
                                 className="attachment-swm_image_size_post size-swm_image_size_post wp-post-image"
                                 alt=""
                                 decoding="async"
-                                srcSet={`${process.env.REACT_APP_API_URL}${
+                                srcSet={`https://xperia.api.regalstyling.com${
                                   JSON.parse(singleBlog.bannerImage).url
-                                } 939w, ${process.env.REACT_APP_API_URL}${
+                                } 939w, https://xperia.api.regalstyling.com${
                                   JSON.parse(singleBlog.bannerImage).url
-                                } 300w, ${process.env.REACT_APP_API_URL}${
+                                } 300w, https://xperia.api.regalstyling.com${
                                   JSON.parse(singleBlog.bannerImage).url
                                 } 768w`}
                                 sizes="(max-width: 939px) 100vw, 939px"

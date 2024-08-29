@@ -16,10 +16,10 @@ const RightContent = ({ BannerData }) => {
                   decoding="async"
                   width={541}
                   height={724}
-                  src={`${process.env.REACT_APP_API_URL}${banner541Image.url}`}
+                  src={`https://xperia.api.regalstyling.com${banner541Image.url}`}
                   srcSet={`
-                  ${process.env.REACT_APP_API_URL}${banner541Image.url} 541w,
-                  ${process.env.REACT_APP_API_URL}${banner224Image.url} 224w
+                  https://xperia.api.regalstyling.com${banner541Image.url} 541w,
+                  https://xperia.api.regalstyling.com${banner224Image.url} 224w
                 `}
                   className="attachment-full size-full"
                   alt={banner541Image.name}

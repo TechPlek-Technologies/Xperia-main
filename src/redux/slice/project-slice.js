@@ -12,7 +12,7 @@ export const fetchProjects = createAsyncThunk(
   "projects/fetchProjects",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`https://xperia-main1.onrender.com/projects/all-project`);
+      const response = await axios.get(`https://xperia.api.regalstyling.com/projects/all-project`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);

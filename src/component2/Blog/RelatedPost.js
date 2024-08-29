@@ -28,7 +28,7 @@ const RelatedPost = ({ data }) => {
                       <img
                         width={939}
                         height={569}
-                        src={`${process.env.REACT_APP_API_URL}/${iconImage.url}`}
+                        src={`https://xperia.api.regalstyling.com/${iconImage.url}`}
                         className="attachment-medium-large size-medium-large wp-post-image"
                         alt={post.blogTitle}
                         decoding="async"

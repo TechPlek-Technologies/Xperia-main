@@ -27,7 +27,7 @@ const LogoSection = ({settingsData}) => {
         <div className={Style.logo}>
             <div className={Style.container}>
                 <Link to={"/"} className={Style.link}>
-                    <img src={`${process.env.REACT_APP_API_URL}${JSON.parse(settingsData?.footerLogo)?.url}`} alt='footerLogo' className={Style.image} />
+                    <img src={`https://xperia.api.regalstyling.com${JSON.parse(settingsData?.footerLogo)?.url}`} alt='footerLogo' className={Style.image} />
                 </Link>
             </div>
         </div>

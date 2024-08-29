@@ -124,7 +124,7 @@ const Blog = () => {
                                     decoding="async"
                                     width={939}
                                     height={569}
-                                    src={`${process.env.REACT_APP_API_URL}/${
+                                    src={`https://xperia.api.regalstyling.com/${
                                       JSON.parse(post.iconImage).url
                                     }`}
                                     className="attachment-full size-full"

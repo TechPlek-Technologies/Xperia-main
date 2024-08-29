@@ -51,7 +51,7 @@ const PortfolioItem = ({ project }) => {
                 height={820}
                 src={
                   project?.iconImages
-                    ? `${process.env.REACT_APP_API_URL}${
+                    ? `https://xperia.api.regalstyling.com${
                         JSON.parse(project.iconImages).url
                       }`
                     : ""
@@ -61,10 +61,10 @@ const PortfolioItem = ({ project }) => {
                 srcSet={
                   project?.iconImages
                     ? `
-                    ${process.env.REACT_APP_API_URL}${
+                    https://xperia.api.regalstyling.com${
                         JSON.parse(project.iconImages).url
                       } 750w,
-                    ${process.env.REACT_APP_API_URL}${
+                    https://xperia.api.regalstyling.com${
                         JSON.parse(project.iconImages).url
                       } 274w
                   `

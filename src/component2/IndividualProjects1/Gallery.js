@@ -28,13 +28,13 @@ const Gallery = ({ data }) => {
                 width={750}
                 height={748}
                 alt="Gallery Img"
-                src={`${process.env.REACT_APP_API_URL}/uploads/${item.file.path}`}
+                src={`https://xperia.api.regalstyling.com/uploads/${item.file.path}`}
                 className="attachment-large size-large wp-image-1159"
                 srcSet={`
-                  ${process.env.REACT_APP_API_URL}/uploads/${item.file.path}         750w,
-                  ${process.env.REACT_APP_API_URL}/uploads/${item.file.path} 300w,
-                  ${process.env.REACT_APP_API_URL}/uploads/${item.file.path} 150w,
-                  ${process.env.REACT_APP_API_URL}/uploads/${item.file.path} 100w
+                  https://xperia.api.regalstyling.com/uploads/${item.file.path}         750w,
+                  https://xperia.api.regalstyling.com/uploads/${item.file.path} 300w,
+                  https://xperia.api.regalstyling.com/uploads/${item.file.path} 150w,
+                  https://xperia.api.regalstyling.com/uploads/${item.file.path} 100w
                 `}
                 sizes="(max-width: 750px) 100vw, 750px"
               />

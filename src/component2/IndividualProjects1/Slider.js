@@ -39,14 +39,14 @@ const Slider = ({ data }) => {
                             decoding="async"
                             width={1400}
                             height={720}
-                            src={`${process.env.REACT_APP_API_URL}/uploads/${item.file.path}`}
+                            src={`https://xperia.api.regalstyling.com/uploads/${item.file.path}`}
                             className="attachment-full size-full"
                             alt="carousel images"
                             srcSet={`
-                              ${process.env.REACT_APP_API_URL}/uploads/${item.file.path}          1400w,
-                              ${process.env.REACT_APP_API_URL}/uploads/${item.file.path}   300w,
-                              ${process.env.REACT_APP_API_URL}/uploads/${item.file.path} 1024w,
-                              ${process.env.REACT_APP_API_URL}/uploads/${item.file.path}   768w
+                              https://xperia.api.regalstyling.com/uploads/${item.file.path}          1400w,
+                              https://xperia.api.regalstyling.com/uploads/${item.file.path}   300w,
+                              https://xperia.api.regalstyling.com/uploads/${item.file.path} 1024w,
+                              https://xperia.api.regalstyling.com/uploads/${item.file.path}   768w
                             `}
                             sizes="(max-width: 1400px) 100vw, 1400px"
                           />

@@ -19,7 +19,7 @@ const Award = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/awards/all-awards`
+        `https://xperia.api.regalstyling.com/awards/all-awards`
       );
       if (response.status === 200) {
         setData(response.data);
