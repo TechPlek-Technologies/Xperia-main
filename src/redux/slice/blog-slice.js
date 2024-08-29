@@ -12,7 +12,7 @@ export const fetchBlogs = createAsyncThunk(
   "blogs/fetchBlogs",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/blogs/all-blogs`);
+      const response = await axios.get(`https://xperia-main1.onrender.com/blogs/all-blogs`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);

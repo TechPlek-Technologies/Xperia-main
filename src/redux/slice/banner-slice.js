@@ -12,7 +12,7 @@ export const fetchBanners = createAsyncThunk(
   "banners/fetchBanners",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/home-banner/all-banners`);
+      const response = await axios.get(`https://xperia-main1.onrender.com/home-banner/all-banners`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);

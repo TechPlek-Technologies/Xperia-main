@@ -12,7 +12,7 @@ export const fetchServices = createAsyncThunk(
   "services/fetchServices",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/services/all-services`);
+      const response = await axios.get(`https://xperia-main1.onrender.com/services/all-services`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);
