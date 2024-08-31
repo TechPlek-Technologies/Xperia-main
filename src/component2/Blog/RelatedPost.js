@@ -15,7 +15,7 @@ const RelatedPost = ({ data }) => {
           </h3>
           <ul>
             {data.map((post, index) => {
-              const iconImage = JSON.parse(post.iconImage);
+              const iconImage = post.iconImage;
 
               return (
                 <li key={post.id}>
@@ -28,7 +28,7 @@ const RelatedPost = ({ data }) => {
                       <img
                         width={939}
                         height={569}
-                        src={`https://xperia.api.regalstyling.com/${iconImage.url}`}
+                        src={`https://api.xperiagroup.in/${iconImage.url}`}
                         className="attachment-medium-large size-medium-large wp-post-image"
                         alt={post.blogTitle}
                         decoding="async"

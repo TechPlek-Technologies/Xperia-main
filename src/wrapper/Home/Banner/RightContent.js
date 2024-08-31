@@ -5,8 +5,8 @@ const RightContent = ({ BannerData }) => {
     <>
       {BannerData &&
         BannerData.map((banner, index) => {
-          const banner541Image = JSON.parse(banner.banner541x724);
-          const banner224Image = JSON.parse(banner.banner224x300);
+          const banner541Image = banner.banner541x724;
+          const banner224Image = banner.banner224x300;
 
           return (
             <div key={index} className="mk-dual-slider-item swiper-slide">
@@ -16,10 +16,10 @@ const RightContent = ({ BannerData }) => {
                   decoding="async"
                   width={541}
                   height={724}
-                  src={`https://xperia.api.regalstyling.com${banner541Image.url}`}
+                  src={`https://api.xperiagroup.in${banner541Image.url}`}
                   srcSet={`
-                  https://xperia.api.regalstyling.com${banner541Image.url} 541w,
-                  https://xperia.api.regalstyling.com${banner224Image.url} 224w
+                  https://api.xperiagroup.in${banner541Image.url} 541w,
+                  https://api.xperiagroup.in${banner224Image.url} 224w
                 `}
                   className="attachment-full size-full"
                   alt={banner541Image.name}

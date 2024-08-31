@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = ({ data }) => {
   // Parse the projectImages string to a JSON object
-  const projectImages = JSON.parse(data.projectImages);
+  const projectImages = data.projectImages;
 
   return (
     <div
@@ -28,13 +28,13 @@ const Gallery = ({ data }) => {
                 width={750}
                 height={748}
                 alt="Gallery Img"
-                src={`https://xperia.api.regalstyling.com/uploads/${item.file.path}`}
+                src={`https://api.xperiagroup.in/uploads/${item.file.path}`}
                 className="attachment-large size-large wp-image-1159"
                 srcSet={`
-                  https://xperia.api.regalstyling.com/uploads/${item.file.path}         750w,
-                  https://xperia.api.regalstyling.com/uploads/${item.file.path} 300w,
-                  https://xperia.api.regalstyling.com/uploads/${item.file.path} 150w,
-                  https://xperia.api.regalstyling.com/uploads/${item.file.path} 100w
+                  https://api.xperiagroup.in/uploads/${item.file.path}         750w,
+                  https://api.xperiagroup.in/uploads/${item.file.path} 300w,
+                  https://api.xperiagroup.in/uploads/${item.file.path} 150w,
+                  https://api.xperiagroup.in/uploads/${item.file.path} 100w
                 `}
                 sizes="(max-width: 750px) 100vw, 750px"
               />

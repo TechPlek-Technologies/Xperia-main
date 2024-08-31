@@ -9,7 +9,7 @@ const Team = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/teams/all-teams`
+        `https://api.xperiagroup.in/teams/all-teams`
       );
       if (response.status === 200) {
         setData(response.data);
@@ -20,17 +20,17 @@ const Team = () => {
   return (
     <Layout>
       <Breadcrumb />
-      <div id="content" class="swm-main-container swm-site-content swm-anim">
-        <div class="swm_site_content_wrap swm-container"></div>
+      <div id="content" className="swm-main-container swm-site-content swm-anim">
+        <div className="swm_site_content_wrap swm-container"></div>
         <div
           data-elementor-type="wp-page"
           data-elementor-id="1259"
-          class="elementor elementor-1259"
+          className="elementor elementor-1259"
         >
           {data && <TeamSection data={data} />}
         </div>
 
-        <div class="clear"></div>
+        <div className="clear"></div>
       </div>
     </Layout>
   );

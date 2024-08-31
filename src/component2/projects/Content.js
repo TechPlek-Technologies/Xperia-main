@@ -33,7 +33,6 @@ const Filter = ({ activeFilter, onFilterChange }) => {
 };
 
 const PortfolioItem = ({ project }) => {
-
   return (
     <>
       <article className="mk-grid-item mk-grid-item-wrap mk-item--full post-1322 portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-photography">
@@ -51,9 +50,7 @@ const PortfolioItem = ({ project }) => {
                 height={820}
                 src={
                   project?.iconImages
-                    ? `https://xperia.api.regalstyling.com${
-                        JSON.parse(project.iconImages).url
-                      }`
+                    ? `https://api.xperiagroup.in${project.iconImages.url}`
                     : ""
                 }
                 className="attachment-full size-full"
@@ -61,12 +58,8 @@ const PortfolioItem = ({ project }) => {
                 srcSet={
                   project?.iconImages
                     ? `
-                    https://xperia.api.regalstyling.com${
-                        JSON.parse(project.iconImages).url
-                      } 750w,
-                    https://xperia.api.regalstyling.com${
-                        JSON.parse(project.iconImages).url
-                      } 274w
+                    https://api.xperiagroup.in${project.iconImages.url} 750w,
+                    https://api.xperiagroup.in${project.iconImages.url} 274w
                   `
                     : ""
                 }
@@ -122,7 +115,7 @@ const Content = ({ projectData }) => {
     <div
       data-elementor-type="wp-page"
       data-elementor-id="1261"
-      class="elementor elementor-1261"
+      className="elementor elementor-1261"
     >
       <div
         className="elementor-element elementor-element-33f69099 e-flex e-con-boxed e-con e-parent"

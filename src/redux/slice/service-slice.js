@@ -12,7 +12,7 @@ export const fetchServices = createAsyncThunk(
   "services/fetchServices",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`https://xperia.api.regalstyling.com/services/all-services`);
+      const response = await axios.get(`https://api.xperiagroup.in/services/all-services`);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response?.data || error.message);

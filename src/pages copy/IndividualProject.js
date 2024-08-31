@@ -17,7 +17,7 @@ const IndividualProject = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/services/find-by-slug${pathname}`
+        `https://api.xperiagroup.in/services/find-by-slug${pathname}`
       );
       if (response.status === 200) {
         setData(response.data);

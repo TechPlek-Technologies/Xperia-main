@@ -1,7 +1,6 @@
 import React from "react";
 
 const Banner = ({ data, title }) => {
-
   return (
     <div
       className="elementor-element elementor-element-4b0b5cb5 e-con-full e-flex e-con e-parent"
@@ -16,9 +15,7 @@ const Banner = ({ data, title }) => {
         // Uncomment the next line if you want to use the settings
         data-settings='{"background_background":"classic","mk_ext_is_sticky":"false"}'
         style={{
-          backgroundImage: `url(https://xperia.api.regalstyling.com${
-            JSON.parse(data.bannerImages).url
-          })`,
+          backgroundImage: `url(https://api.xperiagroup.in${data.bannerImages.url})`,
         }}
       />
       <div
@@ -40,7 +37,7 @@ const Banner = ({ data, title }) => {
                 <span>{data.projectTitle}</span>
               </h2>
               <div className="mk-title-subtitle swm-hide-none">
-                {data.firstName}{" "}{data.lastName}
+                {data.firstName} {data.lastName}
               </div>
             </div>
           </div>
