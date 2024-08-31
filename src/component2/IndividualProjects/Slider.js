@@ -1,7 +1,6 @@
 import React from "react";
 
 const Slider = ({ data }) => {
-  console.log("data", data);
 
   return (
     <div
@@ -35,14 +34,14 @@ const Slider = ({ data }) => {
                           decoding="async"
                           width={1400}
                           height={720}
-                          src={`${process.env.REACT_APP_API_URL}${data.carousel1.url}`}
+                          src={`https://xperia.api.regalstyling.com${JSON.parse(data.carousel1).url}`}
                           className="attachment-full size-full"
                           alt=""
                           srcSet={`
-                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url}          1400w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url}   300w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url} 1024w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel1.url}   768w
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel1).url}          1400w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel1).url}   300w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel1).url} 1024w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel1).url}   768w
                                 `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
@@ -60,14 +59,14 @@ const Slider = ({ data }) => {
                           decoding="async"
                           width={1400}
                           height={720}
-                          src={`${process.env.REACT_APP_API_URL}${data.carousel2.url}`}
+                          src={`https://xperia.api.regalstyling.com${JSON.parse(data.carousel2).url}`}
                           className="attachment-full size-full"
                           alt=""
                           srcSet={`
-                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url}          1400w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url}   300w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url} 1024w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel2.url}   768w
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel2).url}          1400w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel2).url}   300w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel2).url} 1024w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel2).url}   768w
                                 `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
@@ -86,14 +85,14 @@ const Slider = ({ data }) => {
                           decoding="async"
                           width={1400}
                           height={720}
-                          src={`${process.env.REACT_APP_API_URL}${data.carousel3.url}`}
+                          src={`https://xperia.api.regalstyling.com${JSON.parse(data.carousel3).url}`}
                           className="attachment-full size-full"
                           alt=""
                           srcSet={`
-                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url}          1400w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url}   300w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url} 1024w,
-                                  ${process.env.REACT_APP_API_URL}${data.carousel3.url}   768w
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel3).url}          1400w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel3).url}   300w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel3).url} 1024w,
+                                  https://xperia.api.regalstyling.com${JSON.parse(data.carousel3).url}   768w
                                 `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />

@@ -2,24 +2,23 @@ import React from 'react'
 import Style from "./LogoSection.module.css"
 import { Link } from 'react-router-dom'
 import MediaIcons from './MediaIcons'
-import { domain } from '../../../../../domain'
-const LogoSection = () => {
+const LogoSection = ({settingsData}) => {
 
     const socialMediaIcons=[
         {
-            link:"https://www.instagram.com/",
+            link:settingsData?.instagram,
             icon:"fab fa-instagram"
         },
         {
-            link:"https://www.facebook.com/",
+            link:settingsData?.facebook,
             icon:"fa-brands fa-facebook-f"
         },
         {
-            link:"https://www.linkedin.com/",
+            link:settingsData?.x,
             icon:"fa-brands fa-linkedin"
         },
         {
-            link:"https://www.youtube.com/",
+            link:settingsData?.youtube,
             icon:"fa-brands fa-youtube"
         },
     ]
@@ -28,7 +27,7 @@ const LogoSection = () => {
         <div className={Style.logo}>
             <div className={Style.container}>
                 <Link to={"/"} className={Style.link}>
-                    <img src={`${domain}/assets/footerLogo.webp`} alt='footerLogo' className={Style.image} />
+                    <img src={`https://xperia.api.regalstyling.com${JSON.parse(settingsData?.footerLogo)?.url}`} alt='footerLogo' className={Style.image} />
                 </Link>
             </div>
         </div>

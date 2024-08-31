@@ -18,10 +18,10 @@ const AwardImages = ({ imageData, activeId }) => {
                 decoding="async"
                 width={750}
                 height={953}
-                src={`${process.env.REACT_APP_API_URL}${image.awardImage.url}`}
+                src={`https://xperia.api.regalstyling.com${JSON.parse(image.awardImage).url}`}
                 className="attachment-full size-full"
-                alt={image.awardImage.name}
-                srcset={`${process.env.REACT_APP_API_URL}${image.awardImage.url} 750w,  ${process.env.REACT_APP_API_URL}${image.awardImage.url} 236w`}
+                alt={JSON.parse(image.awardImage).name}
+                srcset={`https://xperia.api.regalstyling.com${JSON.parse(image.awardImage).url} 750w,  https://xperia.api.regalstyling.com${JSON.parse(image.awardImage).url} 236w`}
                 sizes="(max-width: 750px) 100vw, 750px"
               />
             </a>

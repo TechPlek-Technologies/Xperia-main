@@ -13,21 +13,18 @@ import Content2 from "../component2/IndividualProjects/Content2";
 const IndividualProject = () => {
   const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
 
-  console.log("Endpoint:", pathname);
-
   const [data, setData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/services/find-by-slug${pathname}`
+        `https://xperia.api.regalstyling.com/services/find-by-slug${pathname}`
       );
-      console.log(response.data);
       if (response.status === 200) {
         setData(response.data);
       }
     };
     fetchData();
-  }, []);
+  }, [pathname]);
   function formatString(str) {
     // Replace hyphens with spaces and remove slashes
     let formattedStr = str.replace(/-/g, " ").replace(/\//g, "");

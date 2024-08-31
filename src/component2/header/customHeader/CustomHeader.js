@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 
 
-const CustomHeader = ({ menuItems }) => {
+const CustomHeader = ({ menuItems,settingsData }) => {
   return (
     <header className="swm_header_custom_section" id="swm-header">
       <div
@@ -26,7 +26,7 @@ const CustomHeader = ({ menuItems }) => {
             data-element_type="container"
             data-settings='{"mk_ext_is_sticky":"false"}'
           >
-           <LogoSection/>
+           <LogoSection settingsData={settingsData}/>
             <Menu menuItems={menuItems} />
             <Sidebar/>
           </div>

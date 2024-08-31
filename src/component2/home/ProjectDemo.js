@@ -1,45 +1,56 @@
 import { FeatureData } from "../../data/home/Data";
 
 export const ProjectImages = ({ imageData }) => {
-    return (
-      <div className="mk-moving-projects-images">
-        {imageData.map((project, index) => (
-          <div key={index} className={`mk-moving-projects-${index === 0 ? 'first' : 'other'}-img`}>
-            <div className="mk-moving-projects-img" data-projectimage={project.dataProjectImage}>
-              <a href="#" className="mk-moving-projects-link">
-                <span className="mk-moving-projects-mobile-title">{project.title.toLowerCase()}</span>
-                <img
-                  loading="lazy"
-                  decoding="async"
-                  width={750}
-                  height={539}
-                  // src={project.img.path}
-                  src={project.img.main749x359}
-                  className="attachment-full size-full"
-                  alt={project.title}
-                  // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
-                  srcSet={`${project.img.main749x359} 749w, ${project.img.sub300x216} 300w`}
-                  sizes="(max-width: 749px) 100vw, 749px"
-                />
-              </a>
-            </div>
+  console.log("imageData", imageData);
+  return (
+    <div className="mk-moving-projects-images">
+      {imageData.map((project, index) => (
+        <div
+          key={index}
+          className={`mk-moving-projects-${
+            index === 0 ? "first" : "other"
+          }-img`}
+        >
+          <div
+            className="mk-moving-projects-img"
+            data-projectimage={project.id}
+          >
+            <a href="#" className="mk-moving-projects-link">
+              <span className="mk-moving-projects-mobile-title">
+                {project?.projectTitle?.toLowerCase()}
+              </span>
+              <img
+                loading="lazy"
+                decoding="async"
+                width={750}
+                height={539}
+                // src={project.img.path}
+                src={`https://xperia.api.regalstyling.com/${JSON.parse(project.iconImages)?.url}`}
+                className="attachment-full size-full"
+                alt="projectImage"
+                // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
+                srcSet={`https://xperia.api.regalstyling.com/${JSON.parse(project.iconImages)?.url} 749w, https://xperia.api.regalstyling.com/${JSON.parse(project.iconImages)?.url} 300w`}
+                sizes="(max-width: 749px) 100vw, 749px"
+              />
+            </a>
           </div>
-        ))}
-      </div>
-    );
-  };
-  
- export const FeaturedProjects = () => {
-    return (
-      <div className="stat-inner">
-        <span className="stat-main-title">
-          <span>featured projects</span>
-        </span>
-        {FeatureData.imageData.map((project, index) => (
-          <div key={index} className="stat-data" data-stat={project.dataStat}>
-            <span>{project.title.toLowerCase()}</span>
-          </div>
-        ))}
-      </div>
-    );
-  };
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export const FeaturedProjects = ({data}) => {
+  return (
+    <div className="stat-inner">
+      <span className="stat-main-title">
+        <span>featured projects</span>
+      </span>
+      {data.map((project, index) => (
+        <div key={index} className="stat-data" data-stat={project.id}>
+          <span>{project.projectTitle.toLowerCase()}</span>
+        </div>
+      ))}
+    </div>
+  );
+};

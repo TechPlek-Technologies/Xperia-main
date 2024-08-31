@@ -3,6 +3,7 @@ import Style from "./Services.module.css";
 import { ServiceData } from "../../data/home/Data";
 import { domain } from "../../domain";
 import ServiceContent from "./ServiceContent";
+import { useSelector } from "react-redux";
 
 const { InnerData } = ServiceData;
 
@@ -27,8 +28,10 @@ export const ServiceItem = ({ item, index }) => {
 };
 
 const Services = () => {
-  const services = JSON.parse(localStorage.getItem("services"));
-  console.log(services);
+  // const services = JSON.parse(localStorage.getItem("services"));
+  const { serviceData: services} = useSelector((state) => state.service);
+
+
   return (
     <div
       className="elementor-element elementor-element-3263df3f e-con-full e-flex e-con e-parent"

@@ -2,19 +2,23 @@ import React from "react";
 import Style from "./BottomFooter.module.css";
 import BottomFooterItem from "./BottomFooterItem";
 
-const BottomFooter = () => {
+const BottomFooter = ({ settingsData }) => {
   const BottomFooterData = [
     {
-      text: "+91 813 083 8855",
-      src: "tel:+918130838855",
+      text: settingsData?.phoneNumber,
+      src: `tel:+91${settingsData?.phoneNumber}`,
       subtitle: "call our office",
     },
     {
-      text: "SaibalGupta@xperiagroup.in",
-      src: "mailto:SaibalGupta@xperiagroup.in",
+      text: settingsData?.email,
+      src: `mailto:${settingsData?.email}`,
       subtitle: "send a message",
     },
-    { text: "F-73, 3rd Floor,Okhla Industrial Area Ph 3,New Delhi, 110020", src: "", subtitle: "our address" },
+    {
+      text: settingsData?.address,
+      src: "",
+      subtitle: "our address",
+    },
   ];
   return (
     <div className={Style.wrapper}>

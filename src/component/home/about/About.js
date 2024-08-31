@@ -10,7 +10,7 @@ import Button from "./about/Button";
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.01,
   });
 
   return (

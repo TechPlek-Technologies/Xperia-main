@@ -10,21 +10,18 @@ import axios from "axios";
 const About = () => {
   const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
 
-  console.log("Endpoint:", pathname);
-
   const [data, setData] = React.useState(null);
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}/about/find-by-slug${pathname}`
+        `https://xperia.api.regalstyling.com/about/find-by-slug${pathname}`
       );
-      console.log(response.data);
       if (response.status === 200) {
         setData(response.data);
       }
     };
     fetchData();
-  }, []);
+  }, [pathname]);
 
   return (
     <Layout type={"other"}>

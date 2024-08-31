@@ -25,7 +25,7 @@ const AwardItems = ({ imageData, activeId,handleMouseEnter,handleMouseLeave }) =
                 <div className="mk-awards-titleSubtitle">
                   <div className="mk-awards-text swm-anim">
                     <h4 className="mk-awards-title swm-anim">
-                      {/* <span className={image.span.toUpperCase()==="GOLD" ? Style.gold : image.span.toUpperCase()==="SILVER" ? Style.silver : Style.bronze  }>{image.span}</span> */}
+                      <span className={ Style.gold }>{"GOLD"}</span>
                       {" "}{image.title}
                     </h4>
                     <span className="mk-awards-subtitle swm-anim swm-hide-none">

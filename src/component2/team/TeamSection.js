@@ -32,7 +32,6 @@ const sampleData = [
 ];
 
 const TeamSection = ({ data }) => {
-  console.log(data);
   return (
     <div className="elementor-element elementor-element-44a8fb1c e-flex e-con-boxed e-con e-parent">
       <div className="e-con-inner">
@@ -93,10 +92,10 @@ const TeamSection = ({ data }) => {
                               decoding="async"
                               width={750}
                               height={820}
-                              src={`${process.env.REACT_APP_API_URL}${item.profileImage.url}`}
+                              src={`https://xperia.api.regalstyling.com${JSON.parse(item?.profileImage).url}`}
                               className="attachment-full size-full"
-                              alt={item.profileImage.name}
-                              srcSet={`${process.env.REACT_APP_API_URL}${item.profileImage.url} 750w, ${process.env.REACT_APP_API_URL}${item.profileImage.url} 274w`}
+                              alt={JSON.parse(item?.profileImage).name}
+                              srcSet={`https://xperia.api.regalstyling.com${JSON.parse(item?.profileImage).url} 750w, https://xperia.api.regalstyling.com${JSON.parse(item?.profileImage).url} 274w`}
                               sizes={`(max-width: 750px) 100vw, 820px`}
                             />
                           </a>

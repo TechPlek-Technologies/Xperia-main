@@ -8,6 +8,18 @@
     <title>Xperia Group &#8211; Creative Agency</title>
 
     <link
+      rel="preload"
+      href="/assets/css/elementor-frontend-inline.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="/assets/js/jquery/jquery.min.js?ver=3.7.1"
+      as="script"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
       rel="stylesheet"
       id="swm-google-fonts-css"
       href="//fonts.googleapis.com/css?family=Poppins%3A500%2C500italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CPoppins%3A600%2C600italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%7CRoboto+Mono%3A400%2C400&#038;display=swap&#038;subset=latin%2Clatin-ext&#038;ver=1.0.0"
@@ -19,11 +31,6 @@
       rel="stylesheet"
       id="elementor-frontend-inline-css"
       href="/assets/css/elementor-frontend-inline.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="/assets/css/services-page.css"
       type="text/css"
     />
 
@@ -57,11 +64,7 @@
       type="text/css"
     />
     <!--  -->
-    <link
-      rel="stylesheet"
-      href="/assets/css/index.css"
-      media="all"
-    />
+    <link rel="stylesheet" href="/assets/css/index.css" media="all" />
 
     <!--  -->
     <link
@@ -123,7 +126,7 @@
     <!-- wordpress css imports -->
 
     <link
-      rel="stylesheet"
+      rel="preload"
       id="mk-widget-style-css"
       href="/assets/css/wp/custom-widgets.css?ver=1.0.0"
       type="text/css"
@@ -174,13 +177,6 @@
     />
 
     <!--  -->
-    <link
-      rel="stylesheet"
-      id="mk-core-main-css"
-      href="/assets/css/wp/core-main.css"
-      type="text/css"
-      media="all"
-    />
 
     <!--  -->
     <link
@@ -191,10 +187,7 @@
       media="all"
     />
     <!--  -->
-    <link
-      rel="stylesheet"
-      href="/assets/css/wp/widget-icon-list.min.css"
-    />
+    <link rel="stylesheet" href="/assets/css/wp/widget-icon-list.min.css" />
     <!--  -->
     <link
       rel="stylesheet"
@@ -204,17 +197,15 @@
       media="all"
     />
 
-    <!-- inline js -->
+    <link
+      rel="stylesheet"
+      id="mk-core-main-css"
+      href="/assets/css/wp/core-main.css"
+      type="text/css"
+      media="all"
+    />
 
-    <script
-      type="text/javascript"
-      src="/assets/js/jquery/jquery-migrate.min.js?ver=3.4.1"
-      id="jquery-migrate-js"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/7633f04f53.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- inline js -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -230,6 +221,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
+    <script
+      type="text/javascript"
+      src="/assets/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+      id="jquery-migrate-js"
+      defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7633f04f53.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script type="text/javascript" id="swm-main-js-extra">
       /* <![CDATA[ */
       var swmJSOptions = {
@@ -243,92 +245,98 @@
       type="text/javascript"
       src="/assets/js/wp-content/custom-functions.min.js?ver=1.0.0"
       id="mk-custom-functions-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-gsap.min.js?ver=1.0.0"
       id="mk-gsap-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-scroll-trigger.min.js?ver=1.0.0"
       id="mk-scroll-trigger-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-anime.min.js?ver=1.0.0"
       id="mk-anime-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/theia-sticky-sidebar.min.js?ver=1.0.0"
       id="theia-sticky-sidebar-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-parallax-scroll.min.js?ver=1.0.0"
       id="mk-parallax-scroll-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/extenders.js?ver=1.0.0"
       id="mk-extenders-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/custom-scripts.js?ver=1.0.0"
       id="mk-custom-scripts-js"
+      defer
     ></script>
     <script
       type="text/javascript"
       src="/assets/js/wp-content/preloaded-modules.min.js?ver=3.20.3"
       id="mk-custom-scripts-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-includes/imagesloaded.min.js?ver=5.0.0"
       id="imagesloaded-js"
+      defer
     ></script>
- 
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/fitvids.min.js?ver=1.0.0"
       id="fitVids-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/magnific-popup.min.js?ver=1.0.0"
       id="magnific-popup-js"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/main.js?ver=1.0.0"
       id="swm-main-js"
-    ></script>
-    <!--  -->
-    <script
-      type="text/javascript"
-      src="/assets/js/wp-content/mk-widgets.min.js"
-      id="mk-widgets-js"
+      defer
     ></script>
     <!--  -->
 
- 
     <script
       type="text/javascript"
       src="/assets/js/wp-content/mk-splittext.min.js?ver=1.0.0"
       id="mk-splittext-js"
+      defer
     ></script>
     <!--  -->
 
@@ -336,6 +344,7 @@
       type="text/javascript"
       src="/assets/js/wp-content/swiper.min.js?ver=5.3.6"
       id="swiper-js"
+      defer
     ></script>
     <!--  -->
 
@@ -343,12 +352,14 @@
       type="text/javascript"
       src="/assets/js/wp-content/mk-modernizr.min.js?ver=1.0.0"
       id="mk-modernizr-js"
+      defer
     ></script>
     <!--  -->
     <script
       type="text/javascript"
       src="/assets/js/wp-content/isotope.min.js?ver=1.0.0"
       id="isotope-js"
+      defer
     ></script>
     <!--  -->
 
@@ -356,12 +367,14 @@
       type="text/javascript"
       src="/assets/js/wp-content/packery.min.js?ver=1.0.0"
       id="packery-js"
+      defer
     ></script>
     <!--  -->
     <script
       type="text/javascript"
       src="/assets/js/wp-content/webpack.runtime.min.js?ver=3.20.3"
       id="elementor-webpack-runtime-js"
+      defer
     ></script>
     <!--  -->
 
@@ -369,6 +382,7 @@
       type="text/javascript"
       src="/assets/js/wp-content/frontend-modules.min.js?ver=3.20.3"
       id="elementor-frontend-modules-js"
+      defer
     ></script>
     <!--  -->
 
@@ -376,6 +390,7 @@
       type="text/javascript"
       src="/assets/js/wp-content/waypoints.min.js?ver=4.0.2"
       id="elementor-waypoints-js"
+      defer
     ></script>
     <!--  -->
 
@@ -383,6 +398,7 @@
       type="text/javascript"
       src="/assets/js/wp-includes/core.min.js?ver=1.13.2"
       id="jquery-ui-core-js"
+      defer
     ></script>
     <!--  -->
 
@@ -390,12 +406,14 @@
       type="text/javascript"
       src="/assets/js/wp-content/share-link.min.js?ver=3.20.3"
       id="share-link-js"
+      defer
     ></script>
     <!--  -->
     <script
       type="text/javascript"
       src="/assets/js/wp-content/dialog.min.js?ver=4.9.0"
       id="elementor-dialog-js"
+      defer
     ></script>
 
     <script type="text/javascript" id="elementor-frontend-js-before">
@@ -519,6 +537,621 @@
       type="text/javascript"
       src="/assets/js/wp-content/frontend.min.js?ver=3.20.3"
       id="elementor-frontend-js"
+      defer
     ></script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        function isSafari() {
+          console.log(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+          return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        }
+
+        if (isSafari()) {
+          window.mkAddons = {
+            body: $("body"),
+            html: $("html"),
+            windowWidth: $(window).width(),
+            windowHeight: $(window).height(),
+            scroll: 0,
+            window: $(window),
+            widgetsList: {},
+          };
+
+          function initMkMovingProjects() {
+            $(".mk-moving-projects").each(function () {
+              var $holder = $(this);
+              var holderId = $holder.attr("id");
+
+              if (!$holder.data("initialized")) {
+                initMovingProjectItem($holder, holderId);
+                $holder.data("initialized", true);
+              }
+            });
+          }
+
+          function initMovingProjectItem($holder, $holder_id) {
+            console.log(
+              "Initializing moving project item for holder ID:",
+              $holder_id
+            );
+            try {
+              if (
+                typeof gsap === "undefined" ||
+                typeof ScrollTrigger === "undefined"
+              ) {
+                console.error("GSAP or ScrollTrigger is not defined.");
+                return;
+              }
+
+              gsap.registerPlugin(ScrollTrigger);
+
+              $holder_id = ".mk-moving-projects-" + $holder_id;
+
+              const firstRow = document.querySelector(
+                $holder_id +
+                  " .mk-moving-projects-holder .mk-moving-projects-images:first-of-type"
+              );
+              const secondRow = document.querySelector(
+                $holder_id +
+                  " .mk-moving-projects-holder .mk-moving-projects-images:nth-of-type(2)"
+              );
+              const projectImage = document.querySelector(
+                $holder_id +
+                  " .mk-moving-projects-holder .mk-moving-projects-images:first-of-type .mk-moving-projects-other-img"
+              );
+              const allImages = document.querySelectorAll(
+                $holder_id +
+                  " .mk-moving-projects-holder .mk-moving-projects-images"
+              );
+
+              if (!firstRow || !secondRow || !projectImage) {
+                console.error("Elements not found:", {
+                  firstRow,
+                  secondRow,
+                  projectImage,
+                });
+                return;
+              }
+
+              let imageWidth = projectImage.offsetWidth;
+              let firstRowWidth =
+                firstRow.getBoundingClientRect().left + imageWidth;
+              let secondRowRight =
+                secondRow.getBoundingClientRect().right - imageWidth;
+
+              const movingProjectsAnim = gsap.timeline({
+                scrollTrigger: {
+                  trigger: $holder_id + " .mk-moving-projects-holder",
+                  id: "clientPin",
+                  start: "top 20%",
+                  end: "bottom top",
+                  pin: $holder_id + ".mk-moving-projects",
+                  scrub: 1,
+                },
+              });
+
+              movingProjectsAnim.to(firstRow, {
+                x: -firstRowWidth,
+                ease: "linear",
+              });
+              movingProjectsAnim.to(
+                secondRow,
+                { x: secondRowRight, ease: "linear" },
+                "<"
+              );
+
+              // hover circle text change
+              const projectInfo = document.querySelector(
+                $holder_id + " .mk-moving-project-info"
+              );
+              const circleBg = projectInfo.querySelector(
+                $holder_id + " .mk-moving-project-info-bg"
+              );
+              const iconImage = projectInfo.querySelector(
+                $holder_id + " .stat-main-title span"
+              );
+              const imageItem = gsap.utils.toArray(
+                $holder_id + " .mk-moving-projects-img"
+              );
+              const gsapAnim = gsap.timeline({ repeat: -1 });
+
+              if (!projectInfo || !circleBg || !iconImage) {
+                console.error("Hover elements not found:", {
+                  projectInfo,
+                  circleBg,
+                  iconImage,
+                });
+                return;
+              }
+
+              gsapAnim.to(iconImage, {
+                duration: 0.3,
+                scale: 1.3,
+                delay: 0.5,
+                ease: "power3.in",
+              });
+              gsapAnim.to(iconImage, {
+                duration: 0.3,
+                scale: 1,
+                ease: "power3.out",
+              });
+
+              allImages.forEach((theImage) => {
+                theImage.addEventListener("mouseenter", function () {
+                  gsap.to(circleBg, {
+                    scale: 1.1,
+                    duration: 1,
+                    ease: "elastic",
+                  });
+                });
+                theImage.addEventListener("mouseleave", function () {
+                  gsap.to(circleBg, { scale: 1, duration: 1, ease: "elastic" });
+                });
+              });
+
+              imageItem.forEach((imageElements) => {
+                imageElements.addEventListener("mouseenter", function () {
+                  const number = this.dataset.projectimage;
+                  const dataStat = document.querySelector(
+                    '[data-stat="' + number + '"]'
+                  );
+
+                  gsapAnim.pause();
+                  gsap.to(dataStat, {
+                    yPercent: -50,
+                    opacity: 1,
+                    scale: 1,
+                    duration: 0.4,
+                    ease: "power4",
+                  });
+                  iconImage.classList.add("invisible");
+                });
+                imageElements.addEventListener("mouseleave", function () {
+                  const number = this.dataset.projectimage;
+                  const dataStat = document.querySelector(
+                    '[data-stat="' + number + '"]'
+                  );
+
+                  gsap.to(dataStat, {
+                    yPercent: -50,
+                    opacity: 0,
+                    scale: 0.5,
+                    duration: 0.4,
+                    ease: "power4",
+                  });
+                  iconImage.classList.remove("invisible");
+                  gsapAnim.restart();
+                });
+              });
+            } catch (error) {
+              console.error("Error in initMovingProjectItem:", error);
+            }
+          }
+
+          var mkScrollLoad = {
+            init: function () {
+              this.holder = $(".mk-scroll--load:not(.mk--loaded)");
+
+              if (this.holder.length) {
+                this.holder.each(function () {
+                  var holder = $(this),
+                    loadDelay = $(this).attr("data-appear-delay");
+
+                  if (!loadDelay) {
+                    mkScrollLoad.viewPortStatus(holder, function () {
+                      holder.addClass("mk--loaded");
+                    });
+                  } else {
+                    loadDelay =
+                      loadDelay === "random"
+                        ? Math.floor(Math.random() * (450 - 10) + 10)
+                        : loadDelay;
+                    mkScrollLoad.viewPortStatus(holder, function () {
+                      setTimeout(function () {
+                        holder.addClass("mk--loaded");
+                      }, loadDelay);
+                    });
+                  }
+                });
+              }
+            },
+            viewPortStatus: function ($item, callback, onlyOnce) {
+              if ($item.length) {
+                var offset =
+                  typeof $item.data("viewport-offset") !== "undefined"
+                    ? $item.data("viewport-offset")
+                    : 0.15;
+                var observer = new IntersectionObserver(
+                  function (entries) {
+                    if (entries[0].isIntersecting === true) {
+                      callback.call($item);
+                      if (onlyOnce !== false) {
+                        observer.disconnect();
+                      }
+                    }
+                  },
+                  { threshold: [offset] }
+                );
+                observer.observe($item[0]);
+              }
+            },
+          };
+
+          function mkDualSliderInit() {
+            var holder = $(".mk-dual-slider-swiper-container");
+
+            if (holder.length) {
+              holder.each(function () {
+                var $holder = $(this),
+                  settings = $holder.data("settings") || {},
+                  pagination = $holder.siblings(".swiper-pagination").length
+                    ? $holder.siblings(".swiper-pagination")[0]
+                    : null;
+
+                var swiperOptions = {
+                  direction: "horizontal",
+                  slidesPerView: 1,
+                  loop: true,
+                  speed: settings["speed"],
+                  effect: settings["effect"],
+                  pagination: {
+                    el: pagination,
+                    type: "bullets",
+                    clickable: true,
+                  },
+                };
+
+                // autoplay
+                if ("yes" === settings["autoplay"]) {
+                  swiperOptions.autoplay = {
+                    delay: settings["autoplay_speed"],
+                    disableOnInteraction: false,
+                  };
+                }
+
+                var $swiper = new Swiper($(this)[0], swiperOptions);
+              });
+            }
+          }
+
+          function mkDualSlider() {
+            var $scope = $(document); // Assuming the whole document should be checked
+
+            var $holder = $scope.find(".mk-dual-slider");
+
+            mkScrollLoad.init();
+            mkDualSliderInit();
+
+            if ($holder.length) {
+              $holder.each(function () {
+                mkDualSliderSyncSwipers($(this));
+                mkDualSliderSyncInfo($(this));
+              });
+            }
+
+            function mkDualSliderSyncSwipers($thisHolder) {
+              var mkLeftSwiper = $thisHolder.find(".mk-dual-slider-left"),
+                mkRightSwiper = $thisHolder.find(".mk-dual-slider-right");
+
+              if (mkLeftSwiper.length && mkRightSwiper.length) {
+                var autoplay = $thisHolder.hasClass(
+                  "mk-dual-slider-autoplay-yes"
+                );
+
+                mkRightSwiper[0].swiper.autoplay.stop();
+                mkLeftSwiper[0].swiper.autoplay.stop();
+                mkRightSwiper[0].swiper.controller.control =
+                  mkLeftSwiper[0].swiper;
+                mkRightSwiper[0].swiper.controller.by = "slide";
+                mkRightSwiper[0].swiper.controller.inverse = true;
+                mkLeftSwiper[0].swiper.controller.control =
+                  mkRightSwiper[0].swiper;
+
+                if (autoplay) {
+                  mkRightSwiper[0].swiper.autoplay.start();
+                }
+              }
+            }
+
+            function mkDualSliderSyncInfo($thisHolder) {
+              var mkLeftSwiper = $thisHolder.find(".mk-dual-slider-left"),
+                contentToPopulate = $thisHolder.find(
+                  ".mk-dual-slider-content-large"
+                ),
+                contents = mkLeftSwiper.find(
+                  ".mk-dual-slider-item .mk-dual-slider-content"
+                );
+
+              mkDualSliderPopulateContent(
+                mkLeftSwiper,
+                contentToPopulate,
+                contents
+              );
+
+              mkLeftSwiper[0].swiper.on(
+                "slideChangeTransitionStart",
+                function () {
+                  setTimeout(function () {
+                    mkDualSliderPopulateContent(
+                      mkLeftSwiper,
+                      contentToPopulate,
+                      contents
+                    );
+                  }, 300);
+                }
+              );
+            }
+
+            function mkDualSliderPopulateContent(
+              mkLeftSwiper,
+              contentToPopulate,
+              contents
+            ) {
+              var activeIndex = mkLeftSwiper[0].swiper.activeIndex;
+
+              if (contentToPopulate.length) {
+                contentToPopulate.html(contents.eq(activeIndex).html());
+              }
+            }
+          }
+          // Services Text Functionality ------------------------------------------
+          // Services Text Functionality ------------------------------------------
+          var mkRevealServices = {
+            init: function () {
+              if (
+                $("body").hasClass("elementor-editor-active") ||
+                mkAddons.windowWidth < 1024
+              ) {
+                return;
+              }
+
+              let $holder = $(".mk-reveal-services-holder");
+
+              if ($holder.length) {
+                gsap.defaults({ overwrite: "auto" });
+                gsap.registerPlugin(ScrollTrigger);
+                gsap.config({ nullTargetWarn: false });
+
+                // Use the holder as a container to find elements within it
+                $holder.each(function () {
+                  let $thisHolder = $(this);
+                  mkRevealServices.initItem($thisHolder);
+                });
+              }
+            },
+            initItem: function ($holder) {
+              const tlBoxMove = gsap.timeline({
+                scrollTrigger: {
+                  trigger: $(".mk-reveal-services-holder"), // Trigger the animation based on the holder's position
+                  start: "top bottom", // Adjust this to fit your needs
+                  end: "bottom top",
+                  scrub: 1,
+                },
+              });
+
+              tlBoxMove
+                .to(".mk-reveal-service-one", {
+                  x: "150vh",
+                  duration: 1, // Adjusted to 1 second for smoother animation
+                  delay: 0.1, // Adjusted delay
+                  opacity: 1,
+                })
+                .to(".mk-reveal-service-two", {
+                  x: "150vh",
+                  duration: 1,
+                  delay: 0.2,
+                  opacity: 1,
+                })
+                .to(".mk-reveal-service-three", {
+                  x: "150vh",
+                  duration: 1,
+                  delay: 0.3,
+                  opacity: 1,
+                })
+                .to(".mk-reveal-service-four", {
+                  x: "150vh",
+                  duration: 1,
+                  delay: 0.4,
+                  opacity: 1,
+                });
+            },
+          };
+
+          // Moving Services Functionality ----------------------------------------
+          var mkMovingServices = function ($scope, $) {
+            var $holder = $scope.find(".mk-moving-services");
+
+            if ($holder.length) {
+              gsap.defaults({ overwrite: "auto" });
+              gsap.registerPlugin(ScrollTrigger);
+              gsap.config({ nullTargetWarn: false });
+
+              $holder.each(function () {
+                let $thisHolder = $(this);
+                initMovingServicesItem($thisHolder);
+              });
+            }
+
+            function initMovingServicesItem($holder) {
+              gsap.registerPlugin(ScrollTrigger, SplitText);
+
+              if (mkAddons.windowWidth > 1024) {
+                let $holder_id = $holder.attr("id");
+
+                const boxes = document.querySelector(
+                    "#" + $holder_id + " .mk-moving-services-items"
+                  ),
+                  boxesDiv = gsap.utils.toArray(
+                    "#" + $holder_id + " .mk-moving-services-items > div"
+                  ),
+                  boxesLeftDistance = boxes.getBoundingClientRect().left / 2;
+
+                let boxLeftDistance = boxesDiv[0].getBoundingClientRect().left,
+                  i = 0;
+
+                for (let x = 0; x < boxesDiv.length; x++) {
+                  i += boxesDiv[x].offsetWidth;
+                }
+
+                i += $($holder).data("extra-length");
+
+                const holderDistance =
+                    -i + (window.innerWidth - 4 * boxesLeftDistance),
+                  boxAnimation = function () {
+                    const firstBoxDistance =
+                        boxesDiv[0].getBoundingClientRect().left,
+                      distance = firstBoxDistance - boxLeftDistance,
+                      finalDistance = Math.abs(
+                        Math.round(1.75 * distance) / 100
+                      ),
+                      getDistance = Math.min(Math.max(finalDistance, 0), 1);
+                    gsap.to(boxesDiv, {
+                      scale: 1 - getDistance / 2,
+                    }),
+                      (boxLeftDistance = firstBoxDistance),
+                      requestAnimationFrame(boxAnimation);
+                  };
+                boxAnimation(),
+                  gsap.to(boxesDiv, {
+                    scrollTrigger: {
+                      trigger: ".mk-moving-services",
+                      start: "top top",
+                      end: "bottom -=300%",
+                      toggleActions: "play none reverse none",
+                      scrub: !0,
+                    },
+                    x: holderDistance,
+                    ease: "linear",
+                  }),
+                  gsap.to(".mk-moving-services", {
+                    scrollTrigger: {
+                      trigger: ".mk-moving-services",
+                      id: "attScroll",
+                      start: "top top",
+                      end: "bottom -=290%",
+                      toggleActions: "play none reverse none",
+                      scrub: !0,
+                      pin: ".mk-moving-services",
+                    },
+                  });
+
+                const defaultText = document.querySelector(
+                    "#" + $holder_id + ".mk-moving-services span:first-of-type"
+                  ),
+                  animText = document.querySelector(
+                    "#" + $holder_id + ".mk-moving-services span:nth-of-type(2)"
+                  );
+
+                let splitText = new SplitText(animText, { type: "chars" }),
+                  splitTextAnim = gsap.timeline({
+                    scrollTrigger: {
+                      trigger: animText,
+                      start: "top 40%",
+                      end: "bottom -=280%",
+                      toggleActions: "play reverse play reverse",
+                      scrub: 0.2,
+                    },
+                  });
+                splitTextAnim.from(splitText.chars, {
+                  y: (e) => 100 * e,
+                  duration: 1,
+                  ease: "linear",
+                }),
+                  splitTextAnim.to(defaultText, {
+                    webkitClipPath: "inset(0% 0% 0% 0%)",
+                    duration: 3,
+                    ease: "linear",
+                  }),
+                  splitTextAnim.to(defaultText, {
+                    webkitClipPath: "inset(0% 100% 0% 0%)",
+                    duration: 5,
+                    ease: "linear",
+                  }),
+                  splitTextAnim.to(splitText.chars, {
+                    y: (e) => -100 * e - 550,
+                    duration: 1,
+                    ease: "linear",
+                  });
+              }
+            }
+          };
+
+          // Assign mkRevealServices and mkMovingServices to mkAddons Widgets List --
+          mkAddons.widgetsList.mk_reveal_services = {
+            mkRevealServices,
+          };
+
+          mkAddons.widgetsList.mk_moving_services = {
+            mkMovingServices,
+          };
+
+          // Initialize on Document Ready -----------------------------------------
+          $(document).ready(function () {
+            mkDualSlider();
+            mkRevealServices.init();
+            mkMovingServices($(document), $);
+          });
+
+          // Additional Event Bindings --------------------------------------------
+          $(window).resize(function () {
+            mkAddons.windowWidth = $(window).width();
+            mkAddons.windowHeight = $(window).height();
+          });
+
+          $(window).scroll(function () {
+            mkAddons.scroll = $(window).scrollTop();
+          });
+
+          $(window).on("load", function () {
+            mkScrollLoad.init();
+            mkDualSlider();
+            initMkMovingProjects();
+          });
+
+          $(window).on("elementor/frontend/init", function () {
+            for (var key in mkAddons.widgetsList) {
+              for (var keyChild in mkAddons.widgetsList[key]) {
+                elementorFrontend.hooks.addAction(
+                  "frontend/element_ready/" + key + ".default",
+                  mkAddons.widgetsList[key][keyChild]
+                );
+              }
+            }
+          });
+
+          $(document).on("mk_trigger_get_new_posts", function () {
+            mkRevealServices.init();
+            mkMovingServices($(document), $);
+          });
+        }
+      })(jQuery);
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (!window.localStorage.getItem("pageReloaded")) {
+          window.localStorage.setItem("pageReloaded", "true");
+          // Wait until the external script is loaded before reloading
+          window.addEventListener("load", function () {
+            setTimeout(function () {
+              window.location.reload();
+            }, 3000); // 3000 milliseconds = 3 seconds
+          });
+        } else {
+          // Clear the localStorage item to reset the reload flag
+          window.localStorage.removeItem("pageReloaded");
+        }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      src="/assets/js/wp-content/mk-widgets.min.js"
+      id="mk-widgets-js"
+      defer
+    ></script>
+    <!--  -->
   </body>
 </html>

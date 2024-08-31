@@ -3,7 +3,7 @@ import Menu2 from './Menu2'
 import Sidebar from '../customHeader/Sidebar'
 import LogoSection from '../customHeader/LogoSection'
 
-const StickyHeader = ({ menuItems }) => {
+const StickyHeader = ({ menuItems,settingsData }) => {
   return (
     <header
      className="swm_header_sticky_section swm-sticky-scoll-up"
@@ -28,7 +28,7 @@ const StickyHeader = ({ menuItems }) => {
            data-settings='{"mk_ext_is_sticky":"false"}'
          >
            
-           <LogoSection/>
+           <LogoSection settingsData={settingsData}/>
            <Menu2 menuItems={menuItems}/>
            <Sidebar/>
          </div>

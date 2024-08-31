@@ -20,7 +20,7 @@ const FormSection = () => {
     <div className={Style.Form} onClick={handleClickOpen}>
     <div className={Style.header}>
       <h2 className={Style.h2}>
-        <span>{"Have a Project in Mind?"}</span>
+        <span>{"Have a project in mind?"}</span>
       </h2>
     </div>
     

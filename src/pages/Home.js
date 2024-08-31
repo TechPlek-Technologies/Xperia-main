@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../component2/wrapper/Layout";
 import HomeBanner from "../component2/home/HomeBanner";
 import Services from "../component2/home/Services";
@@ -10,24 +10,25 @@ import AboutSection from "../component/home/AboutSection";
 import Team from "../component2/home/Team";
 
 const Home = () => {
+  
   return (
     <>
       <Layout>
-          <div
-            data-elementor-type="wp-page"
-            data-elementor-id={1255}
-            className="elementor elementor-1255"
-          >
-            <HomeBanner />
+        <div
+          data-elementor-type="wp-page"
+          data-elementor-id={1255}
+          className="elementor elementor-1255"
+        >
+          <HomeBanner />
 
-            {/* <Services /> */}
-            <AboutSection />
-            <Projects />
-            <Award />
-            <Team />
-            <Testimonial />
-            <Blog />
-          </div>
+          <Services />
+          <AboutSection />
+          <Projects />
+          <Award />
+          <Team />
+          <Testimonial />
+          <Blog />
+        </div>
       </Layout>
     </>
   );
