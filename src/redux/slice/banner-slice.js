@@ -13,7 +13,7 @@ export const fetchBanners = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/home-banner/all-banners`
+        `https://api.xperiagroup.in/home-banner/all-banners`
       );
       return response.data;
     } catch (error) {

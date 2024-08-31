@@ -6,10 +6,10 @@ const FooterLogo = ({ settingsData }) => {
       <img
         width={319}
         height={217}
-        src={`https://xperia.api.regalstyling.com${JSON.parse(settingsData?.footerLogo).url}`}
+        src={`https://api.xperiagroup.in${settingsData?.footerLogo.url}`}
         alt="footerLogo"
         className="attachment-large size-large wp-image-1206"
-        srcSet={`https://xperia.api.regalstyling.com${JSON.parse(settingsData?.footerLogo).url} 319w, https://xperia.api.regalstyling.com${JSON.parse(settingsData?.footerLogo).url} 300w`}
+        srcSet={`https://api.xperiagroup.in${settingsData?.footerLogo.url} 319w, https://api.xperiagroup.in${settingsData?.footerLogo.url} 300w`}
         sizes="(max-width: 319px) 100vw, 319px"
       />
     </div>

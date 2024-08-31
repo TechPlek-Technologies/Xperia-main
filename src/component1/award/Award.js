@@ -19,9 +19,11 @@ const Award = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/awards/all-awards`
+        `https://api.xperiagroup.in/awards/all-awards`
       );
       if (response.status === 200) {
+        console.log(response.data);
+        
         setData(response.data);
         setActiveId(response.data[0].id)
       }

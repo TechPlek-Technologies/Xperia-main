@@ -9,7 +9,7 @@ const Contact = () => {
       <div
         data-elementor-type="wp-page"
         data-elementor-id="1266"
-        class="elementor elementor-1266"
+        className="elementor elementor-1266"
       >
 <Form/>
       </div>

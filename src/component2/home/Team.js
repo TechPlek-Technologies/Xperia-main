@@ -4,12 +4,11 @@ import Button from "../../component/home/about/about/Button";
 import axios from "axios";
 
 const Team = () => {
-
   const [data, setData] = React.useState(null);
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/teams/all-teams`
+        `https://api.xperiagroup.in/teams/all-teams`
       );
       if (response.status === 200) {
         setData(response.data);
@@ -85,10 +84,10 @@ const Team = () => {
                           decoding="async"
                           width={750}
                           height={820}
-                          src={`https://xperia.api.regalstyling.com${JSON.parse(item?.profileImage)?.url}`}
+                          src={`https://api.xperiagroup.in${item?.profileImage?.url}`}
                           className="attachment-full size-full"
-                          alt={JSON.parse(item?.profileImage)?.name}
-                          srcSet={`https://xperia.api.regalstyling.com${JSON.parse(item?.profileImage)?.url} 750w, https://xperia.api.regalstyling.com${JSON.parse(item?.profileImage)?.url} 274w`}
+                          alt={item?.profileImage?.name}
+                          srcSet={`https://api.xperiagroup.in${item?.profileImage?.url} 750w, https://api.xperiagroup.in${item?.profileImage?.url} 274w`}
                           sizes={`(max-width: 750px) 100vw, 820px`}
                         />
                       </a>

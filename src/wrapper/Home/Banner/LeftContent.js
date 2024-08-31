@@ -4,10 +4,10 @@ const LeftContent = ({ BannerData }) => {
   return (
     <>
       {BannerData && BannerData.map((banner, index) => {
-        const mainImage = JSON.parse(banner.main1259x724);
-        const sub1024Image = JSON.parse(banner.sub1024x589);
-        const sub768Image = JSON.parse(banner.sub768x442);
-        const banner224Image = JSON.parse(banner.banner224x300);
+        const mainImage = banner.main1259x724;
+        const sub1024Image = banner.sub1024x589;
+        const sub768Image = banner.sub768x442;
+        const banner224Image = banner.banner224x300;
 
         return (
           <div key={index} className="mk-dual-slider-item swiper-slide">
@@ -19,10 +19,10 @@ const LeftContent = ({ BannerData }) => {
                     decoding="async"
                     width={1259}
                     height={724}
-                    src={`https://xperia.api.regalstyling.com${mainImage.url}`}
+                    src={`https://api.xperiagroup.in${mainImage.url}`}
                     className="attachment-full size-full"
                     alt={mainImage.name}
-                    srcSet={`https://xperia.api.regalstyling.com${mainImage.url} 1259w, https://xperia.api.regalstyling.com${banner224Image.url} 300w, https://xperia.api.regalstyling.com${sub1024Image.url} 1024w, https://xperia.api.regalstyling.com${sub768Image.url} 768w`}
+                    srcSet={`https://api.xperiagroup.in${mainImage.url} 1259w, https://api.xperiagroup.in${banner224Image.url} 300w, https://api.xperiagroup.in${sub1024Image.url} 1024w, https://api.xperiagroup.in${sub768Image.url} 768w`}
                     sizes="(max-width: 1259px) 100vw, 1259px"
                   />
                 </a>

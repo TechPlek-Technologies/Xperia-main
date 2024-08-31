@@ -6,7 +6,7 @@ import Form from '../component2/contact/Form';
 const Contact = () => {
   return (
     <Layout type={'other'}>
-      <div data-elementor-type="wp-page" data-elementor-id="1266" class="elementor elementor-1266">
+      <div data-elementor-type="wp-page" data-elementor-id="1266" className="elementor elementor-1266">
         <Form />
       </div>
     </Layout>
