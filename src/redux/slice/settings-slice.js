@@ -12,7 +12,7 @@ export const fetchSettings = createAsyncThunk(
   "settings/fetchSettings",
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`https://xperia.api.regalstyling.com/settings/all-settings`);
+      const response = await axios.get(`https://api.xperiagroup.in/settings/all-settings`);
       return response.data;
     } catch (error) {
       // Capture and return error information

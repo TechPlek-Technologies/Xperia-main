@@ -37,15 +37,15 @@ const Banner = ({ data }) => {
                           decoding="async"
                           width={1840}
                           height={615}
-                          src={`https://xperia.api.regalstyling.com${JSON.parse(data.aboutImage).url}`}
+                          src={`https://api.xperiagroup.in${JSON.parse(data.aboutImage).url}`}
                           className="attachment-full size-full"
                           alt=""
                           srcSet={`
-                                https://xperia.api.regalstyling.com${JSON.parse(data.aboutImage).url} 1840w,
-                                https://xperia.api.regalstyling.com${JSON.parse(data.aboutImage).url} 300w,
-                                https://xperia.api.regalstyling.com${JSON.parse(data.aboutImage).url} 1024w,
-                                https://xperia.api.regalstyling.com${JSON.parse(data.aboutImage).url} 768w,
-                                https://xperia.api.regalstyling.com${JSON.parse(data.aboutImage).url} 1536w
+                                https://api.xperiagroup.in${JSON.parse(data.aboutImage).url} 1840w,
+                                https://api.xperiagroup.in${JSON.parse(data.aboutImage).url} 300w,
+                                https://api.xperiagroup.in${JSON.parse(data.aboutImage).url} 1024w,
+                                https://api.xperiagroup.in${JSON.parse(data.aboutImage).url} 768w,
+                                https://api.xperiagroup.in${JSON.parse(data.aboutImage).url} 1536w
                               `}
                           sizes="(max-width: 1840px) 100vw, 1840px"
                         />

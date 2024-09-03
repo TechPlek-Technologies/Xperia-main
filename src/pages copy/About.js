@@ -14,7 +14,7 @@ const About = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/about/find-by-slug${pathname}`
+        `https://api.xperiagroup.in/about/find-by-slug${pathname}`
       );
       if (response.status === 200) {
         setData(response.data);

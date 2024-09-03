@@ -50,16 +50,16 @@ const BlogContent = () => {
                       decoding="async"
                       width={939}
                       height={569}
-                      src={`https://xperia.api.regalstyling.com/${
+                      src={`https://api.xperiagroup.in/${
                         JSON.parse(blog.iconImage).url
                       }`}
                       className="attachment-full size-full"
                       alt="blog icon"
-                      srcSet={`${`https://xperia.api.regalstyling.com/${
+                      srcSet={`${`https://api.xperiagroup.in/${
                         JSON.parse(blog.iconImage).url
-                      }`} 939w, ${`https://xperia.api.regalstyling.com/${
+                      }`} 939w, ${`https://api.xperiagroup.in/${
                         JSON.parse(blog.iconImage).url
-                      }`} 300w, ${`https://xperia.api.regalstyling.com/${
+                      }`} 300w, ${`https://api.xperiagroup.in/${
                         JSON.parse(blog.iconImage).url
                       }`} 768w`}
                       sizes="(max-width: 939px) 100vw, 939px"

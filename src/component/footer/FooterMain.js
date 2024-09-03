@@ -96,7 +96,7 @@ const FooterMain = () => {
                         {/* <img
                           width={407}
                           height={104}
-                          src={`https://xperia.api.regalstyling.com/${settingsData.footerLogo}`}
+                          src={`https://api.xperiagroup.in/${settingsData.footerLogo}`}
                           className="attachment-large size-large wp-image-1046"
                           alt=""
                           srcSet="https://orbius.premiumthemes.in/wp-content/uploads/2024/03/logo-footer.png 407w, https://orbius.premiumthemes.in/wp-content/uploads/2024/03/logo-footer-300x77.png 300w"
@@ -105,14 +105,14 @@ const FooterMain = () => {
                         <img
                           width={407}
                           height={104}
-                          src={`https://xperia.api.regalstyling.com${
+                          src={`https://api.xperiagroup.in${
                             JSON.parse(settingsData[0]?.footerLogo)?.url
                           }`}
                           className="attachment-large size-large wp-image-1046"
                           alt=""
-                          srcSet={`https://xperia.api.regalstyling.com${
+                          srcSet={`https://api.xperiagroup.in${
                             JSON.parse(settingsData[0]?.footerLogo)?.url
-                          } 407w, https://xperia.api.regalstyling.com${
+                          } 407w, https://api.xperiagroup.in${
                             JSON.parse(settingsData[0]?.footerLogo)?.url
                           } 300w`}
                           sizes="(max-width: 407px) 100vw, 407px"

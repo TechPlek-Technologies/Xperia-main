@@ -9,7 +9,7 @@ const Team = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://xperia.api.regalstyling.com/teams/all-teams`
+        `https://api.xperiagroup.in/teams/all-teams`
       );
       if (response.status === 200) {
         setData(response.data);
