@@ -4,7 +4,6 @@ import Button from "../../component/home/about/about/Button";
 import axios from "axios";
 
 const Team = () => {
-
   const [data, setData] = React.useState(null);
   useEffect(() => {
     const fetchData = async () => {
@@ -85,10 +84,17 @@ const Team = () => {
                           decoding="async"
                           width={750}
                           height={820}
+<<<<<<< HEAD
                           src={`https://api.xperiagroup.in${JSON.parse(item?.profileImage)?.url}`}
                           className="attachment-full size-full"
                           alt={JSON.parse(item?.profileImage)?.name}
                           srcSet={`https://api.xperiagroup.in${JSON.parse(item?.profileImage)?.url} 750w, https://api.xperiagroup.in${JSON.parse(item?.profileImage)?.url} 274w`}
+=======
+                          src={`https://api.xperiagroup.in${item?.profileImage?.url}`}
+                          className="attachment-full size-full"
+                          alt={item?.profileImage?.name}
+                          srcSet={`https://api.xperiagroup.in${item?.profileImage?.url} 750w, https://api.xperiagroup.in${item?.profileImage?.url} 274w`}
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                           sizes={`(max-width: 750px) 100vw, 820px`}
                         />
                       </a>

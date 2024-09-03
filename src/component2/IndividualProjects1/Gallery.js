@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = ({ data }) => {
   // Parse the projectImages string to a JSON object
-  const projectImages = JSON.parse(data.projectImages);
+  const projectImages = data.projectImages;
 
   return (
     <div

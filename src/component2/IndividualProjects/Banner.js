@@ -15,9 +15,13 @@ const Banner = ({ data, title }) => {
         // Uncomment the next line if you want to use the settings
         data-settings='{"background_background":"classic","mk_ext_is_sticky":"false"}'
         style={{
+<<<<<<< HEAD
           backgroundImage: `url(https://api.xperiagroup.in${
             JSON.parse(data.banner).url
           })`,
+=======
+          backgroundImage: `url(https://api.xperiagroup.in${data.banner.url})`,
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
         }}
       />
       <div

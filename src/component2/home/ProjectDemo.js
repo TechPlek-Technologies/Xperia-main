@@ -25,11 +25,19 @@ export const ProjectImages = ({ imageData }) => {
                 width={750}
                 height={539}
                 // src={project.img.path}
+<<<<<<< HEAD
                 src={`https://api.xperiagroup.in/${JSON.parse(project.iconImages)?.url}`}
                 className="attachment-full size-full"
                 alt="projectImage"
                 // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
                 srcSet={`https://api.xperiagroup.in/${JSON.parse(project.iconImages)?.url} 749w, https://api.xperiagroup.in/${JSON.parse(project.iconImages)?.url} 300w`}
+=======
+                src={`https://api.xperiagroup.in/${project.iconImages?.url}`}
+                className="attachment-full size-full"
+                alt="projectImage"
+                // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
+                srcSet={`https://api.xperiagroup.in/${project.iconImages?.url} 749w, https://api.xperiagroup.in/${project.iconImages?.url} 300w`}
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                 sizes="(max-width: 749px) 100vw, 749px"
               />
             </a>
@@ -40,7 +48,7 @@ export const ProjectImages = ({ imageData }) => {
   );
 };
 
-export const FeaturedProjects = ({data}) => {
+export const FeaturedProjects = ({ data }) => {
   return (
     <div className="stat-inner">
       <span className="stat-main-title">

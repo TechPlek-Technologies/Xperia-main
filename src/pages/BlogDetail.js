@@ -44,19 +44,11 @@ const BlogDetail = () => {
                                 fetchpriority="high"
                                 width={939}
                                 height={569}
-                                src={`https://api.xperiagroup.in${
-                                  JSON.parse(singleBlog.bannerImage).url
-                                }`}
+                                src={`https://api.xperiagroup.in${singleBlog.bannerImage.url}`}
                                 className="attachment-swm_image_size_post size-swm_image_size_post wp-post-image"
                                 alt=""
                                 decoding="async"
-                                srcSet={`https://api.xperiagroup.in${
-                                  JSON.parse(singleBlog.bannerImage).url
-                                } 939w, https://api.xperiagroup.in${
-                                  JSON.parse(singleBlog.bannerImage).url
-                                } 300w, https://api.xperiagroup.in${
-                                  JSON.parse(singleBlog.bannerImage).url
-                                } 768w`}
+                                srcSet={`https://api.xperiagroup.in${singleBlog.bannerImage.url} 939w, https://api.xperiagroup.in${singleBlog.bannerImage.url} 300w, https://api.xperiagroup.in${singleBlog.bannerImage.url} 768w`}
                                 sizes="(max-width: 939px) 100vw, 939px"
                               />{" "}
                             </figure>
@@ -139,7 +131,11 @@ const BlogDetail = () => {
               </div>
             </section>
 
-            <RelatedPost data={blog.filter(data=> data.category===singleBlog.category)}/>
+            <RelatedPost
+              data={blog.filter(
+                (data) => data.category === singleBlog.category
+              )}
+            />
 
             <div className="clear" />
           </div>

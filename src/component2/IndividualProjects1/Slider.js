@@ -1,7 +1,7 @@
 import React from "react";
 
 const Slider = ({ data }) => {
-  const carouselImages = JSON.parse(data.carouselImages);
+  const carouselImages = data.carouselImages;
 
   return (
     <div

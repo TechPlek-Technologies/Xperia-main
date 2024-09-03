@@ -5,8 +5,8 @@ const RightContent = ({ BannerData }) => {
     <>
       {BannerData &&
         BannerData.map((banner, index) => {
-          const banner541Image = JSON.parse(banner.banner541x724);
-          const banner224Image = JSON.parse(banner.banner224x300);
+          const banner541Image = banner.banner541x724;
+          const banner224Image = banner.banner224x300;
 
           return (
             <div key={index} className="mk-dual-slider-item swiper-slide">

@@ -106,14 +106,24 @@ const FooterMain = () => {
                           width={407}
                           height={104}
                           src={`https://api.xperiagroup.in${
+<<<<<<< HEAD
                             JSON.parse(settingsData[0]?.footerLogo)?.url
+=======
+                            settingsData[0]?.footerLogo?.url
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                           }`}
                           className="attachment-large size-large wp-image-1046"
                           alt=""
                           srcSet={`https://api.xperiagroup.in${
+<<<<<<< HEAD
                             JSON.parse(settingsData[0]?.footerLogo)?.url
                           } 407w, https://api.xperiagroup.in${
                             JSON.parse(settingsData[0]?.footerLogo)?.url
+=======
+                            settingsData[0]?.footerLogo?.url
+                          } 407w, https://api.xperiagroup.in${
+                            settingsData[0]?.footerLogo?.url
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                           } 300w`}
                           sizes="(max-width: 407px) 100vw, 407px"
                         />{" "}

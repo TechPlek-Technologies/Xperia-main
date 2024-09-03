@@ -1,7 +1,6 @@
 import React from "react";
 
 const Slider = ({ data }) => {
-
   return (
     <div
       className="elementor-element elementor-element-7b8fead8 e-flex e-con-boxed e-con e-parent"
@@ -34,6 +33,7 @@ const Slider = ({ data }) => {
                           decoding="async"
                           width={1400}
                           height={720}
+<<<<<<< HEAD
                           src={`https://api.xperiagroup.in${JSON.parse(data.carousel1).url}`}
                           className="attachment-full size-full"
                           alt=""
@@ -42,6 +42,16 @@ const Slider = ({ data }) => {
                                   https://api.xperiagroup.in${JSON.parse(data.carousel1).url}   300w,
                                   https://api.xperiagroup.in${JSON.parse(data.carousel1).url} 1024w,
                                   https://api.xperiagroup.in${JSON.parse(data.carousel1).url}   768w
+=======
+                          src={`https://api.xperiagroup.in${data.carousel1.url}`}
+                          className="attachment-full size-full"
+                          alt=""
+                          srcSet={`
+                                  https://api.xperiagroup.in${data.carousel1.url}          1400w,
+                                  https://api.xperiagroup.in${data.carousel1.url}   300w,
+                                  https://api.xperiagroup.in${data.carousel1.url} 1024w,
+                                  https://api.xperiagroup.in${data.carousel1.url}   768w
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                                 `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
@@ -59,6 +69,7 @@ const Slider = ({ data }) => {
                           decoding="async"
                           width={1400}
                           height={720}
+<<<<<<< HEAD
                           src={`https://api.xperiagroup.in${JSON.parse(data.carousel2).url}`}
                           className="attachment-full size-full"
                           alt=""
@@ -67,6 +78,16 @@ const Slider = ({ data }) => {
                                   https://api.xperiagroup.in${JSON.parse(data.carousel2).url}   300w,
                                   https://api.xperiagroup.in${JSON.parse(data.carousel2).url} 1024w,
                                   https://api.xperiagroup.in${JSON.parse(data.carousel2).url}   768w
+=======
+                          src={`https://api.xperiagroup.in${data.carousel2.url}`}
+                          className="attachment-full size-full"
+                          alt=""
+                          srcSet={`
+                                  https://api.xperiagroup.in${data.carousel2.url}          1400w,
+                                  https://api.xperiagroup.in${data.carousel2.url}   300w,
+                                  https://api.xperiagroup.in${data.carousel2.url} 1024w,
+                                  https://api.xperiagroup.in${data.carousel2.url}   768w
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                                 `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />
@@ -85,6 +106,7 @@ const Slider = ({ data }) => {
                           decoding="async"
                           width={1400}
                           height={720}
+<<<<<<< HEAD
                           src={`https://api.xperiagroup.in${JSON.parse(data.carousel3).url}`}
                           className="attachment-full size-full"
                           alt=""
@@ -93,6 +115,16 @@ const Slider = ({ data }) => {
                                   https://api.xperiagroup.in${JSON.parse(data.carousel3).url}   300w,
                                   https://api.xperiagroup.in${JSON.parse(data.carousel3).url} 1024w,
                                   https://api.xperiagroup.in${JSON.parse(data.carousel3).url}   768w
+=======
+                          src={`https://api.xperiagroup.in${data.carousel3.url}`}
+                          className="attachment-full size-full"
+                          alt=""
+                          srcSet={`
+                                  https://api.xperiagroup.in${data.carousel3.url}          1400w,
+                                  https://api.xperiagroup.in${data.carousel3.url}   300w,
+                                  https://api.xperiagroup.in${data.carousel3.url} 1024w,
+                                  https://api.xperiagroup.in${data.carousel3.url}   768w
+>>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                                 `}
                           sizes="(max-width: 1400px) 100vw, 1400px"
                         />

@@ -4,10 +4,10 @@ const LeftContent = ({ BannerData }) => {
   return (
     <>
       {BannerData && BannerData.map((banner, index) => {
-        const mainImage = JSON.parse(banner.main1259x724);
-        const sub1024Image = JSON.parse(banner.sub1024x589);
-        const sub768Image = JSON.parse(banner.sub768x442);
-        const banner224Image = JSON.parse(banner.banner224x300);
+        const mainImage = banner.main1259x724;
+        const sub1024Image = banner.sub1024x589;
+        const sub768Image = banner.sub768x442;
+        const banner224Image = banner.banner224x300;
 
         return (
           <div key={index} className="mk-dual-slider-item swiper-slide">
