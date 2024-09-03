@@ -50,13 +50,7 @@ const PortfolioItem = ({ project }) => {
                 height={820}
                 src={
                   project?.iconImages
-<<<<<<< HEAD
-                    ? `https://api.xperiagroup.in${
-                        JSON.parse(project.iconImages).url
-                      }`
-=======
                     ? `https://api.xperiagroup.in${project.iconImages.url}`
->>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                     : ""
                 }
                 className="attachment-full size-full"

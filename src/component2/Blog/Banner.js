@@ -37,17 +37,6 @@ const Banner = ({ data }) => {
                           decoding="async"
                           width={1840}
                           height={615}
-<<<<<<< HEAD
-                          src={`https://api.xperiagroup.in${JSON.parse(data.bannerImage).url}`}
-                          className="attachment-full size-full"
-                          alt=""
-                          srcSet={`
-                                https://api.xperiagroup.in${JSON.parse(data.bannerImage).url} 1840w,
-                                https://api.xperiagroup.in${JSON.parse(data.bannerImage).url} 300w,
-                                https://api.xperiagroup.in${JSON.parse(data.bannerImage).url} 1024w,
-                                https://api.xperiagroup.in${JSON.parse(data.bannerImage).url} 768w,
-                                https://api.xperiagroup.in${JSON.parse(data.bannerImage).url} 1536w
-=======
                           src={`https://api.xperiagroup.in${data.bannerImage.url}`}
                           className="attachment-full size-full"
                           alt=""
@@ -57,7 +46,6 @@ const Banner = ({ data }) => {
                                 https://api.xperiagroup.in${data.bannerImage.url} 1024w,
                                 https://api.xperiagroup.in${data.bannerImage.url} 768w,
                                 https://api.xperiagroup.in${data.bannerImage.url} 1536w
->>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                               `}
                           sizes="(max-width: 1840px) 100vw, 1840px"
                         />

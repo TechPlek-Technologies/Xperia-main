@@ -125,11 +125,7 @@ const Blog = () => {
                                     width={939}
                                     height={569}
                                     src={`https://api.xperiagroup.in/${
-<<<<<<< HEAD
-                                      JSON.parse(post.iconImage).url
-=======
                                       post.iconImage.url
->>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                                     }`}
                                     className="attachment-full size-full"
                                     alt="icon"
