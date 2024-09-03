@@ -25,7 +25,7 @@ const Award = () => {
         console.log(response.data);
         
         setData(response.data);
-        setActiveId(response.data[0].id)
+        setActiveId(response?.data[0]?.id)
       }
     };
     fetchData();
