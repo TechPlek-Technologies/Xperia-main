@@ -65,15 +65,7 @@ export const menuData = [
         type: "post_type",
         object: "page",
         href: "/multiplex",
-        label: "multiplex",
-        children: [],
-      },
-      {
-        id: 1966,
-        type: "post_type",
-        object: "page",
-        href: "/cinema-advertising",
-        label: "cinema advertising",
+        label: "multiplex & cinema",
         children: [],
       },
       {

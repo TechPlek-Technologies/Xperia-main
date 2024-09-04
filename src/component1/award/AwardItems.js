@@ -1,6 +1,11 @@
 import React from "react";
-import Style from './AwardItems.module.css'
-const AwardItems = ({ imageData, activeId,handleMouseEnter,handleMouseLeave }) => {
+import Style from "./AwardItems.module.css";
+const AwardItems = ({
+  imageData,
+  activeId,
+  handleMouseEnter,
+  handleMouseLeave,
+}) => {
   return (
     <div className="mk-awards-items">
       <div className="mk-awards-items-list">
@@ -25,8 +30,18 @@ const AwardItems = ({ imageData, activeId,handleMouseEnter,handleMouseLeave }) =
                 <div className="mk-awards-titleSubtitle">
                   <div className="mk-awards-text swm-anim">
                     <h4 className="mk-awards-title swm-anim">
-                      <span className={ Style.gold }>{"GOLD"}</span>
-                      {" "}{image.title}
+                      <span
+                        className={
+                          image.category.toUpperCase() === "GOLD"
+                            ? Style.gold
+                            : image.category.toUpperCase() === "SILVER"
+                            ? Style.silver
+                            : Style.bronze
+                        }
+                      >
+                        {image.category}
+                      </span>{" "}
+                      {image.title}
                     </h4>
                     <span className="mk-awards-subtitle swm-anim swm-hide-none">
                       {image.description}
@@ -36,7 +51,6 @@ const AwardItems = ({ imageData, activeId,handleMouseEnter,handleMouseLeave }) =
               </div>
             </article>
           ))}
-        
         </div>
       </div>
     </div>

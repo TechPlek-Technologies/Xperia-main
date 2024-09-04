@@ -58,17 +58,8 @@ const PortfolioItem = ({ project }) => {
                 srcSet={
                   project?.iconImages
                     ? `
-<<<<<<< HEAD
-                    https://api.xperiagroup.in${
-                        JSON.parse(project.iconImages).url
-                      } 750w,
-                    https://api.xperiagroup.in${
-                        JSON.parse(project.iconImages).url
-                      } 274w
-=======
                     https://api.xperiagroup.in${project.iconImages.url} 750w,
                     https://api.xperiagroup.in${project.iconImages.url} 274w
->>>>>>> 23aea98167bc6a762ae0c7c3c8e056618a086053
                   `
                     : ""
                 }
