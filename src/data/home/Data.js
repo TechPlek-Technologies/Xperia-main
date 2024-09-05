@@ -156,6 +156,7 @@ export const AboutData = {
       content:
         "The mothership, brimming with business ideas, commanding the media landscape with award winning execution case studies across the tapestry of consumer touch-points.",
       slug: "slug",
+      link: "/xperia-group",
     },
     {
       logo: {
@@ -166,6 +167,7 @@ export const AboutData = {
       content:
         "Pencil Box, the creative studio, where ideas are hatched, stories are crafted, designs are rendered, and films are made.",
       slug: "slug",
+      link: "/pencil-box",
     },
     {
       logo: {
@@ -175,8 +177,9 @@ export const AboutData = {
       title: "XPERIA ALIVE",
       content:
         "Xperia Alive, the pulsating multi-floor studio where we not only blend sound to brand vibes, we also own India’s longest thriving Music IP’s",
-      slug: "slug",
-    },
+        slug: "slug",
+        link: "/xperia-alive",
+      },
   ],
 };
 
@@ -248,18 +251,18 @@ export const AwardData = {
       subtitle: "Innovative Green Initiative Hush Puppies",
     },
     {
-       id: "tab-3",
+      id: "tab-3",
       href: `${domain}`,
       src: `${domain}/assets/img/awards/2024/SilverE4MNeon.webp`,
-       year: "2024",
+      year: "2024",
       span: "SILVER",
       title: "E4MNEON AWARD",
       subtitle:
         "Most innovative use of Digital OOH Media ITC Sunfeast Mom’s Magic",
 
       src750x953: `${domain}/assets/img/awards/750x953/SilverE4MNeon.webp`,
-       src236x300: `${domain}/assets/img/awards/236x300/SilverE4MNeon.webp`,
-     },
+      src236x300: `${domain}/assets/img/awards/236x300/SilverE4MNeon.webp`,
+    },
     // {
     //   id: "tab-4",
     //   href: `${domain}`,
@@ -401,9 +404,9 @@ export const BlogData = {
   BlogInnerData: [
     {
       icon: { name: "blog.webp", path: `${domain}/assets/img/blog/blog1.webp` },
-      img939x569:`${domain}/assets/img/blog/939x569/blog1.webp`,
-      img768x465:`${domain}/assets/img/blog/768x465/blog1.webp`,
-      img300x182:`${domain}/assets/img/blog/300x182/blog1.webp`,
+      img939x569: `${domain}/assets/img/blog/939x569/blog1.webp`,
+      img768x465: `${domain}/assets/img/blog/768x465/blog1.webp`,
+      img300x182: `${domain}/assets/img/blog/300x182/blog1.webp`,
       name: "Grabbing Guilty Qualms",
       category: "Creativity",
       date: "Mar 23, 2021",
@@ -414,9 +417,9 @@ export const BlogData = {
     },
     {
       icon: { name: "blog.webp", path: `${domain}/assets/img/blog/blog2.webp` },
-      img939x569:`${domain}/assets/img/blog/939x569/blog2.webp`,
-      img768x465:`${domain}/assets/img/blog/768x465/blog2.webp`,
-      img300x182:`${domain}/assets/img/blog/300x182/blog2.webp`,
+      img939x569: `${domain}/assets/img/blog/939x569/blog2.webp`,
+      img768x465: `${domain}/assets/img/blog/768x465/blog2.webp`,
+      img300x182: `${domain}/assets/img/blog/300x182/blog2.webp`,
       name: "Actively listening?",
       category: "Creativity",
       date: "Mar 22, 2021",
@@ -427,9 +430,9 @@ export const BlogData = {
     },
     {
       icon: { name: "blog.webp", path: `${domain}/assets/img/blog/blog3.webp` },
-      img939x569:`${domain}/assets/img/blog/939x569/blog3.webp`,
-      img768x465:`${domain}/assets/img/blog/768x465/blog3.webp`,
-      img300x182:`${domain}/assets/img/blog/300x182/blog3.webp`,
+      img939x569: `${domain}/assets/img/blog/939x569/blog3.webp`,
+      img768x465: `${domain}/assets/img/blog/768x465/blog3.webp`,
+      img300x182: `${domain}/assets/img/blog/300x182/blog3.webp`,
       name: "Not so Knotty",
       category: "Creativity",
       date: "Mar 22, 2021",
