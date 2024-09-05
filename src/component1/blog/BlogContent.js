@@ -6,8 +6,9 @@ import { useSelector } from "react-redux";
 const { BlogInnerData } = BlogData;
 
 const BlogContent = () => {
-  // const blogs = JSON.parse(localStorage.getItem("Blogs"));
+  // const blogs = localStorage.getItem("Blogs"));
   const { blogData: blogs } = useSelector((state) => state.blogs);
+  console.log(blogs);
 
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);
@@ -51,16 +52,16 @@ const BlogContent = () => {
                       width={939}
                       height={569}
                       src={`https://api.xperiagroup.in/${
-                        JSON.parse(blog.iconImage).url
+                        blog.bannerImage.url
                       }`}
                       className="attachment-full size-full"
                       alt="blog icon"
                       srcSet={`${`https://api.xperiagroup.in/${
-                        JSON.parse(blog.iconImage).url
+                        blog.bannerImage.url
                       }`} 939w, ${`https://api.xperiagroup.in/${
-                        JSON.parse(blog.iconImage).url
+                        blog.bannerImage.url
                       }`} 300w, ${`https://api.xperiagroup.in/${
-                        JSON.parse(blog.iconImage).url
+                        blog.bannerImage.url
                       }`} 768w`}
                       sizes="(max-width: 939px) 100vw, 939px"
                     />

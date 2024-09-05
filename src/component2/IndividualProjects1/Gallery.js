@@ -28,13 +28,13 @@ const Gallery = ({ data }) => {
                 width={750}
                 height={748}
                 alt="Gallery Img"
-                src={`https://api.xperiagroup.in/uploads/${item.file.path}`}
+                src={`https://api.xperiagroup.in${item.url}`}
                 className="attachment-large size-large wp-image-1159"
                 srcSet={`
-                  https://api.xperiagroup.in/uploads/${item.file.path}         750w,
-                  https://api.xperiagroup.in/uploads/${item.file.path} 300w,
-                  https://api.xperiagroup.in/uploads/${item.file.path} 150w,
-                  https://api.xperiagroup.in/uploads/${item.file.path} 100w
+                  https://api.xperiagroup.in${item.url}         750w,
+                  https://api.xperiagroup.in${item.url} 300w,
+                  https://api.xperiagroup.in${item.url} 150w,
+                  https://api.xperiagroup.in${item.url} 100w
                 `}
                 sizes="(max-width: 750px) 100vw, 750px"
               />
