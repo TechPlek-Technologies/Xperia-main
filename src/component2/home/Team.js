@@ -35,7 +35,7 @@ const Team = () => {
             {/* filter */}
             {/* content */}
             {data &&
-              data.map((item) => (
+              data.slice(0, 3).map((item) => (
                 <article
                   key={item.id}
                   className={`mk-grid-item mk-grid-item-wrap mk-item--full post-${item.id} portfolio type-portfolio status-publish has-post-thumbnail hentry portfolio_category-photography`}
@@ -89,6 +89,7 @@ const Team = () => {
                           alt={item?.profileImage?.name}
                           srcSet={`https://api.xperiagroup.in${item?.profileImage?.url} 750w, https://api.xperiagroup.in${item?.profileImage?.url} 274w`}
                           sizes={`(max-width: 750px) 100vw, 820px`}
+                          style={{ width: "750px", height: "820px" }}
                         />
                       </a>
                     </div>

@@ -28,7 +28,7 @@ const About = () => {
           >
             <Image source={item.logo.path} alt={item.logo.name} />
             <Content heading={item.title} para={item.content} />
-            <Button />
+            <Button src={item.link}/>
           </div>
         ))}
       </div>
