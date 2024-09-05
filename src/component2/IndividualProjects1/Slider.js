@@ -2,6 +2,7 @@ import React from "react";
 
 const Slider = ({ data }) => {
   const carouselImages = data.carouselImages;
+  console.log(data);
 
   return (
     <div
@@ -25,8 +26,20 @@ const Slider = ({ data }) => {
                 data-settings='{"direction":"horizontal","parallax":"no","effect":"slide","arrows_on":"yes","dots":"","autoplay":"yes","autoplay_speed":5000,"speed":1000,"mousewheel":"no","loop":"yes","pause_on_hover":"no","slides_to_show":1,"slides_to_show_tablet":1,"slides_to_show_mobile":1,"slider_next":".mk-slider-next","slider_prev":".mk-slider-prev","slider_pagination":".swiper-pagination","centered_slides":"no","video":"yes","image_spacing":{"unit":"px","size":0,"sizes":[]}}'
                 id="swiper-46236af"
               >
-                <div className="swiper-wrapper">
-                  {carouselImages.map((item, index) => (
+                {carouselImages.map((item, index) => {
+                  console.log(item);
+                  
+                  if (!item.url) {
+                    // console.warn(`Missing URL for item at index ${index}`);
+                    return null; 
+                  }
+
+                  const fileExtension = item.url.split(".").pop().toLowerCase();
+                  const isVideo = ["mp4", "webm", "ogg"].includes(
+                    fileExtension
+                  ); 
+
+                  return (
                     <div
                       key={index}
                       className="mk-swiper-item swiper-slide size-default"
@@ -34,30 +47,45 @@ const Slider = ({ data }) => {
                       <div className="mk-carousel-slider-overlay" />
                       <div className="mk-carousel-slider-img-holder">
                         <div className="mk-carousel-slider-img">
-                          <img
-                            fetchpriority="high"
-                            decoding="async"
-                            width={1400}
-                            height={720}
-                            src={`https://api.xperiagroup.in/uploads/${item.file.path}`}
-                            className="attachment-full size-full"
-                            alt="carousel images"
-                            srcSet={`
-                              https://api.xperiagroup.in/uploads/${item.file.path}          1400w,
-                              https://api.xperiagroup.in/uploads/${item.file.path}   300w,
-                              https://api.xperiagroup.in/uploads/${item.file.path} 1024w,
-                              https://api.xperiagroup.in/uploads/${item.file.path}   768w
-                            `}
-                            sizes="(max-width: 1400px) 100vw, 1400px"
-                          />
+                          {isVideo ? (
+                            <video
+                              controls
+                              width={1400}
+                              height={720}
+                              className="attachment-full size-full"
+                            >
+                              <source
+                                src={`https://api.xperiagroup.in${item.url}`}
+                                type={`video/${fileExtension}`}
+                              />
+                              Your browser does not support the video tag.
+                            </video>
+                          ) : (
+                            <img
+                              loading="lazy"
+                              decoding="async"
+                              width={1400}
+                              height={720}
+                              src={`https://api.xperiagroup.in${item.url}`}
+                              className="attachment-full size-full"
+                              alt="carousel images"
+                              srcSet={`https://api.xperiagroup.in${item.url} 1400w,
+                                       https://api.xperiagroup.in${item.url}   300w,
+                                       https://api.xperiagroup.in${item.url} 1024w,
+                                       https://api.xperiagroup.in${item.url}   768w
+                                     `}
+                              sizes="(max-width: 1400px) 100vw, 1400px"
+                            />
+                          )}
                         </div>
                       </div>
                       <div className="mk-carousel-slider-content-wrap">
                         <div className="mk-carousel-slider-content" />
                       </div>
                     </div>
-                  ))}
-                </div>
+                  );
+                })}
+
                 <div className="mk-slider-pn mk-slider-prev swiper-46236af-prev swm-hide-mobile">
                   <svg
                     className="swm-svg--arrow swm-svg-filterable-bs-slider-arrow"
