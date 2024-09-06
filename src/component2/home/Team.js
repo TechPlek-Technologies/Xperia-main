@@ -89,7 +89,7 @@ const Team = () => {
                           alt={item?.profileImage?.name}
                           srcSet={`https://api.xperiagroup.in${item?.profileImage?.url} 750w, https://api.xperiagroup.in${item?.profileImage?.url} 274w`}
                           sizes={`(max-width: 750px) 100vw, 820px`}
-                          style={{ width: "750px", height: "820px" }}
+                          style={{ width: "750px", height: "520px" }}
                         />
                       </a>
                     </div>
