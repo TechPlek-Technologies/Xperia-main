@@ -1,4 +1,5 @@
 import { FeatureData } from "../../data/home/Data";
+import { domain } from "../../domain";
 
 export const ProjectImages = ({ imageData }) => {
   console.log("imageData", imageData);
@@ -15,7 +16,7 @@ export const ProjectImages = ({ imageData }) => {
             className="mk-moving-projects-img"
             data-projectimage={project.id}
           >
-            <a href="#" className="mk-moving-projects-link">
+            <a href={`${domain}/project-description?title=${project.slug}`} className="mk-moving-projects-link">
               <span className="mk-moving-projects-mobile-title">
                 {project?.projectTitle?.toLowerCase()}
               </span>

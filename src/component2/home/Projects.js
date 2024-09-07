@@ -47,8 +47,8 @@ const Projects = () => {
   // const projectData = JSON.parse(localStorage.getItem("projects"));
   console.log("projectData", projectData);
 
-  const array = duplicateToLimit(projectData);
-  const { topImages, bottomImages } = splitArray(array);
+  // const array = duplicateToLimit(projectData);
+  const { topImages, bottomImages } = splitArray(projectData);
 
 
   return (
@@ -81,7 +81,7 @@ const Projects = () => {
                 {bottomImages && <ProjectImages imageData={bottomImages} />}
                 <div className="mk-moving-project-info">
                   <div className="mk-moving-project-info-bg" />
-                  {array && <FeaturedProjects data={projectData} />}
+                  {projectData && <FeaturedProjects data={projectData} />}
                 </div>
               </div>
             </section>

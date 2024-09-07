@@ -21,6 +21,7 @@ const IndividualProject1 = () => {
   const { projectData } = useSelector((state) => state.projects);
 
   const data = projectData?.filter((data) => data.slug === paramValue);
+  console.log("IndividualProject1",data)
   return (
     <Layout type={"other"}>
       <div
@@ -32,7 +33,7 @@ const IndividualProject1 = () => {
         {data && <Content data={data[0]} />}
         {data && <Slider data={data[0]} />}
         {/* {data && <Content2 data={data[0]} />} */}
-        <Description data={data[0]} />
+        {/* <Description data={data[0]} /> */}
         <Gallery data={data[0]} />
         {data && <ProjectDetail data={data[0]} />}
         {/* <ProjectNavigation /> */}

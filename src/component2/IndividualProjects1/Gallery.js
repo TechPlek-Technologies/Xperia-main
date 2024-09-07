@@ -10,6 +10,7 @@ const Gallery = ({ data }) => {
       data-id="21c0dd8d"
       data-element_type="container"
       data-settings='{"mk_ext_is_sticky":"false"}'
+      style={{marginTop:"50px"}}
     >
       <div className="e-con-inner">
         {projectImages.map((item, index) => (
