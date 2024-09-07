@@ -2,7 +2,6 @@ import React from "react";
 
 const Slider = ({ data }) => {
   const carouselImages = data.carouselImages;
-  console.log(data);
 
   return (
     <div
