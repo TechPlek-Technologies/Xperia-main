@@ -28,7 +28,7 @@ const RelatedPost = ({ data }) => {
                       <img
                         width={939}
                         height={569}
-                        src={`https://api.xperiagroup.in/${iconImage.url}`}
+                        src={`https://api.xperiagroup.in/${data.bannerImage.url}`}
                         className="attachment-medium-large size-medium-large wp-post-image"
                         alt={post.blogTitle}
                         decoding="async"

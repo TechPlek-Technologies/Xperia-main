@@ -5,11 +5,11 @@ const MediaIcons = ({ socialMediaIcons }) => {
   return (
     <div className={Style.social_wrapper}>
       <ul className={Style.uList}>
-        {socialMediaIcons.map((icons) => (
-          <li className={Style.list}>
+        {socialMediaIcons.map((icons,index) => (
+          <li className={Style.list} key={index}>
             <Link to={icons.link} className={Style.links}>
               <span className={Style.span}>
-                <i class={icons.icon}></i>
+                <i className={icons.icon}></i>
               </span>
             </Link>
           </li>

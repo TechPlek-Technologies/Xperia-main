@@ -21,6 +21,7 @@ const BlogDetail = () => {
 
   const data = blog?.filter((data) => data.slug === paramValue);
   const singleBlog = data[0];
+
   return (
     <Layout>
       <Breadcrumb title={singleBlog.blogTitle} />
@@ -59,28 +60,15 @@ const BlogDetail = () => {
                           <div className="swm-post-title-section">
                             <div className="swm-post-meta  highlight-text">
                               <div className="swm-post-meta-date-separator" />
-                              <a
-                                itemProp="dateCreated"
-                                href="https://techpartner.online/orbius/2024/03/"
-                                className="entry-date published updated"
-                              >
-                                {formatDate(singleBlog.createdAt)}
-                              </a>
+                              <p>{formatDate(singleBlog.createdAt)}</p>
                               <div className="swm-post-meta-separator" />
-                              <a
-                                href="https://techpartner.online/orbius/category/design-trends/"
-                                rel="tag"
-                              >
+                              <p>
                                 {singleBlog.category}
-                              </a>
+                              </p>
                               <div className="swm-post-meta-separator" />
-                              <a
-                                itemProp="url"
-                                href="https://techpartner.online/orbius/hushed-whispers-echo-through-ruins/#respond"
-                                className="swm-info-comments-link"
-                              >
+                              <p>
                                 0 Comments
-                              </a>
+                              </p>
                               <div className="swm-post-meta-separator" />
                             </div>
                             <div className="swm-post-title-content">
@@ -131,11 +119,11 @@ const BlogDetail = () => {
               </div>
             </section>
 
-            <RelatedPost
+            {/* <RelatedPost
               data={blog.filter(
                 (data) => data.category === singleBlog.category
               )}
-            />
+            /> */}
 
             <div className="clear" />
           </div>

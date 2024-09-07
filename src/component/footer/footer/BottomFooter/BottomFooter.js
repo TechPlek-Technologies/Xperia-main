@@ -22,11 +22,12 @@ const BottomFooter = ({ settingsData }) => {
   ];
   return (
     <div className={Style.wrapper}>
-      {BottomFooterData.map((item) => (
+      {BottomFooterData.map((item,index) => (
         <BottomFooterItem
           src={item.src}
           text={item.text}
           subtitle={item.subtitle}
+          key={index}
         />
       ))}
     </div>

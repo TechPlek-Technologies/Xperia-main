@@ -12,7 +12,7 @@ const AwardImages = ({ imageData, activeId }) => {
               activeId === image.id ? "active-item" : ""
             }`}
           >
-            <a className="mk-awards-link" href={"#"}>
+            <p className="mk-awards-link">
               <img
                 loading="lazy"
                 decoding="async"
@@ -24,7 +24,7 @@ const AwardImages = ({ imageData, activeId }) => {
                 srcset={`https://api.xperiagroup.in${image.awardImage.url} 750w,  https://api.xperiagroup.in${image.awardImage.url} 236w`}
                 sizes="(max-width: 750px) 100vw, 750px"
               />
-            </a>
+            </p>
           </div>
         ))}
       </div>
