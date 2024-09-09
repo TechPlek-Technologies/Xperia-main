@@ -15,7 +15,7 @@ export const ServiceItem = ({ item, index }) => {
     <div
       className={`mk-moving-services-item-box stack mk-moving-services-item-${position}`}
     >
-      <a href={`${domain}${item.slug}`} className="mk-moving-services-link" />
+      <a href={`${domain}/${item.slug}`} className="mk-moving-services-link" />
       <article className="mk-moving-services-item">
         <span className="mk-moving-services-counter">{`0${index + 1}`}</span>
         <h4 className="mk-moving-services-title">{item.title}</h4>

@@ -125,7 +125,7 @@ const Blog = () => {
                                     width={939}
                                     height={569}
                                     src={`https://api.xperiagroup.in/${
-                                      post.iconImage.url
+                                      post.bannerImage.url
                                     }`}
                                     className="attachment-full size-full"
                                     alt="icon"

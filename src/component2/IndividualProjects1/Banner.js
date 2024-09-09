@@ -36,9 +36,9 @@ const Banner = ({ data, title }) => {
               <h2 className="mk-title-heading swm-hide-none">
                 <span>{data.projectTitle}</span>
               </h2>
-              <div className="mk-title-subtitle swm-hide-none">
+              {/* <div className="mk-title-subtitle swm-hide-none">
                 {data.firstName} {data.lastName}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

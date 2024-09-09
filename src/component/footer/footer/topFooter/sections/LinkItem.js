@@ -13,10 +13,10 @@ const LinkItem = ({ title, listItem }) => {
         <div className={Style.container}>
           <div className={Style.list}>
             <div className={Style.listItem}>
-              {listItem.map((item) => (
+              {listItem.map((item, index) => (
                 <>
-                  <Link to={item.src} className={Style.link}>
-                  <h4 className={Style.h4}>{item.name}</h4>
+                  <Link key={index} to={item.src} className={Style.link}>
+                    <h4 className={Style.h4}>{item.name}</h4>
                   </Link>
                 </>
               ))}

@@ -18,10 +18,6 @@ const AwardItems = ({
               data-index={image.id}
               onMouseEnter={() => handleMouseEnter(image.id)}
             >
-              <a
-                className="mk-awards-link"
-                href="https://techpartner.online/orbius/about-us/"
-              />
               <div className="mk-awards-content">
                 <div className="mk-awards-year-holder swm-anim swm-anim swm-hide-none">
                   <span className="mk-awards-year swm-anim">{image.year}</span>
