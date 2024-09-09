@@ -26,6 +26,7 @@ const Slider = ({ data }) => {
             loop
             src={`${process.env.REACT_APP_API_URL}/${carouselImages.url}`}
             style={{ width: "1422.22px", height: 800 }}
+            poster={`${process.env.REACT_APP_API_URL}/${carouselImages.url}`}
           />
         </div>
       </div>
