@@ -21,34 +21,15 @@ const splitArray = (array) => {
   }
 };
 
-function duplicateToLimit(arr) {
-  // If the array length is already 8 or more, return the original array
-  if (arr?.length >= 8) {
-    return arr.slice(0, 8);
-  }
-
-  // While the array length is less than 8, duplicate its elements
-  while (arr?.length < 8) {
-    // Calculate the number of elements needed to reach a length of 8
-    const elementsNeeded = 8 - arr.length;
-
-    // Duplicate elements from the start of the array to fill the gap
-    arr = arr.concat(arr.slice(0, elementsNeeded));
-  }
-
-  return arr;
-}
 
 const Projects = () => {
   // const [firstHalf, secondHalf] = splitData(FeatureData.imageData);
   const { projectData } = useSelector((state) => state.projects);
-  // console.log("projectData", projectData);
-
-  // const projectData = JSON.parse(localStorage.getItem("projects"));
   console.log("projectData", projectData);
 
   // const array = duplicateToLimit(projectData);
-  const { topImages, bottomImages } = splitArray(projectData);
+  const { topImages, bottomImages } = splitArray(projectData.filter(item=>item.homepage).slice(0,8));
+console.log(topImages, bottomImages);
 
 
   return (

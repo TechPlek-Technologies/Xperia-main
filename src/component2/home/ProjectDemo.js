@@ -32,6 +32,7 @@ export const ProjectImages = ({ imageData }) => {
                 // srcSet={`${project.img.path} 749w, ${project.img.path.replace('.webp', '-300x216.webp')} 300w`}
                 srcSet={`https://api.xperiagroup.in/${project.iconImages?.url} 749w, https://api.xperiagroup.in/${project.iconImages?.url} 300w`}
                 sizes="(max-width: 749px) 100vw, 749px"
+                style={{width:"750px"}}
               />
             </a>
           </div>

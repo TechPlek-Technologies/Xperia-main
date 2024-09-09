@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../component2/wrapper/Layout";
 import Banner from "../component2/IndividualProjects1/Banner";
 import Content from "../component2/IndividualProjects1/Content";
 import Slider from "../component2/IndividualProjects1/Slider";
-import Description from "../component2/IndividualProjects1/Description";
 import Gallery from "../component2/IndividualProjects1/Gallery";
 import ProjectDetail from "../component2/IndividualProjects1/ProjectDetail";
-import ProjectNavigation from "../component2/IndividualProjects1/ProjectNavigation";
-import axios from "axios";
-import Content2 from "../component2/IndividualProjects1/Content2";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const IndividualProject1 = () => {
