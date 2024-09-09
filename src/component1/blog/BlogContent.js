@@ -8,7 +8,7 @@ const { BlogInnerData } = BlogData;
 const BlogContent = () => {
   // const blogs = localStorage.getItem("Blogs"));
   const { blogData: blogs } = useSelector((state) => state.blogs);
-  console.log(blogs);
+  console.log("blogs", blogs);
 
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);
@@ -51,18 +51,10 @@ const BlogContent = () => {
                       decoding="async"
                       width={939}
                       height={569}
-                      src={`https://api.xperiagroup.in/${
-                        blog.bannerImage.url
-                      }`}
+                      src={`https://api.xperiagroup.in/${blog.bannerImage.url}`}
                       className="attachment-full size-full"
                       alt="blog icon"
-                      srcSet={`${`https://api.xperiagroup.in/${
-                        blog.bannerImage.url
-                      }`} 939w, ${`https://api.xperiagroup.in/${
-                        blog.bannerImage.url
-                      }`} 300w, ${`https://api.xperiagroup.in/${
-                        blog.bannerImage.url
-                      }`} 768w`}
+                      srcSet={`${`https://api.xperiagroup.in/${blog.bannerImage.url}`} 939w, ${`https://api.xperiagroup.in/${blog.bannerImage.url}`} 300w, ${`https://api.xperiagroup.in/${blog.bannerImage.url}`} 768w`}
                       sizes="(max-width: 939px) 100vw, 939px"
                     />
                   </a>
