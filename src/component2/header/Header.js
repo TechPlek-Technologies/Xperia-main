@@ -17,7 +17,7 @@ export const menuData = [
     type: "custom",
     object: "custom",
     href: "#",
-    label: "about",
+    label: "about ⮟",
     children: [
       {
         id: 1981,
@@ -50,7 +50,7 @@ export const menuData = [
     type: "custom",
     object: "custom",
     href: "#",
-    label: "services",
+    label: "services ⮟",
     children: [
       {
         id: 1983,
@@ -65,7 +65,7 @@ export const menuData = [
         type: "post_type",
         object: "page",
         href: "/multiplex",
-        label: "multiplex & cinema",
+        label: "cinema advertisement",
         children: [],
       },
       {
@@ -131,7 +131,7 @@ export const menuData = [
     type: "custom",
     object: "custom",
     href: "#",
-    label: "contact",
+    label: "contact ⮟",
     children: [
       {
         id: 1990,

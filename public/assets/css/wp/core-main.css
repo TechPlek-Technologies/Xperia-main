@@ -2251,7 +2251,7 @@ a.mk-image-link { position: absolute; top: 0; left: 0; width: 100%; height: 100%
 .mk-title-subtitle span,
 .mk-title-desc span { display: inline-block; position: relative; }
 .mk-title-subtitle:before,
-.mk-title-subtitle:after { content: ''; flex-shrink:0;  width: 7px; height: 7px;  display: none; border-radius: 100%; background:var(--swm-color-headings); }
+.mk-title-subtitle:after { content: ''; flex-shrink:0;  width: 7px; height: 7px;  display: none; border-radius: 100%; ; }
 .mk-title-subtitle { position: relative; z-index: 0; color: var(--swm-color-headings); display:flex; justify-content:flex-start; align-items:center; position: relative; }
 .mk-title-align--center .mk-title-subtitle { justify-content:center; }
 .mk-title-align--justify .mk-title-subtitle:before,

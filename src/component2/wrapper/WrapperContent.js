@@ -1,13 +1,13 @@
 import React from "react";
 
-const WrapperContent = () => {
+const WrapperContent = ({ settingsData }) => {
+  console.log("WrapperContent", settingsData.sidebar);
   return (
     <div className="elementor-widget-container">
       <div className="mk-title mk-title-">
         <div className="mk-title-desc swm-hide-none">
           <span>
-            Curabitur sagittis lectus quis purus interua vulputate justo hererit
-            asellus ullcorper sem vel tellus ultrices ac suscipit orci
+            {settingsData?.sidebar}
           </span>
         </div>
       </div>

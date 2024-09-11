@@ -1,4 +1,5 @@
 import React from "react";
+import { domain } from "../../domain";
 
 const Form = () => {
   return (
@@ -35,10 +36,10 @@ const Form = () => {
                     decoding="async"
                     width={605}
                     height={605}
-                    src="https://orbius.premiumthemes.in/wp-content/uploads/2024/03/contact-us.jpg"
+                    src={`${domain}/assets/img/contact/contact-us.jpg`}
                     className="attachment-full size-full wp-image-1231"
                     alt=""
-                    srcSet="https://orbius.premiumthemes.in/wp-content/uploads/2024/03/contact-us.jpg 605w, https://orbius.premiumthemes.in/wp-content/uploads/2024/03/contact-us-300x300.jpg 300w, https://orbius.premiumthemes.in/wp-content/uploads/2024/03/contact-us-150x150.jpg 150w, https://orbius.premiumthemes.in/wp-content/uploads/2024/03/contact-us-100x100.jpg 100w"
+                    srcSet={`${domain}/assets/img/contact/contact-us.jpg 605w, ${domain}/assets/img/contact/contact-us.jpg 300w, ${domain}/assets/img/contact/contact-us.jpg 150w, ${domain}/assets/img/contact/contact-us.jpg 100w`}
                     sizes="(max-width: 605px) 100vw, 605px"
                   />{" "}
                 </div>
