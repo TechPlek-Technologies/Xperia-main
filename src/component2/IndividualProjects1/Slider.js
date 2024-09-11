@@ -4,30 +4,10 @@ const Slider = ({ data }) => {
   const carouselImages = data.carouselImages[0];
   console.log(carouselImages);
 
-  function checkImageFormat(imagePath) {
-    // Define the allowed extensions
-    const allowedExtensions = ["png", "jpg", "jpeg", "webp"];
-
-    // Extract the extension from the image path
-    const extension = imagePath.split(".").pop().toLowerCase();
-
-    // Check if the extension is in the allowed list
-    if (allowedExtensions.includes(extension)) {
-      console.log("Valid image format:", extension);
-      return true; // Valid image format
-    } else {
-      console.error(
-        "Invalid image format. Allowed formats are PNG, JPG, JPEG, or WEBP."
-      );
-      return false; // Invalid image format
-    }
-  }
-
-  checkImageFormat(carouselImages.url);
 
   return (
     <>
-      {!checkImageFormat(carouselImages.url) && (
+      { (
         <div
           className="elementor-element elementor-element-b89713c e-con-full e-flex e-con e-parent e-lazyloaded"
           data-id="b89713c"

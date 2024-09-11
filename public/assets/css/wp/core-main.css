@@ -3063,7 +3063,7 @@ a.mk-video-icon-element:before { background: var(--swm-color-light-1); }
 .mk-dual-slider .mk-dual-slider-item .mk-dual-slider-content { display: none !important; }
 .mk-dual-slider .mk-dual-slider-title { margin: 0 0 9px; animation: mk-dual-slider-anim-text 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 .mk-dual-slider-content-large {  z-index:11; position: relative; }
-.mk-dual-slider-content-large .mk-dual-slider-title { font-weight:500; max-width:60vw; font-size:3.6vw; line-height:1.1; padding:1vw 0vw; -webkit-animation-name: mkClipOut; animation-name: mkClipOut; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: .7s; animation-duration: .7s; -webkit-animation-timing-function: cubic-bezier(0.67, 0.04, 0.3, 0.91); animation-timing-function: cubic-bezier(0.67, 0.04, 0.3, 0.91); will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.mk-dual-slider-content-large .mk-dual-slider-title { font-weight:500; max-width:100vw; font-size:3.6vw; line-height:1.1; padding:1vw 0vw; -webkit-animation-name: mkClipOut; animation-name: mkClipOut; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: .7s; animation-duration: .7s; -webkit-animation-timing-function: cubic-bezier(0.67, 0.04, 0.3, 0.91); animation-timing-function: cubic-bezier(0.67, 0.04, 0.3, 0.91); will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 
 .mk-dual-slider-top { display:flex; justify-content:space-between; align-items:flex-end; position: relative; z-index:2;  }
 
