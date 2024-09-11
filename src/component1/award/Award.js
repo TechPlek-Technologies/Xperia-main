@@ -3,6 +3,8 @@ import AwardImages from "./AwardImages";
 import AwardItems from "./AwardItems";
 import SectionHeading from "../../component2/common/section-heading";
 import axios from "axios";
+import Button from "../../component/home/about/about/Button";
+import { domain } from "../../domain";
 
 const Award = () => {
   const [activeId, setActiveId] = React.useState(1);
@@ -63,6 +65,7 @@ const Award = () => {
               </div>
             </div>
           </div>
+        <Button text={"view all"} src={`${domain}/awards`} />
         </div>
       </div>
     </>

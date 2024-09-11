@@ -19,6 +19,7 @@ import { fetchBanners } from "./redux/slice/banner-slice";
 import { fetchBlogs } from "./redux/slice/blog-slice";
 import { setLoading } from "./redux/slice/loading-slice";
 import { domain } from "./domain";
+import Awards from "./pages/Awards";
 
 function App() {
   const dispatch = useDispatch();
@@ -69,6 +70,7 @@ function App() {
               element={<IndividualProject1 projectData={projectData} />}
             />
             <Route path={"/team"} element={<Team />} />
+            <Route path={"/awards"} element={<Awards />} />
             <Route path={"/blogs"} element={<Blog />} />
             <Route path={"/blog"} element={<BlogDetail />} />
             <Route path={"/locations"} element={<Locations />} />

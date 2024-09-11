@@ -7,14 +7,14 @@
 
 .imageinner{
     height: 100px;
-    width: 100px;
+    width: 200px;
 }
 
 
-/* @media screen and (min-width: 1900px) {
+@media screen and (min-width: 1900px) {
   
     .imageinner{
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
     }
-} */
+}

@@ -71,7 +71,8 @@
     .wrapper{
         margin-inline-start: 300px;
         margin-inline-end: 300px;
-        padding-block-start: 150px;
+        padding-block-start: 250px;
+        padding-block-end: 250px;
         
     }
 }

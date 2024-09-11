@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import SectionHeading from "../common/section-heading";
 import Button from "../../component/home/about/about/Button";
 import axios from "axios";
+import { domain } from "../../domain";
 
 const Team = () => {
   const [data, setData] = React.useState(null);
@@ -89,7 +90,7 @@ const Team = () => {
                           alt={item?.profileImage?.name}
                           srcSet={`https://api.xperiagroup.in${item?.profileImage?.url} 750w, https://api.xperiagroup.in${item?.profileImage?.url} 274w`}
                           sizes={`(max-width: 750px) 100vw, 820px`}
-                          style={{ width: "750px", height: "520px" }}
+                          // style={{ width: "750px", height: "520px" }}
                         />
                       </a>
                     </div>
@@ -97,7 +98,7 @@ const Team = () => {
                 </article>
               ))}
             <div className="clear" />
-            <Button text={"view all"} />
+            <Button text={"view all"} src={`${domain}/team`} />
           </div>
         </div>
       </div>
