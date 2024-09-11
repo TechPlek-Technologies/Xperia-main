@@ -36,7 +36,7 @@ const AwardSection = ({ data }) => {
                                   </a>
                                 </h3>
                                 <div className="mk-portfolio-subtitle">
-                                  {item.category}
+                                  {item.category} {`(${item.year})`}
                                 </div>
                                 <div
                                   className="mk-portfolio-title"
