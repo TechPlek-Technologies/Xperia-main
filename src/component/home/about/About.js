@@ -15,24 +15,28 @@ const About = () => {
 
   return (
     <>
-    <SectionHeading title={"who we are"} subTitle={"discover our identity"}/>
-    <div className={Style.wrapper} >
-      <div className={Style.container} >
-        {AboutData.aboutInnerData.map((item, index) => (
-          <div
-            ref={ref}
-            className={`${Style.aboutinner} ${
-              inView ? Style.show : Style.hide
-            }`}
-            style={{ transitionDelay: `${index * 0.1}s` }}
-          >
-            <Image source={item.logo.path} alt={item.logo.name} />
-            <Content heading={item.title} para={item.content} />
-            <Button src={item.link}/>
-          </div>
-        ))}
+      <SectionHeading title={"who we are"} subTitle={"discover our identity"} />
+      <div className={Style.wrapper}>
+        <div className={Style.container}>
+          {AboutData.aboutInnerData.map((item, index) => (
+            <div
+              ref={ref}
+              className={`${Style.aboutinner} ${
+                inView ? Style.show : Style.hide
+              }`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
+              <Image
+                alive={index === 2 ? true : false}
+                source={item.logo.path}
+                alt={item.logo.name}
+              />
+              <Content heading={item.title} para={item.content} />
+              <Button src={item.link} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 };
