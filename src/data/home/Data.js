@@ -150,7 +150,7 @@ export const AboutData = {
     {
       logo: {
         name: "about.webp",
-        path: `${domain}/assets/img/about/2.png`,
+        path: `${domain}/assets/img/about/rr.png`,
       },
       title: "XPERIA GROUP",
       content:
