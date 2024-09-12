@@ -26,16 +26,15 @@ const Projects = () => {
   const { projectData } = useSelector((state) => state.projects);
   console.log("projectData", projectData);
 
-  // const array = duplicateToLimit(projectData);
-  const { topImages, bottomImages } = splitArray(
-    projectData.filter((item) => item.homepage).slice(0, 8)
-  );
-
   useEffect(() => {
     if (!projectData) {
       window.location.reload();
     }
   }, []);
+  // const array = duplicateToLimit(projectData);
+  const { topImages, bottomImages } = splitArray(
+    projectData.filter((item) => item.homepage).slice(0, 8)
+  );
 
   return (
     <>
