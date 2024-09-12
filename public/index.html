@@ -540,12 +540,20 @@
       defer
     ></script>
 
+    <script
+      type="text/javascript"
+      src="/assets/js/wp-content/mk-widgets.min.js"
+      id="mk-widgets-js"
+      defer
+    ></script>
     <script>
       (function ($) {
         "use strict";
 
         function isSafari() {
-          console.log(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+          console.log(
+            /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+          );
           return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
         }
 
@@ -898,69 +906,51 @@
             }
           }
           // Services Text Functionality ------------------------------------------
-          // Services Text Functionality ------------------------------------------
-          var mkRevealServices = {
-            init: function () {
-              if (
-                $("body").hasClass("elementor-editor-active") ||
-                mkAddons.windowWidth < 1024
-              ) {
-                return;
-              }
+          var mkInteractiveServices = function ($scope, $) {
+            var thisHolder = $scope.find(".mk-interactive-services"),
+              articles = thisHolder.find(".mk-itsr-item"),
+              showcaseWallImages = thisHolder.find(".mk-itsr-images"),
+              showcaseWallImage = thisHolder.find(".mk-itsr-image");
 
-              let $holder = $(".mk-reveal-services-holder");
-
-              if ($holder.length) {
-                gsap.defaults({ overwrite: "auto" });
-                gsap.registerPlugin(ScrollTrigger);
-                gsap.config({ nullTargetWarn: false });
-
-                // Use the holder as a container to find elements within it
-                $holder.each(function () {
-                  let $thisHolder = $(this);
-                  mkRevealServices.initItem($thisHolder);
-                });
-              }
-            },
-            initItem: function ($holder) {
-              const tlBoxMove = gsap.timeline({
-                scrollTrigger: {
-                  trigger: $(".mk-reveal-services-holder"), // Trigger the animation based on the holder's position
-                  start: "top bottom", // Adjust this to fit your needs
-                  end: "bottom top",
-                  scrub: 1,
-                },
+            if ($(window).width() >= 1024) {
+              $(articles.get().reverse()).each(function () {
+                if ($(this).hasClass("active-item")) {
+                  articles.removeClass("active-item");
+                  $(this).addClass("active-item");
+                }
               });
 
-              tlBoxMove
-                .to(".mk-reveal-service-one", {
-                  x: "150vh",
-                  duration: 1, // Adjusted to 1 second for smoother animation
-                  delay: 0.1, // Adjusted delay
-                  opacity: 1,
-                })
-                .to(".mk-reveal-service-two", {
-                  x: "150vh",
-                  duration: 1,
-                  delay: 0.2,
-                  opacity: 1,
-                })
-                .to(".mk-reveal-service-three", {
-                  x: "150vh",
-                  duration: 1,
-                  delay: 0.3,
-                  opacity: 1,
-                })
-                .to(".mk-reveal-service-four", {
-                  x: "150vh",
-                  duration: 1,
-                  delay: 0.4,
-                  opacity: 1,
+              $(showcaseWallImage.get().reverse()).each(function () {
+                if ($(this).hasClass("active-item")) {
+                  showcaseWallImage.removeClass("active-item");
+                  $(this).addClass("active-item");
+                }
+              });
+
+              articles.each(function () {
+                $(this).on({
+                  mouseenter: function () {
+                    articles.removeClass("active-item");
+                    $(this).addClass("active-item");
+                    showcaseWallImage.removeClass("active-item");
+                    showcaseWallImages
+                      .find("#" + $(this).data("index"))
+                      .addClass("active-item");
+                  },
+                  mouseleave: function () {},
                 });
-            },
+              });
+            } else {
+              articles.removeClass("active-item");
+            }
           };
 
-          // Moving Services Functionality ----------------------------------------
+          mkAddons.widgetsList.mk_interactive_services = {};
+          mkAddons.widgetsList.mk_interactive_services.mkInteractiveServices =
+            mkInteractiveServices;
+
+          // ----------------------------------------------------------
+
           var mkMovingServices = function ($scope, $) {
             var $holder = $scope.find(".mk-moving-services");
 
@@ -993,10 +983,10 @@
                   i = 0;
 
                 for (let x = 0; x < boxesDiv.length; x++) {
-                  i += boxesDiv[x].offsetWidth;
+                  i += boxesDiv[x].offsetWidth; // total width of all horizontal services items
                 }
 
-                i += $($holder).data("extra-length");
+                i += $($holder).data("extra-length"); // add extra length to match background text and scroll item scroll animation
 
                 const holderDistance =
                     -i + (window.innerWidth - 4 * boxesLeftDistance),
@@ -1008,35 +998,39 @@
                         Math.round(1.75 * distance) / 100
                       ),
                       getDistance = Math.min(Math.max(finalDistance, 0), 1);
+
                     gsap.to(boxesDiv, {
                       scale: 1 - getDistance / 2,
-                    }),
-                      (boxLeftDistance = firstBoxDistance),
-                      requestAnimationFrame(boxAnimation);
+                    });
+                    boxLeftDistance = firstBoxDistance;
+                    requestAnimationFrame(boxAnimation);
                   };
-                boxAnimation(),
-                  gsap.to(boxesDiv, {
-                    scrollTrigger: {
-                      trigger: ".mk-moving-services",
-                      start: "top top",
-                      end: "bottom -=300%",
-                      toggleActions: "play none reverse none",
-                      scrub: !0,
-                    },
-                    x: holderDistance,
-                    ease: "linear",
-                  }),
-                  gsap.to(".mk-moving-services", {
-                    scrollTrigger: {
-                      trigger: ".mk-moving-services",
-                      id: "attScroll",
-                      start: "top top",
-                      end: "bottom -=290%",
-                      toggleActions: "play none reverse none",
-                      scrub: !0,
-                      pin: ".mk-moving-services",
-                    },
-                  });
+
+                boxAnimation();
+
+                gsap.to(boxesDiv, {
+                  scrollTrigger: {
+                    trigger: ".mk-moving-services",
+                    start: "top top",
+                    end: "bottom -=300%",
+                    toggleActions: "play none reverse none",
+                    scrub: true,
+                  },
+                  x: holderDistance,
+                  ease: "linear",
+                });
+
+                gsap.to(".mk-moving-services", {
+                  scrollTrigger: {
+                    trigger: ".mk-moving-services",
+                    id: "attScroll",
+                    start: "top top",
+                    end: "bottom -=290%",
+                    toggleActions: "play none reverse none",
+                    scrub: true,
+                    pin: ".mk-moving-services",
+                  },
+                });
 
                 const defaultText = document.querySelector(
                     "#" + $holder_id + ".mk-moving-services span:first-of-type"
@@ -1055,44 +1049,40 @@
                       scrub: 0.2,
                     },
                   });
+
                 splitTextAnim.from(splitText.chars, {
                   y: (e) => 100 * e,
                   duration: 1,
                   ease: "linear",
-                }),
-                  splitTextAnim.to(defaultText, {
-                    webkitClipPath: "inset(0% 0% 0% 0%)",
-                    duration: 3,
-                    ease: "linear",
-                  }),
-                  splitTextAnim.to(defaultText, {
-                    webkitClipPath: "inset(0% 100% 0% 0%)",
-                    duration: 5,
-                    ease: "linear",
-                  }),
-                  splitTextAnim.to(splitText.chars, {
-                    y: (e) => -100 * e - 550,
-                    duration: 1,
-                    ease: "linear",
-                  });
+                });
+                splitTextAnim.to(defaultText, {
+                  webkitClipPath: "inset(0% 0% 0% 0%)",
+                  clipPath: "inset(0% 0% 0% 0%)",
+                  duration: 3,
+                  ease: "linear",
+                });
+                splitTextAnim.to(defaultText, {
+                  webkitClipPath: "inset(0% 100% 0% 0%)",
+                  clipPath: "inset(0% 100% 0% 0%)",
+                  duration: 5,
+                  ease: "linear",
+                });
+                splitTextAnim.to(splitText.chars, {
+                  y: (e) => -100 * e - 550,
+                  duration: 1,
+                  ease: "linear",
+                });
               }
             }
           };
-
-          // Assign mkRevealServices and mkMovingServices to mkAddons Widgets List --
-          mkAddons.widgetsList.mk_reveal_services = {
-            mkRevealServices,
-          };
-
-          mkAddons.widgetsList.mk_moving_services = {
-            mkMovingServices,
-          };
-
+          mkAddons.widgetsList.mk_moving_services = {};
+          mkAddons.widgetsList.mk_moving_services.mkMovingServices =
+            mkMovingServices;
           // Initialize on Document Ready -----------------------------------------
           $(document).ready(function () {
+            mkScrollLoad.init();
             mkDualSlider();
-            mkRevealServices.init();
-            mkMovingServices($(document), $);
+            initMkMovingProjects();
           });
 
           // Additional Event Bindings --------------------------------------------
@@ -1131,27 +1121,28 @@
     </script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        if (!window.localStorage.getItem("pageReloaded")) {
-          window.localStorage.setItem("pageReloaded", "true");
-          // Wait until the external script is loaded before reloading
-          window.addEventListener("load", function () {
-            setTimeout(function () {
-              window.location.reload();
-            }, 3000); // 3000 milliseconds = 3 seconds
-          });
-        } else {
-          // Clear the localStorage item to reset the reload flag
-          window.localStorage.removeItem("pageReloaded");
-        }
-      });
+      function isSafari() {
+        console.log(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      }
+      if (!isSafari) {
+        document.addEventListener("DOMContentLoaded", function () {
+          if (!window.localStorage.getItem("pageReloaded")) {
+            window.localStorage.setItem("pageReloaded", "true");
+            // Wait until the external script is loaded before reloading
+            window.addEventListener("load", function () {
+              setTimeout(function () {
+                window.location.reload();
+              }, 3000); // 3000 milliseconds = 3 seconds
+            });
+          } else {
+            // Clear the localStorage item to reset the reload flag
+            window.localStorage.removeItem("pageReloaded");
+          }
+        });
+      }
     </script>
-    <script
-      type="text/javascript"
-      src="/assets/js/wp-content/mk-widgets.min.js"
-      id="mk-widgets-js"
-      defer
-    ></script>
+
     <!--  -->
   </body>
 </html>
