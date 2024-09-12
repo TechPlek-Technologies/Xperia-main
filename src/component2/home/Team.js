@@ -98,8 +98,8 @@ const Team = () => {
                 </article>
               ))}
             <div className="clear" />
-            <Button text={"view all"} src={`${domain}/team`} />
           </div>
+            <Button text={"view all"} src={`${domain}/team`} />
         </div>
       </div>
     </>
