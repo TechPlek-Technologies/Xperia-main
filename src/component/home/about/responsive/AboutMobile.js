@@ -9,7 +9,7 @@ const AboutMobile = ({AboutData}) => {
         {AboutData.map((item)=>(
               <div className={Style.containerInner}>
               <div className={Style.image}>
-                <img src={item.logo.path} alt={item.logo.name} height={"120px"} width={"120px"}/>
+                <img src={item.logo.path} alt={item.logo.name} height={"200px"} width={"200px"}/>
               </div>
               <div className={Style.content}>
                 <h4 className={Style.h4}>{item.title}</h4>
