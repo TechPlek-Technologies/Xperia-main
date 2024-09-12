@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const MenuItem = ({ item, currentPath }) => {
+  console.log("MenuItem",item)
   const isActive = (item) => {
     if (item.href === currentPath) {
       return true;
@@ -20,7 +21,7 @@ const MenuItem = ({ item, currentPath }) => {
       className={`menu-item menu-item-type-${item.type} menu-item-object-${item.object} ${itemIsActive ? 'swm-m-active' : ''} ${item.children.length > 0 ? 'menu-item-has-children' : ''}`}
     >
       <Link to={item.href}>
-        <span>{item.label}</span>
+        <span>{item.label} {" "}{item.object==="custom"&& <i class="fa fa-caret-down"></i>}</span>
       </Link>
       {item.children.length > 0 && (
         <ul className="sub-menu">
