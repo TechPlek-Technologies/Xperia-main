@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import PersistProvider from "./redux/providers/persist-provider";
 import { store } from "./redux/store";
-// import '@babel/polyfill';
+import '@babel/polyfill';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
