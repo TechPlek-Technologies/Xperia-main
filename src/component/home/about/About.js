@@ -30,6 +30,7 @@ const About = () => {
                 alive={index === 2 ? true : false}
                 source={item.logo.path}
                 alt={item.logo.name}
+                
               />
               <Content heading={item.title} para={item.content} />
               <Button src={item.link} />
