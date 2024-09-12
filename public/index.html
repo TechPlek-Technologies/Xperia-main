@@ -1125,7 +1125,7 @@
         console.log(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
         return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
       }
-      if (!isSafari) {
+      // if (!isSafari) {
       document.addEventListener("DOMContentLoaded", function () {
         if (!window.localStorage.getItem("pageReloaded")) {
           window.localStorage.setItem("pageReloaded", "true");
@@ -1140,7 +1140,7 @@
           window.localStorage.removeItem("pageReloaded");
         }
       });
-      }
+      // }
     </script>
 
     <!--  -->
