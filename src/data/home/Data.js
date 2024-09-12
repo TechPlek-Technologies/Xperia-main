@@ -150,7 +150,7 @@ export const AboutData = {
     {
       logo: {
         name: "about.webp",
-        path: `${domain}/assets/img/about/about1.webp`,
+        path: `${domain}/assets/img/about/2.png`,
       },
       title: "XPERIA GROUP",
       content:
@@ -161,7 +161,7 @@ export const AboutData = {
     {
       logo: {
         name: "about.webp",
-        path: `${domain}/assets/img/about/pencilBox.webp`,
+        path: `${domain}/assets/img/about/3.png`,
       },
       title: "PENCIL BOX",
       content:
@@ -172,7 +172,7 @@ export const AboutData = {
     {
       logo: {
         name: "about.webp",
-        path: `${domain}/assets/img/about/alive.png`,
+        path: `${domain}/assets/img/about/1.png`,
       },
       title: "XPERIA ALIVE",
       content:
