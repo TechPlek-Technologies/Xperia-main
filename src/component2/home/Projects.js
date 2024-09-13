@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SectionHeading from "../common/section-heading";
 import { FeaturedProjects, ProjectImages } from "./ProjectDemo";
-import { FeatureData } from "../../data/home/Data";
 import { useSelector } from "react-redux";
 // Helper function to split the imageData array
 const splitArray = (array) => {
@@ -24,16 +23,22 @@ const splitArray = (array) => {
 const Projects = () => {
   // const [firstHalf, secondHalf] = splitData(FeatureData.imageData);
   const { projectData } = useSelector((state) => state.projects);
+  const [top,setTop]=useState(null)
+  const [bottom,setBottom]=useState(null)
 
   useEffect(() => {
-    if (!projectData) {
-      window.location.reload();
-    }
+   if(projectData){
+    const { topImages, bottomImages } = splitArray(
+      projectData.filter((item) => item.homepage).slice(0, 8)
+    );
+    setTop(topImages);
+    setBottom(bottomImages)
+   }
   }, []);
   // const array = duplicateToLimit(projectData);
-  const { topImages, bottomImages } = splitArray(
-    projectData.filter((item) => item.homepage).slice(0, 8)
-  );
+
+  
+
 
   return (
     <>
@@ -61,8 +66,8 @@ const Projects = () => {
             >
               <div className="mk-moving-projects-gap" />
               <div className="mk-moving-projects-holder">
-                {topImages && <ProjectImages imageData={topImages} />}
-                {bottomImages && <ProjectImages imageData={bottomImages} />}
+                {top && <ProjectImages imageData={top} />}
+                {bottom && <ProjectImages imageData={bottom} />}
                 <div className="mk-moving-project-info">
                   <div className="mk-moving-project-info-bg" />
                   {projectData && <FeaturedProjects data={projectData} />}
