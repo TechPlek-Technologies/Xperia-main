@@ -50,9 +50,9 @@ const Home = () => {
           <HomeBanner />
 
           {/* { !isSafari() && screenSize.width > 980 ? <SafariServices services={serviceData}/> : <Services services={serviceData} />} */}
-          <Projects />
-          <AboutSection />
           <Services services={serviceData} />
+          <AboutSection />
+          <Projects />
           <Award />
           <Team />
           <Testimonial />
