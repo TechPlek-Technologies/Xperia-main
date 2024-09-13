@@ -2,7 +2,6 @@ import React from "react";
 
 
 const AwardSection = ({ data }) => {
-  console.log("awards Data",data )
   return (
     <div className="elementor-element elementor-element-44a8fb1c e-flex e-con-boxed e-con e-parent">
       <div className="e-con-inner">

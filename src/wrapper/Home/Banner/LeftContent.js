@@ -1,7 +1,6 @@
 import React from "react";
 
 const LeftContent = ({ BannerData }) => {
-  console.log("BannerData", BannerData);
 
   return (
     <>

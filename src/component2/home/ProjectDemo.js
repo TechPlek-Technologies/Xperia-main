@@ -1,8 +1,6 @@
-import { FeatureData } from "../../data/home/Data";
 import { domain } from "../../domain";
 
 export const ProjectImages = ({ imageData }) => {
-  console.log("imageData", imageData);
   return (
     <div className="mk-moving-projects-images">
       {imageData.map((project, index) => (

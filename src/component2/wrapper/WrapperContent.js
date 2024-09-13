@@ -1,7 +1,6 @@
 import React from "react";
 
 const WrapperContent = ({ settingsData }) => {
-  console.log("WrapperContent", settingsData.sidebar);
   return (
     <div className="elementor-widget-container">
       <div className="mk-title mk-title-">

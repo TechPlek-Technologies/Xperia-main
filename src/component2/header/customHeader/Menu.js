@@ -2,7 +2,6 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const MenuItem = ({ item, currentPath }) => {
-  console.log("MenuItem",item)
   const isActive = (item) => {
     if (item.href === currentPath) {
       return true;

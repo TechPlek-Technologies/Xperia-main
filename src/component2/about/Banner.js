@@ -1,7 +1,6 @@
 import React from "react";
 
 const Banner = ({ data }) => {
-  console.log(`https://api.xperiagroup.in${data.aboutImage.url}`);
   
   return (
     <div

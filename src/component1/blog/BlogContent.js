@@ -1,14 +1,11 @@
 import React from "react";
-import { BlogData } from "../../data/home/Data";
 import { domain } from "../../domain";
 import { useSelector } from "react-redux";
 
-const { BlogInnerData } = BlogData;
 
 const BlogContent = () => {
   // const blogs = localStorage.getItem("Blogs"));
   const { blogData: blogs } = useSelector((state) => state.blogs);
-  console.log("blogs", blogs);
 
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);

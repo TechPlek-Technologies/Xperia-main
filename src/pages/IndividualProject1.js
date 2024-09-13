@@ -17,7 +17,6 @@ const IndividualProject1 = () => {
   const { projectData } = useSelector((state) => state.projects);
 
   const data = projectData?.filter((data) => data.slug === paramValue);
-  console.log("IndividualProject1",data)
   return (
     <Layout type={"other"}>
       <div

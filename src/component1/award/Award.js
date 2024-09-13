@@ -24,7 +24,6 @@ const Award = () => {
         `https://api.xperiagroup.in/awards/all-awards`
       );
       if (response.status === 200) {
-        console.log(response.data);
         
         setData(response.data.slice(0,5));
         setActiveId(response?.data[0]?.id)

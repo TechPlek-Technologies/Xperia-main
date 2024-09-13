@@ -24,7 +24,6 @@ const splitArray = (array) => {
 const Projects = () => {
   // const [firstHalf, secondHalf] = splitData(FeatureData.imageData);
   const { projectData } = useSelector((state) => state.projects);
-  console.log("projectData", projectData);
 
   useEffect(() => {
     if (!projectData) {

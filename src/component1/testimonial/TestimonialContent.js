@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { TestimonialData } from "../../data/home/Data";
 import axios from "axios";
 
-const { TestimonialInnerData } = TestimonialData;
 
 const TestimonialContent = () => {
   const [data, setData] = useState(null);
@@ -12,7 +10,6 @@ const TestimonialContent = () => {
       const response = await axios.get(
         `https://api.xperiagroup.in/testimonials/all-testimonial`
       );
-      console.log(response);
       if (response.status === 200) {
         setData(response.data);
       }
