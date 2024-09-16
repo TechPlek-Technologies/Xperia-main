@@ -9,16 +9,9 @@ import Award from "../component1/award/Award";
 import AboutSection from "../component/home/AboutSection";
 import Team from "../component2/home/Team";
 import { useSelector } from "react-redux";
-import SafariServices from "../component2/home/SafariServices";
 
 const Home = () => {
-  function isSafari() {
-    console.log(
-      /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-    );
-    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  }
-  isSafari();
+
   const { serviceData } = useSelector((state) => state.service);
 
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -39,6 +32,21 @@ const Home = () => {
       window.removeEventListener("resize", updateDimension);
     };
   }, [screenSize]);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/assets/js/wp-content/mk-widgets.min.js';
+    script.id = 'mk-widgets-js';
+
+    // Append the script to the body
+    document.body.appendChild(script);
+
+    // Cleanup function to remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once
+
   return (
     <>
       <Layout>
