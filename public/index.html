@@ -323,13 +323,13 @@
       id="magnific-popup-js"
       defer
     ></script>
-<!-- 
+
     <script
       type="text/javascript"
       src="/assets/js/wp-content/main.js?ver=1.0.0"
       id="swm-main-js"
       defer
-    ></script> -->
+    ></script>
     <!--  -->
 
     <script
@@ -548,7 +548,7 @@
     ></script>
 
 
-        <script>
+        <!-- <script>
       (function ($) {
         "use strict";
 
@@ -1121,14 +1121,14 @@
           });
         }
       })(jQuery);
-    </script>
+    </script> -->
 
     <script>
       function isSafari() {
         console.log(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
         return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
       }
-      if (!isSafari) {
+    
       document.addEventListener("DOMContentLoaded", function () {
         if (!window.localStorage.getItem("pageReloaded")) {
           window.localStorage.setItem("pageReloaded", "true");
@@ -1143,24 +1143,7 @@
           window.localStorage.removeItem("pageReloaded");
         }
       });
-      }
-
-      if (isSafari) {
-      document.addEventListener("DOMContentLoaded", function () {
-        if (!window.localStorage.getItem("pageReloaded")) {
-          window.localStorage.setItem("pageReloaded", "true");
-          // Wait until the external script is loaded before reloading
-          window.addEventListener("load", function () {
-            setTimeout(function () {
-              window.location.reload();
-            }, 3000); // 3000 milliseconds = 3 seconds
-          });
-        } else {
-          // Clear the localStorage item to reset the reload flag
-          window.localStorage.removeItem("pageReloaded");
-        }
-      });
-      }
+      
     </script>
 
   
