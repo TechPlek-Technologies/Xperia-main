@@ -73,7 +73,7 @@ const PortfolioItem = ({ project }) => {
               <div className="mk-portfolio-title-subtitle">
                 <h3 className="mk-portfolio-title">
                   <a
-                    href="https://techpartner.online/orbius/portfolio-item/nova-wade/"
+                    href={`${domain}/project-description?title=${project.slug}`}
                     target="_self"
                   >
                     {project.projectTitle}
