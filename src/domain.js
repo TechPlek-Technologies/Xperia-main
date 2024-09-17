@@ -1,1 +1,1 @@
-export const domain='http://demo.xperiagroup.in'
+export const domain='https://xperia-main.onrender.com'
