@@ -5,6 +5,7 @@ import Breadcrumb from "../component2/Blog/Breadcrumb";
 import Banner from "../component2/Blog/Banner";
 import RelatedPost from "../component2/Blog/RelatedPost";
 import { useSelector } from "react-redux";
+import { domain } from "../domain";
 
 function formatDate(isoDateStr) {
   const date = new Date(isoDateStr);
@@ -62,13 +63,9 @@ const BlogDetail = () => {
                               <div className="swm-post-meta-date-separator" />
                               <p>{formatDate(singleBlog.createdAt)}</p>
                               <div className="swm-post-meta-separator" />
-                              <p>
-                                {singleBlog.category}
-                              </p>
+                              <p>{singleBlog.category}</p>
                               <div className="swm-post-meta-separator" />
-                              <p>
-                                0 Comments
-                              </p>
+                              <p>0 Comments</p>
                               <div className="swm-post-meta-separator" />
                             </div>
                             <div className="swm-post-title-content">
@@ -138,7 +135,8 @@ const BlogDetail = () => {
                     <form
                       role="search"
                       method="get"
-                      action="https://techpartner.online/orbius/"
+                      action={`${domain}/blogs`}
+                      // action="https://techpartner.online/orbius/"
                       className="wp-block-search__button-outside wp-block-search__text-button wp-block-search"
                     >
                       <label
@@ -182,33 +180,19 @@ const BlogDetail = () => {
                     <div className="clear" />
                     <ul>
                       <li className="cat-item cat-item-1">
-                        <a href="https://techpartner.online/orbius/category/blog/">
-                          Blog
-                        </a>
+                        <a href={`${domain}/blogs`}>Blog</a>
                       </li>
                       <li className="cat-item cat-item-2">
-                        <a href="https://techpartner.online/orbius/category/creativity/">
+                        <a href={`${domain}/blogs?category=Creative`}>
                           creativity
                         </a>
                       </li>
                       <li className="cat-item cat-item-3">
-                        <a href="https://techpartner.online/orbius/category/design-trends/">
-                          design trends
-                        </a>
+                        <a href={`${domain}/blogs?category=Social`}>social</a>
                       </li>
                       <li className="cat-item cat-item-4">
-                        <a href="https://techpartner.online/orbius/category/infographics/">
-                          infographics
-                        </a>
-                      </li>
-                      <li className="cat-item cat-item-5">
-                        <a href="https://techpartner.online/orbius/category/packaging-design/">
-                          packaging design
-                        </a>
-                      </li>
-                      <li className="cat-item cat-item-6">
-                        <a href="https://techpartner.online/orbius/category/photography/">
-                          photography
+                        <a href={`${domain}/blogs?category=Trending`}>
+                          trending
                         </a>
                       </li>
                     </ul>

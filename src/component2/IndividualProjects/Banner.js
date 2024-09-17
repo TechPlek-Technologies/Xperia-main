@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Banner.module.css';
 const Banner = ({ data, title }) => {
   return (
     <div
@@ -36,7 +36,7 @@ const Banner = ({ data, title }) => {
               <h2 className="mk-title-heading swm-hide-none">
                 <span>{title}</span>
               </h2>
-              <div className="mk-title-subtitle swm-hide-none">
+              <div className="mk-title-subtitle swm-hide-none hideDot">
                 {data.shortDescription}
               </div>
             </div>

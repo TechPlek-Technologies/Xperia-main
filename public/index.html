@@ -761,7 +761,7 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         const currentTime = new Date().getTime();
-
+        const expirationTime = 3600000;
         // Get the 'pageReloaded' data from localStorage
         const pageReloadedData = JSON.parse(
           window.localStorage.getItem("pageReloaded")

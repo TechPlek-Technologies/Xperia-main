@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../component2/wrapper/Layout";
 import { domain } from "../domain";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 const Blog = () => {
   // Static data for blog posts
 
   // const blog = JSON.parse(localStorage.getItem('Blogs'));
   const { blogData: blog } = useSelector((state) => state.blogs);
+  const [data, setData] = useState(null);
 
   function formatDate(isoDateStr) {
     const date = new Date(isoDateStr);
     const options = { year: "numeric", month: "long", day: "numeric" };
     return date.toLocaleDateString("en-US", options);
   }
+
+  const queryparam = new URLSearchParams(useLocation().search);
+  const query = queryparam.get("category");
+
+  useEffect(() => {
+    console.log("query", query);
+    if (query) {
+      const filteredData = blog.filter((item) => {
+        return item.category === query; // Use '===' for comparison
+      });
+      console.log("filteredData", filteredData);
+      setData(filteredData);
+    } else {
+      setData(blog);
+    }
+  }, [query, blog]);
   return (
     <Layout type={"other"}>
       <div
@@ -85,69 +103,68 @@ const Blog = () => {
                   >
                     {/* Dynamic content generation */}
                     <div className="mk-grid-inner clear">
-                      {blog.map((post) => (
-                        <article
-                          key={post.id}
-                          className="mk-grid-item mk-grid-item-wrap mk-item--full"
-                        >
-                          <div className="mk-post-wrap">
-                            <div className="mk-post-content">
-                              <div className="mk-post-meta highlight-text">
-                                <div className="mk-post-meta-date-separator" />
-                                <a
-                                  href={`${domain}/blog?title=${post.slug}`}
-                                  className="entry-date published updated"
-                                >
-                                  {formatDate(post.createdAt)}
-                                </a>
-                                <div className="mk-post-meta-separator" />
-                                <a
-                                  href={`${domain}/blog?title=${post.slug}`}
-                                  rel="tag"
-                                >
-                                  {post.category}
-                                </a>
-                                <div className="mk-post-meta-separator" />
-                              </div>
-                              <h3 className="mk_post_title">
-                                <a href={`${domain}/blog?title=${post.slug}`}>
-                                  {post.blogTitle}
-                                </a>
-                              </h3>
-                              <div className="mk-post-image">
-                                <a
-                                  href={`${domain}/blog?title=${post.slug}`}
-                                  className="mk-post-grid-image swm-anim"
-                                >
-                                  <img
-                                    loading="lazy"
-                                    decoding="async"
-                                    width={939}
-                                    height={569}
-                                    src={`https://api.xperiagroup.in/${
-                                      post.bannerImage.url
-                                    }`}
-                                    className="attachment-full size-full"
-                                    alt="icon"
-                                  />
-                                </a>
-                              </div>
-                              <div className="mk_post_excerpt">
-                                {post.description}
-                              </div>
-                              <div className="mk-post-button">
-                                <a href={`${domain}/blog?title=${post.slug}`}>
-                                  <span className="mk-post-button-arrow-start" />
-                                  <span className="mk-post-button-text">
-                                    read more
-                                  </span>
-                                  <span className="mk-post-button-arrow-end" />
-                                </a>
+                      {data &&
+                        data.map((post) => (
+                          <article
+                            key={post.id}
+                            className="mk-grid-item mk-grid-item-wrap mk-item--full"
+                          >
+                            <div className="mk-post-wrap">
+                              <div className="mk-post-content">
+                                <div className="mk-post-meta highlight-text">
+                                  <div className="mk-post-meta-date-separator" />
+                                  <a
+                                    href={`${domain}/blog?title=${post.slug}`}
+                                    className="entry-date published updated"
+                                  >
+                                    {formatDate(post.createdAt)}
+                                  </a>
+                                  <div className="mk-post-meta-separator" />
+                                  <a
+                                    href={`${domain}/blog?title=${post.slug}`}
+                                    rel="tag"
+                                  >
+                                    {post.category}
+                                  </a>
+                                  <div className="mk-post-meta-separator" />
+                                </div>
+                                <h3 className="mk_post_title">
+                                  <a href={`${domain}/blog?title=${post.slug}`}>
+                                    {post.blogTitle}
+                                  </a>
+                                </h3>
+                                <div className="mk-post-image">
+                                  <a
+                                    href={`${domain}/blog?title=${post.slug}`}
+                                    className="mk-post-grid-image swm-anim"
+                                  >
+                                    <img
+                                      loading="lazy"
+                                      decoding="async"
+                                      width={939}
+                                      height={569}
+                                      src={`https://api.xperiagroup.in/${post.bannerImage.url}`}
+                                      className="attachment-full size-full"
+                                      alt="icon"
+                                    />
+                                  </a>
+                                </div>
+                                <div className="mk_post_excerpt">
+                                  {post.description}
+                                </div>
+                                <div className="mk-post-button">
+                                  <a href={`${domain}/blog?title=${post.slug}`}>
+                                    <span className="mk-post-button-arrow-start" />
+                                    <span className="mk-post-button-text">
+                                      read more
+                                    </span>
+                                    <span className="mk-post-button-arrow-end" />
+                                  </a>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </article>
-                      ))}
+                          </article>
+                        ))}
                     </div>
                   </div>
                 </div>

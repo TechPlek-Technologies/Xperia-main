@@ -115,8 +115,34 @@ const Content = ({ projectData }) => {
     <div
       data-elementor-type="wp-page"
       data-elementor-id="1261"
-      className="elementor elementor-1261"
+      className="elementor elementor-1261 elementor-1267"
     >
+         <div
+            className="elementor-element elementor-element-2158acdf e-con-full e-flex e-con e-parent"
+            data-id="2158acdf"
+            data-element_type="container"
+            data-settings='{"mk_ext_is_sticky":"false"}'
+            data-core-v316-plus="true"
+          >
+            <div
+              className="elementor-element elementor-element-2552d0e3 elementor-widget elementor-widget-mk_section_heading"
+              data-id="2552d0e3"
+              data-element_type="widget"
+              data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
+              data-widget_type="mk_section_heading.default"
+            >
+              <div className="elementor-widget-container">
+                <div className="mk-section-heading">
+                  <h4 className="mk-section-heading-title">
+                    <span>portfolio</span>
+                  </h4>
+                  <span className="mk-section-heading-subtitle swm-hide-tablet">
+                    / view our work
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
       <div
         className="elementor-element elementor-element-33f69099 e-flex e-con-boxed e-con e-parent"
         data-id="33f69099"

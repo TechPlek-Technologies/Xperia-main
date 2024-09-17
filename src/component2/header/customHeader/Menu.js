@@ -17,10 +17,21 @@ const MenuItem = ({ item, currentPath }) => {
   return (
     <li
       id={`menu-item-${item.id}`}
-      className={`menu-item menu-item-type-${item.type} menu-item-object-${item.object} ${itemIsActive ? 'swm-m-active' : ''} ${item.children.length > 0 ? 'menu-item-has-children' : ''}`}
+      className={`menu-item menu-item-type-${item.type} menu-item-object-${
+        item.object
+      } ${itemIsActive ? "swm-m-active" : ""} ${
+        item.children.length > 0 ? "menu-item-has-children" : ""
+      }`}
     >
       <Link to={item.href}>
-        <span>{item.label} {" "}{item.object==="custom"&& <i class="fa fa-caret-down"></i>}</span>
+        <span
+          style={{
+            cursor: item.object === "custom" ? "default" : "pointer",
+          }}
+        >
+          {item.label}{" "}
+          {item.object === "custom" && <i class="fa fa-caret-down"></i>}
+        </span>
       </Link>
       {item.children.length > 0 && (
         <ul className="sub-menu">
@@ -49,9 +60,16 @@ const Menu = ({ menuItems }) => {
         <div className="mk-navigation-menu-container">
           <div className="swm-primary-nav-wrap">
             <div className="menu-main-navigation-container">
-              <ul id="menu-main-navigation" className="mk-nav-menu swm-primary-nav">
+              <ul
+                id="menu-main-navigation"
+                className="mk-nav-menu swm-primary-nav"
+              >
                 {menuItems?.map((item) => (
-                  <MenuItem key={item.id} item={item} currentPath={currentPath} />
+                  <MenuItem
+                    key={item.id}
+                    item={item}
+                    currentPath={currentPath}
+                  />
                 ))}
               </ul>
             </div>

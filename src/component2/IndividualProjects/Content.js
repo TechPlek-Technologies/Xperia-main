@@ -25,7 +25,7 @@ const Content = ({data}) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none">{data.title1}</div>
+                <div className="mk-title-subtitle swm-hide-none" style={{lineHeight:'40px'}}>{data.title1}</div>
                 <div className="mk-title-desc swm-hide-none">
                   <span>
                   {data.content1}
@@ -50,7 +50,7 @@ const Content = ({data}) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none">{data.title2}</div>
+                <div className="mk-title-subtitle swm-hide-none" style={{lineHeight:'40px'}}>{data.title2}</div>
                 <div className="mk-title-desc swm-hide-none">
                   <span>
                   {data.content2}
@@ -75,7 +75,7 @@ const Content = ({data}) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none">{data.title3}</div>
+                <div className="mk-title-subtitle swm-hide-none" style={{lineHeight:'40px'}}>{data.title3}</div>
                 <div className="mk-title-desc swm-hide-none">
                   <span>
                    {data.content3}

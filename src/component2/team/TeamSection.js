@@ -33,7 +33,10 @@ const sampleData = [
 
 const TeamSection = ({ data }) => {
   return (
-    <div className="elementor-element elementor-element-44a8fb1c e-flex e-con-boxed e-con e-parent">
+    <div
+      className="elementor-element elementor-element-44a8fb1c e-flex e-con-boxed e-con e-parent"
+      style={{ paddingTop: "80px" }}
+    >
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-702a86e3 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 join-items-no mk-portfolio-image-zoom-no mk-portfolio-c-width-fullwidth mk-pf-excerpt-category elementor-widget elementor-widget-mk_portfolio_modern">
           <div className="elementor-widget-container">
@@ -58,14 +61,14 @@ const TeamSection = ({ data }) => {
                           ></a>
                           <div className="mk-portfolio-content">
                             <div className="mk-portfolio-content-holder">
-                              <div className="mk-portfolio-title-subtitle">
+                              <div className="mk-portfolio-title-subtitle ">
                                 <h3 className="mk-portfolio-title">
                                   <a href={"#"} target="_self">
                                     {item.name}
                                   </a>
                                 </h3>
-                                <div className="mk-portfolio-subtitle">
-                                  {item.designation}
+                                <div className="mk-portfolio-subtitle remove_dot">
+                                &mdash;{"  "}{item.designation}
                                 </div>
                                 <div
                                   className="mk-portfolio-title"
