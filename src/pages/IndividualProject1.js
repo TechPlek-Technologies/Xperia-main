@@ -12,7 +12,7 @@ const IndividualProject1 = () => {
   const [searchParams] = useSearchParams();
   const paramValue = searchParams.get("title");
   // Extract a specific query parameter
-
+console.log(paramValue)
   // const projectData = JSON.parse(localStorage.getItem("projects"));
   const { projectData } = useSelector((state) => state.projects);
 

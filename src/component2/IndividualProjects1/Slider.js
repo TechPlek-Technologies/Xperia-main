@@ -3,10 +3,10 @@ import React from "react";
 const Slider = ({ data }) => {
   const carouselImages = data.carouselImages[0];
 
-
+  console.log(data);
   return (
     <>
-      { (
+      {data.carouselImages && data.carouselImages.length > 0 && (
         <div
           className="elementor-element elementor-element-b89713c e-con-full e-flex e-con e-parent e-lazyloaded"
           data-id="b89713c"

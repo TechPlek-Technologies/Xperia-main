@@ -1735,6 +1735,7 @@ a.mk-image-link { position: absolute; top: 0; left: 0; width: 100%; height: 100%
 .mk-portfolio-modern.mk-parallax-scroll-on a.mk-post-grid-image { transform: scale(1.22); }
 
 .mk-portfolio-modern .mk-portfolio-subtitle { position:relative; display:flex; align-items:center; font-family: var(--swm-secondary-font-family); font-weight: var(--swm-secondary-font-weight); font-style: var(--swm-secondary-font-style); letter-spacing: var(--swm-secondary-font-letter-spacing); flex-wrap:wrap; }
+.mk-portfolio-modern .remove_dot:before { display: none; }
 .mk-portfolio-modern .mk-portfolio-subtitle:before { content:''; width:18px; height:1px; background:currentColor; margin-right:10px; }
 .mk-pf-excerpt-excerpt .mk-portfolio-modern .mk-portfolio-subtitle:before { display:none; }
 
