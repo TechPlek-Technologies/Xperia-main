@@ -16,6 +16,7 @@ import { bannersReducer } from './slice/banner-slice';
 import { blogsReducer } from './slice/blog-slice';
 import { servicesReducer } from './slice/service-slice';
 import { loadingReducer } from './slice/loading-slice';
+import { teamsReducer } from './slice/team-slice';
 
 
 const persistConfig = {
@@ -32,6 +33,7 @@ const rootReducer = combineReducers({
     blogs: blogsReducer,
     service: servicesReducer,
     loading: loadingReducer,
+    teams:teamsReducer
     
     // product: productReducer, // Uncomment if you have a product slice
 });

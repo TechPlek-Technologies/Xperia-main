@@ -50,9 +50,7 @@ const Layout = ({ children, type }) => {
               </div>
               <div className="clear" />
             </div>
-            {/* .swm-main-container */}
-            {/* {<Footer/>} */}
-            {/* <Footer/> */}
+         
             {screenSize.width <= 880 ? (
               <ResponsiveFooter settingsData={settingsData[0]} />
             ) : (

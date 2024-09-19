@@ -55,19 +55,20 @@ const menuData = [
     subMenu: [
       { href: "/xperia-group/", label: "xperia group" },
       { href: "/pencil-box/", label: "pencil box" },
-      { href: "/xperia-live/", label: "xperia live" },
+      { href: "/xperia-alive", label: "xperia alive" },
     ],
   },
   {
     href: "#",
     label: "services",
     subMenu: [
-      { href: "/ideation/", label: "ideation" },
-      { href: "/media-planning/", label: "media planning" },
-      { href: "/film/", label: "film" },
-      { href: "/design/", label: "design" },
-      { href: "/content/", label: "content" },
-      { href: "/music/", label: "music" },
+      { href: "/out-of-home", label: "out of home" },
+      { href: "/multiplex", label: "cinema advertisement" },
+      { href: "/events-and-promotions", label: "events & promotions" },
+      { href: "/content-design", label: "content design" },
+      { href: "/creative-retainership", label: "creative-retainership" },
+      { href: "/corporate-films", label: "corporate films" },
+      { href: "/music", label: "music" },
     ],
   },
   {
@@ -78,7 +79,7 @@ const menuData = [
     href: "/blogs",
     label: "blog",
   },
-  
+
   {
     href: "#",
     label: "contact",

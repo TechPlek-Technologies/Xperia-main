@@ -20,6 +20,7 @@ import { fetchBlogs } from "./redux/slice/blog-slice";
 import { setLoading } from "./redux/slice/loading-slice";
 import { domain } from "./domain";
 import Awards from "./pages/Awards";
+import { fetchTeams } from "./redux/slice/team-slice";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ function App() {
         dispatch(fetchServices()),
         dispatch(fetchBanners()),
         dispatch(fetchBlogs()),
+        dispatch(fetchTeams())
       ]);
       dispatch(setLoading(false));
       localStorage.setItem('dataLoaded',true)

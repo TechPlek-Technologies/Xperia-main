@@ -7,6 +7,7 @@ import Gallery from "../component2/IndividualProjects1/Gallery";
 import ProjectDetail from "../component2/IndividualProjects1/ProjectDetail";
 import { useSearchParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const IndividualProject1 = () => {
   const [searchParams] = useSearchParams();
@@ -18,7 +19,7 @@ console.log(paramValue)
 
   const data = projectData?.filter((data) => data.slug === paramValue);
   return (
-    <Layout type={"other"}>
+    <Layout2 type={"other"}>
       <div
         data-elementor-type="wp-post"
         data-elementor-id={1331}
@@ -33,7 +34,7 @@ console.log(paramValue)
         {data && <ProjectDetail data={data[0]} />}
         {/* <ProjectNavigation /> */}
       </div>
-    </Layout>
+    </Layout2>
   );
 };
 

@@ -9,6 +9,7 @@ import ProjectDetail from "../component2/IndividualProjects/ProjectDetail";
 import ProjectNavigation from "../component2/IndividualProjects/ProjectNavigation";
 import axios from "axios";
 import Content2 from "../component2/IndividualProjects/Content2";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const IndividualProject = () => {
   const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
@@ -36,7 +37,7 @@ const IndividualProject = () => {
   }
 
   return (
-    <Layout type={"other"}>
+    <Layout2 type={"other"}>
       <div
         data-elementor-type="wp-post"
         data-elementor-id={1331}
@@ -51,7 +52,7 @@ const IndividualProject = () => {
         {data && <ProjectDetail title={formatString(pathname)} data={data} />}
         {/* <ProjectNavigation /> */}
       </div>
-    </Layout>
+    </Layout2>
   );
 };
 

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import Layout from "../component2/wrapper/Layout";
 import Banner from "../component2/about/Banner";
 import Testimonial from "../component1/testimonial/Testimonial";
 import TextContent from "../component2/about/TextContent";
 import Projects from "../component2/about/Projects";
 import BottomSection from "../component2/about/BottomSection";
 import axios from "axios";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const About = () => {
   const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
@@ -24,13 +24,15 @@ const About = () => {
   }, [pathname]);
 
   return (
-    <Layout type={"other"}>
-      {data && <Banner data={data} />}
-      {data && <TextContent data={data} />}
-      {/* <Projects /> */}
-      <BottomSection />
-      <Testimonial />
-    </Layout>
+    data && (
+      <Layout2>
+        {data && <Banner data={data} />}
+        {data && <TextContent data={data} />}
+        {/* <Projects /> */}
+        <BottomSection />
+        <Testimonial />
+      </Layout2>
+    )
   );
 };
 

@@ -3,6 +3,7 @@ import Layout from "../component2/wrapper/Layout";
 import { domain } from "../domain";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const Blog = () => {
   // Static data for blog posts
@@ -33,7 +34,7 @@ const Blog = () => {
     }
   }, [query, blog]);
   return (
-    <Layout type={"other"}>
+    <Layout2>
       <div
         id="content"
         className="swm-main-container swm-site-content swm-anim"
@@ -174,7 +175,7 @@ const Blog = () => {
         </div>
         <div className="clear" />
       </div>
-    </Layout>
+    </Layout2>
   );
 };
 

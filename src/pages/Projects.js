@@ -1,13 +1,13 @@
 import React from "react";
-import Layout from "../component2/wrapper/Layout";
 import Content from "../component2/projects/Content";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const Projects = ({ projectData }) => {
   return (
-    <Layout type={"other"}>
+    <Layout2>
       {/* {projectData && <Banner projectData={projectData} />} */}
       {projectData && <Content projectData={projectData} />}
-    </Layout>
+    </Layout2>
   );
 };
 

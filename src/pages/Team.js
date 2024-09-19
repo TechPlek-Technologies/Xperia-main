@@ -1,21 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../component2/wrapper/Layout";
 import TeamSection from "../component2/team/TeamSection";
-import axios from "axios";
+import { useSelector } from "react-redux";
 
 const Team = () => {
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `https://api.xperiagroup.in/teams/all-teams`
-      );
-      if (response.status === 200) {
-        setData(response.data);
-      }
-    };
-    fetchData();
-  }, []);
+ 
+  const { teamData: data } = useSelector((state) => state.teams);
   return (
     <Layout type={"other"}>
       <div id="content" className="swm-main-container swm-site-content swm-anim">

@@ -1,9 +1,10 @@
 import React from "react";
 import Layout from "../component2/wrapper/Layout";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const Services = () => {
   return (
-    <Layout>
+    <Layout2>
       <div
         data-elementor-type="wp-page"
         data-elementor-id={1253}
@@ -1895,7 +1896,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout2>
   );
 };
 

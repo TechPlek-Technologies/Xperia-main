@@ -5,10 +5,11 @@ import Title from '../component2/contact/Title'
 import LocationContent from '../component2/contact/LocationContent'
 import Map from '../component2/contact/Map'
 import GoogleMapComponent from '../component2/contact/GoogleMapComponent'
+import Layout2 from '../component2/wrapper/Layout2'
 
 const Locations = () => {
   return (
-    <Layout type={"other"}>
+    <Layout2 type={"other"}>
   <div
         data-elementor-type="wp-page"
         data-elementor-id="1266"
@@ -20,7 +21,7 @@ const Locations = () => {
         <GoogleMapComponent/>
         {/* <Map/> */}
       </div>
-    </Layout>
+    </Layout2>
   )
 }
 

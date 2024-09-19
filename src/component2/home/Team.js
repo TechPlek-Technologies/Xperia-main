@@ -1,22 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SectionHeading from "../common/section-heading";
 import Button from "../../component/home/about/about/Button";
-import axios from "axios";
 import { domain } from "../../domain";
+import { useSelector } from "react-redux";
 
 const Team = () => {
-  const [data, setData] = React.useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `https://api.xperiagroup.in/teams/all-teams`
-      );
-      if (response.status === 200) {
-        setData(response.data);
-      }
-    };
-    fetchData();
-  }, []);
+  const { teamData: data } = useSelector((state) => state.teams);
+  console.log("data",data)
   return (
     <>
       <SectionHeading title={"team"} subTitle={"brains behind the screen"} />
@@ -48,17 +38,17 @@ const Team = () => {
                 >
                   <div className="mk-portfolio-wrap content-position--hover-over">
                     <div className="mk-portfolio-image">
-                      <a href={"#"} className="mk-portfolio-modern-overlay"></a>
+                      <a className="mk-portfolio-modern-overlay"></a>
                       <div className="mk-portfolio-content">
                         <div className="mk-portfolio-content-holder">
                           <div className="mk-portfolio-title-subtitle">
                             <h3 className="mk-portfolio-title">
-                              <a href={"#"} target="_self">
-                                {item.name}
+                              <a target="_self">
+                                {item.name} 
                               </a>
                             </h3>
-                            <div className="mk-portfolio-subtitle">
-                              {item.designation}
+                            <div className="mk-portfolio-subtitle remove_dot">
+                            &mdash;{"  "}{item.designation}
                             </div>
                             <div
                               className="mk-portfolio-title"
@@ -76,7 +66,6 @@ const Team = () => {
                         </div>
                       </div>
                       <a
-                        href={"#"}
                         className="mk-post-grid-image swm-anim"
                         target="_self"
                       >
@@ -99,7 +88,7 @@ const Team = () => {
               ))}
             <div className="clear" />
           </div>
-            <Button text={"view all"} src={`${domain}/team`} />
+          <Button text={"view all"} src={`${domain}/team`} />
         </div>
       </div>
     </>
