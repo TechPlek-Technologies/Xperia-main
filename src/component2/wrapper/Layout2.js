@@ -463,12 +463,12 @@ const Layout2 = ({ children }) => {
                                 </ul>
                               </li>
                               <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1970">
-                                <a href="https://techpartner.online/orbius/contact/">
+                                <a href="/team">
                                   team
                                 </a>
                               </li>
                               <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1970">
-                                <a href="https://techpartner.online/orbius/contact/">
+                                <a href="/blogs">
                                   blog
                                 </a>
                               </li>
