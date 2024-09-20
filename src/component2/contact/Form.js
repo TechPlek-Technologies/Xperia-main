@@ -39,7 +39,7 @@ const Form = () => {
                     src={`${domain}/assets/img/contact/contact-us.jpg`}
                     className="attachment-full size-full wp-image-1231"
                     alt=""
-                    srcSet={`${domain}/assets/img/contact/contact-us.jpg 605w, ${domain}/assets/img/contact/contact-us.jpg 300w, ${domain}/assets/img/contact/contact-us.jpg 150w, ${domain}/assets/img/contact/contact-us.jpg 100w`}
+                   
                     sizes="(max-width: 605px) 100vw, 605px"
                   />{" "}
                 </div>
