@@ -15,7 +15,7 @@ export const ProjectImages = ({ imageData }) => {
             className="mk-moving-projects-img"
             data-projectimage={project.id}
           >
-            <Link to={`${domain}/project-description?title=${project.slug}`} className="mk-moving-projects-link">
+            <a href={`/project-description?title=${project.slug}`} className="mk-moving-projects-link">
               <span className="mk-moving-projects-mobile-title">
                 {project?.projectTitle?.toLowerCase()}
               </span>
@@ -33,7 +33,7 @@ export const ProjectImages = ({ imageData }) => {
                 sizes="(max-width: 749px) 100vw, 749px"
                 style={{width:"750px"}}
               />
-            </Link>
+            </a>
           </div>
         </div>
       ))}

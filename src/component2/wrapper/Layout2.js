@@ -184,7 +184,6 @@ const Layout2 = ({ children }) => {
   );
   return (
     <>
-      <div className="swm-site-loader"></div>
       <div id="swm-page">
         <div id="swm-outer-wrap" className="clear">
           <div id="swm-wrap" className="clear">
