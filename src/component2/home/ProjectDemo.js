@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { domain } from "../../domain";
 
 export const ProjectImages = ({ imageData }) => {
@@ -14,7 +15,7 @@ export const ProjectImages = ({ imageData }) => {
             className="mk-moving-projects-img"
             data-projectimage={project.id}
           >
-            <a href={`${domain}/project-description?title=${project.slug}`} className="mk-moving-projects-link">
+            <Link to={`${domain}/project-description?title=${project.slug}`} className="mk-moving-projects-link">
               <span className="mk-moving-projects-mobile-title">
                 {project?.projectTitle?.toLowerCase()}
               </span>
@@ -32,7 +33,7 @@ export const ProjectImages = ({ imageData }) => {
                 sizes="(max-width: 749px) 100vw, 749px"
                 style={{width:"750px"}}
               />
-            </a>
+            </Link>
           </div>
         </div>
       ))}
