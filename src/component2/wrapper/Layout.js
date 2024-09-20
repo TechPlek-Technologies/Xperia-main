@@ -61,7 +61,7 @@ const Layout = ({ children, type }) => {
           {/* #swm-wrap */}
         </div>
         {/* #swm-outer-wrap */}
-        {<OuterWrapper settingsData={settingsData[0]} />}
+        {<OuterWrapper settingsData={settingsData} />}
       </div>}
       {/* end #swm-page */}
     </>

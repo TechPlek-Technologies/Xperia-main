@@ -9,7 +9,6 @@ import WrapperFooter from "./WrapperFooter";
 import MediaLinks from "./MediaLinks";
 import WrapperContent from "./WrapperContent";
 import FooterLogo from "./FooterLogo";
-import { Link } from "react-router-dom";
 
 const menuData = [
   {
@@ -357,14 +356,10 @@ const Layout2 = ({ children }) => {
                               className="mk-ver-menu"
                             >
                               <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1965">
-                                <a href="/">
-                                  home
-                                </a>
+                                <a href="/">home</a>
                               </li>
                               <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1965">
-                                <a href="/projects">
-                                  projects
-                                </a>
+                                <a href="/projects">projects</a>
                               </li>
                               <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1993">
                                 <a href="#">
@@ -388,19 +383,13 @@ const Layout2 = ({ children }) => {
                                 </a>
                                 <ul className="sub-menu">
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1983">
-                                    <a href="/xperia-group">
-                                   xperia group
-                                    </a>
+                                    <a href="/xperia-group">xperia group</a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1967">
-                                    <a href="/pencil-box">
-                                    pencil box
-                                    </a>
+                                    <a href="/pencil-box">pencil box</a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1966">
-                                    <a href="/xperia-alive">
-                                    xperia alive
-                                    </a>
+                                    <a href="/xperia-alive">xperia alive</a>
                                   </li>
                                 </ul>
                               </li>
@@ -426,51 +415,41 @@ const Layout2 = ({ children }) => {
                                 </a>
                                 <ul className="sub-menu">
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968">
-                                    <a href="/out-of-home">
-                                    out of home
-                                    </a>
+                                    <a href="/out-of-home">out of home</a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1988">
                                     <a href="/multiplex">
-                                    cinema advertisement
+                                      cinema advertisement
                                     </a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1969">
                                     <a href="/events-and-promotions">
-                                    events and promotions
+                                      events and promotions
                                     </a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-post menu-item-2244">
-                                    <a href="/content-design">
-                                    content design
-                                    </a>
+                                    <a href="/content-design">content design</a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-post menu-item-2244">
                                     <a href="/creative-retainership">
-                                    creative retainership
+                                      creative retainership
                                     </a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-post menu-item-2244">
                                     <a href="/corporate-films">
-                                     corporate films
+                                      corporate films
                                     </a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-post menu-item-2244">
-                                    <a href="/music">
-                                    music
-                                    </a>
+                                    <a href="/music">music</a>
                                   </li>
                                 </ul>
                               </li>
                               <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1970">
-                                <a href="/team">
-                                  team
-                                </a>
+                                <a href="/team">team</a>
                               </li>
                               <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1970">
-                                <a href="/blogs">
-                                  blog
-                                </a>
+                                <a href="/blogs">blog</a>
                               </li>
                               <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1995">
                                 <a href="#">
@@ -494,16 +473,11 @@ const Layout2 = ({ children }) => {
                                 </a>
                                 <ul className="sub-menu">
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1968">
-                                    <a href="/locations">
-                                    locations
-                                    </a>
+                                    <a href="/locations">locations</a>
                                   </li>
                                   <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1988">
-                                    <a href="/get-in-touch">
-                                    get in touch
-                                    </a>
+                                    <a href="/get-in-touch">get in touch</a>
                                   </li>
-                                 
                                 </ul>
                               </li>
                             </ul>
@@ -519,7 +493,7 @@ const Layout2 = ({ children }) => {
                     data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                     data-widget_type="mk_title.default"
                   >
-                     <WrapperFooter settingsData={settingsData[0]}/>
+                    <WrapperFooter settingsData={settingsData[0]} />
                   </div>
                   <div
                     className="mk_sections_item elementor-element elementor-element-2942f901 elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -528,7 +502,7 @@ const Layout2 = ({ children }) => {
                     data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                     data-widget_type="icon-list.default"
                   >
-                  <MediaLinks settingsData={settingsData[0]}/>
+                    <MediaLinks settingsData={settingsData[0]} />
                   </div>
                 </div>
               </div>
@@ -546,7 +520,7 @@ const Layout2 = ({ children }) => {
                     data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                     data-widget_type="image.default"
                   >
-                    <WrapperLogo settingsData={settingsData[0]}/>
+                    <WrapperLogo settingsData={settingsData[0]} />
                   </div>
                   <div
                     className="mk_sections_item elementor-element elementor-element-39d5c41f mk-title-align--left elementor-widget elementor-widget-mk_title"
@@ -555,7 +529,7 @@ const Layout2 = ({ children }) => {
                     data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                     data-widget_type="mk_title.default"
                   >
-                  <WrapperContent settingsData={settingsData[0]}/>
+                    <WrapperContent settingsData={settingsData[0]} />
                   </div>
                   <div
                     className="mk_sections_item elementor-element elementor-element-cf6193d elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -564,7 +538,7 @@ const Layout2 = ({ children }) => {
                     data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                     data-widget_type="icon-list.default"
                   >
-                    <MediaLinks settingsData={settingsData[0]}/>
+                    <MediaLinks settingsData={settingsData[0]} />
                   </div>
                   <div
                     className="mk_sections_item elementor-element elementor-element-5e0ec20c elementor-widget elementor-widget-image"
@@ -573,9 +547,9 @@ const Layout2 = ({ children }) => {
                     data-settings='{"mk_ext_is_infinite":"false","mk_ext_is_scrollme":"false"}'
                     data-widget_type="image.default"
                   >
-                  <FooterLogo settingsData={settingsData[0]}/>
+                    <FooterLogo settingsData={settingsData[0]} />
                   </div>
-                  <WrapperFooter settingsData={settingsData[0]}/>
+                  <WrapperFooter settingsData={settingsData[0]} />
                 </div>
               </div>
             </div>

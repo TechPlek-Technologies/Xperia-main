@@ -24,7 +24,7 @@ const Content2 = ({ data }) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none" style={{lineHeight:'40px'}}>
+                <div className="mk-title-subtitle swm-hide-none add_dot" style={{lineHeight:'40px'}}>
                   {data.title4}
                 </div>
                 <div className="mk-title-desc swm-hide-none">
@@ -49,7 +49,7 @@ const Content2 = ({ data }) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none" style={{lineHeight:'40px'}}>
+                <div className="mk-title-subtitle swm-hide-none add_dot" style={{lineHeight:'40px'}}>
                   {data.title5}
                 </div>
                 <div className="mk-title-desc swm-hide-none">

@@ -26,13 +26,6 @@ const Banner = () => {
             src={`${domain}/assets/img/contact/titlebar.jpg`}
             className="attachment-full size-full wp-image-1156"
             alt=""
-            srcset={`
-           ${domain}/assets/img/contact/titlebar.jpg          1840w,
-           ${domain}/assets/img/contact/titlebar.jpg    300w,
-            ${domain}/assets/img/contact/titlebar.jpg 1024w,
-           ${domain}/assets/img/contact/titlebar.jpg   768w,
-           ${domain}/assets/img/contact/titlebar.jpg 1536w
-          `}
             sizes="(max-width: 1840px) 100vw, 1840px"
           />
         </div>

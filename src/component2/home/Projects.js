@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import SectionHeading from "../common/section-heading";
 import { FeaturedProjects, ProjectImages } from "./ProjectDemo";
 import { useSelector } from "react-redux";
+import Button from "../../component/home/about/about/Button";
+import { domain } from "../../domain";
 // Helper function to split the imageData array
 const splitArray = (array) => {
   const length = array?.length;
@@ -94,7 +96,13 @@ const Projects = () => {
               </div>
             </section>
           </div>
+          {screenSize.width <= 880 ? (
+               <Button text={"view all"} src={`${domain}/projects`} />
+            ) : (
+              null
+            )}
         </div>
+       
       </div>
     </>
   );

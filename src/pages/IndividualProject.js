@@ -1,39 +1,55 @@
-import React, { useEffect, useState } from "react";
-import Layout from "../component2/wrapper/Layout";
+import React, { useMemo, useState } from "react";
+import { useLocation } from "react-router-dom"; // useLocation instead of window.location
+import Layout2 from "../component2/wrapper/Layout2";
 import Banner from "../component2/IndividualProjects/Banner";
 import Content from "../component2/IndividualProjects/Content";
 import Slider from "../component2/IndividualProjects/Slider";
-import Description from "../component2/IndividualProjects/Description";
-import Gallery from "../component2/IndividualProjects/Gallery";
-import ProjectDetail from "../component2/IndividualProjects/ProjectDetail";
-import ProjectNavigation from "../component2/IndividualProjects/ProjectNavigation";
-import axios from "axios";
 import Content2 from "../component2/IndividualProjects/Content2";
-import Layout2 from "../component2/wrapper/Layout2";
+import ProjectDetail from "../component2/IndividualProjects/ProjectDetail";
+import { useSelector } from "react-redux";
 
 const IndividualProject = () => {
-  const pathname = window.location.pathname; // Endpoint (e.g., /about/123)
+  const { pathname } = useLocation(); // Use React Router's useLocation hook
 
-  const [data, setData] = useState(null);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        `https://api.xperiagroup.in/services/find-by-slug${pathname}`
-      );
-      if (response.status === 200) {
-        setData(response.data);
-      }
-    };
-    fetchData();
+  // Get serviceData from Redux store
+  const { serviceData } = useSelector((state) => state.service);
+  const [error, setError] = useState(null);
+
+  // Format pathname and filter data based on slug
+  const filteredData = useMemo(() => {
+    if (!serviceData) return null;
+
+    // Remove leading slash if exists
+    const formattedPathname = pathname.replace(/^\/+/, "");
+
+    // Find the object in serviceData where slug matches pathname
+    return serviceData.find((item) => item.slug === formattedPathname);
+  }, [serviceData, pathname]);
+
+  const formatString = useMemo(() => {
+    if (!pathname) return "";
+
+    // Replace hyphens with spaces, remove slashes, and capitalize words
+    return pathname
+      .replace(/-/g, " ")
+      .replace(/\//g, "")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
   }, [pathname]);
-  function formatString(str) {
-    // Replace hyphens with spaces and remove slashes
-    let formattedStr = str.replace(/-/g, " ").replace(/\//g, "");
 
-    // Capitalize the first letter of each word
-    formattedStr = formattedStr.replace(/\b\w/g, (char) => char.toUpperCase());
+  if (!filteredData) {
+    return (
+      <Layout2 type={"other"}>
+        <p>{error}</p>
+      </Layout2>
+    );
+  }
 
-    return formattedStr;
+  if (!filteredData) {
+    return (
+      <Layout2 type={"other"}>
+        <p>Project not found</p>
+      </Layout2>
+    );
   }
 
   return (
@@ -43,14 +59,13 @@ const IndividualProject = () => {
         data-elementor-id={1331}
         className="elementor elementor-1331"
       >
-        {data && <Banner data={data} title={formatString(pathname)} />}
-        {data && <Content data={data} />}
-        {data && <Slider data={data} />}
-        {data && <Content2 data={data} />}
-        {/* <Description /> */}
-        {/* <Gallery /> */}
-        {data && <ProjectDetail title={formatString(pathname)} data={data} />}
-        {/* <ProjectNavigation /> */}
+        <>
+          <Banner data={filteredData} title={formatString} />
+          <Content data={filteredData} />
+          <Slider data={filteredData} />
+          <Content2 data={filteredData} />
+          <ProjectDetail title={formatString} data={filteredData} />
+        </>
       </div>
     </Layout2>
   );
