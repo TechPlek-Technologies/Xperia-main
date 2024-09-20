@@ -97,7 +97,7 @@ const Projects = () => {
             </section>
           </div>
           {screenSize.width <= 880 ? (
-               <Button text={"view all"} src={`${domain}/projects`} />
+               <Button text={"view all"} src={`/projects`} />
             ) : (
               null
             )}
