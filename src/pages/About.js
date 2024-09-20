@@ -24,7 +24,7 @@ const About = () => {
   }, [pathname]);
 
   return (
-    data && (
+    (
       <Layout2>
         {data && <Banner data={data} />}
         {data && <TextContent data={data} />}

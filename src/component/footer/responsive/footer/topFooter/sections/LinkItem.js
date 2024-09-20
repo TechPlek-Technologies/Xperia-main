@@ -15,9 +15,9 @@ const LinkItem = ({ title, listItem }) => {
             <div className={Style.listItem}>
               {listItem.map((item) => (
                 <>
-                  <Link to={item.src} className={Style.link}>
+                  <a href={item.src} className={Style.link}>
                   <h4 className={Style.h4}>{item.name}</h4>
-                  </Link>
+                  </a>
                 </>
               ))}
             </div>

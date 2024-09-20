@@ -23,7 +23,7 @@ console.log(paramValue)
       <div
         data-elementor-type="wp-post"
         data-elementor-id={1331}
-        className="elementor elementor-1331"
+        className="elementor elementor-1331 elementor elementor-1255"
       >
         {data && <Banner data={data[0]} />}
         {data && <Content data={data[0]} />}

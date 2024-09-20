@@ -24,7 +24,7 @@ const Content = ({ data }) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none">
+                <div className="mk-title-subtitle swm-hide-none add_dot">
                  Concept
                 </div>
                 <div className="mk-title-desc swm-hide-none">
@@ -49,7 +49,7 @@ const Content = ({ data }) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none">
+                <div className="mk-title-subtitle swm-hide-none add_dot">
                  Challenge
                 </div>
                 <div className="mk-title-desc swm-hide-none">
@@ -74,10 +74,10 @@ const Content = ({ data }) => {
           >
             <div className="elementor-widget-container">
               <div className="mk-title mk-title-">
-                <div className="mk-title-subtitle swm-hide-none">
+                <div className="mk-title-subtitle swm-hide-none add_dot">
                   Solution
                 </div>
-                <div className="mk-title-desc swm-hide-none">
+                <div className="mk-title-desc swm-hide-none ">
                   <span>{data.projectSolution}</span>
                 </div>
               </div>

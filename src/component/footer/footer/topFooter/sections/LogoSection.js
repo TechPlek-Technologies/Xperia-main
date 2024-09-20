@@ -26,9 +26,9 @@ const LogoSection = ({settingsData}) => {
     <div className={Style.wrapper}>
         <div className={Style.logo}>
             <div className={Style.container}>
-                <Link to={"/"} className={Style.link}>
+                <a href={"/"} className={Style.link}>
                     <img src={`https://api.xperiagroup.in${settingsData?.footerLogo?.url}`} alt='footerLogo' className={Style.image} />
-                </Link>
+                </a>
             </div>
         </div>
 

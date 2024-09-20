@@ -1,13 +1,13 @@
 import React from "react";
-import Layout from "../component2/wrapper/Layout";
 import TeamSection from "../component2/team/TeamSection";
 import { useSelector } from "react-redux";
+import Layout2 from "../component2/wrapper/Layout2";
 
 const Team = () => {
  
   const { teamData: data } = useSelector((state) => state.teams);
   return (
-    <Layout type={"other"}>
+    <Layout2>
       <div id="content" className="swm-main-container swm-site-content swm-anim">
         <div className="swm_site_content_wrap swm-container"></div>
         <div
@@ -46,7 +46,7 @@ const Team = () => {
 
         <div className="clear"></div>
       </div>
-    </Layout>
+    </Layout2>
   );
 };
 

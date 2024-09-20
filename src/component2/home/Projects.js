@@ -26,6 +26,25 @@ const Projects = () => {
   const [top,setTop]=useState(null)
   const [bottom,setBottom]=useState(null)
 
+  const [screenSize, setScreenSize] = React.useState(getCurrentDimension());
+  function getCurrentDimension() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
+  React.useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
+
   useEffect(() => {
    if(projectData){
     const { topImages, bottomImages } = splitArray(
@@ -50,7 +69,7 @@ const Projects = () => {
         data-element_type="container"
         data-settings='{"mk_ext_is_sticky":"false"}'
         data-core-v316-plus="true"
-        style={{ paddingBottom: "140px" }}
+        style={{ paddingBottom: "140px" ,paddingTop:"100px"}}
       >
         <div
           className="elementor-element elementor-element-629713b8 elementor-widget elementor-widget-mk_moving_projects"

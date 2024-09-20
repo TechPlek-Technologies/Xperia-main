@@ -28,10 +28,10 @@ const MenuItem = ({ href, label, subMenu, isCurrent }) => (
       isCurrent ? "current-menu-item current_page_item" : ""
     } ${subMenu ? "menu-item-has-children" : ""}`}
   >
-    <Link to={href} aria-current={isCurrent ? "page" : undefined}>
+    <a href={href} aria-current={isCurrent ? "page" : undefined}>
       {label}
       {subMenu && <SvgIcon />}
-    </Link>
+    </a>
     {subMenu && (
       <ul className="sub-menu">
         {subMenu.map((item, index) => (
