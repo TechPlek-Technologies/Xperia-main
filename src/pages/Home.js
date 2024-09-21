@@ -22,6 +22,17 @@ const Home = () => {
     };
   }
 
+      useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/assets/js/wp-content/mk-widgets.min.js';
+    script.id = 'mk-widgets-js';
+    // Append the script to the body
+    document.body.appendChild(script);
+    // anup function to remove the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []); 
   useEffect(() => {
     const updateDimension = () => {
       setScreenSize(getCurrentDimension());
