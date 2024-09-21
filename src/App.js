@@ -8,7 +8,7 @@ import Team from "./pages/Team";
 import Blog from "./pages/Blog";
 import Locations from "./pages/Locations";
 import Contact from "./pages/Contact";
-import { useEffect} from "react";
+import { useEffect, useState } from "react";
 import Test from "./Test";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSettings } from "./redux/slice/settings-slice";
@@ -18,12 +18,14 @@ import { fetchServices } from "./redux/slice/service-slice";
 import { fetchBanners } from "./redux/slice/banner-slice";
 import { fetchBlogs } from "./redux/slice/blog-slice";
 import { setLoading } from "./redux/slice/loading-slice";
+import { domain } from "./domain";
 import Awards from "./pages/Awards";
 import { fetchTeams } from "./redux/slice/team-slice";
 
 function App() {
   const dispatch = useDispatch();
   const { projectData } = useSelector((state) => state.projects);
+  const loading = useSelector((state) => state.loading.loading);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,24 +37,20 @@ function App() {
         dispatch(fetchBlogs()),
         dispatch(fetchTeams())
       ]);
-      dispatch(setLoading(false)); 
+      dispatch(setLoading(false));
+      localStorage.setItem('dataLoaded',true)
     };
 
     fetchData();
   }, [dispatch]);
 
-
-    useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '/assets/js/wp-content/mk-widgets.min.js';
-    script.id = 'mk-widgets-js';
-    // Append the script to the body
-    document.body.appendChild(script);
-    // anup function to remove the script when the component unmounts
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []); // Empty dependency array to ensure the effect runs only once
+  // useEffect(() => {
+  //   const dataLoaded= localStorage.getItem('dataLoaded')
+  //   console.log(dataLoaded)
+  //   if (!dataLoaded) {
+  //    window.location.reload(); // Redirect to the target route within the app
+  //   }
+  // }, []);
 
   return (
     <>

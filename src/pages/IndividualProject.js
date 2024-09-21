@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom"; // useLocation instead of window.location
 import Layout2 from "../component2/wrapper/Layout2";
 import Banner from "../component2/IndividualProjects/Banner";
@@ -14,11 +14,6 @@ const IndividualProject = () => {
   // Get serviceData from Redux store
   const { serviceData } = useSelector((state) => state.service);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    // Scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
 
   // Format pathname and filter data based on slug
   const filteredData = useMemo(() => {

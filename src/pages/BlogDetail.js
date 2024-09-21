@@ -203,16 +203,16 @@ const BlogDetail = () => {
               <div id="tag_cloud-1" className="widget widget_tag_cloud">
                 <div className="swm-sidebar-widget-box">
                   <div className="swm-widget-content">
-                    {/* <div className="swm-sidebar-ttl">
+                    <div className="swm-sidebar-ttl">
                       <h4>
                         <span>tags</span>
                       </h4>
                       <div className="clear" />
-                    </div> */}
-                    {/* <div className="clear" />
+                    </div>
+                    <div className="clear" />
                     <div className="tagcloud">
                       <a
-                        href=""
+                        href="https://techpartner.online/orbius/tag/blogger/"
                         className="tag-cloud-link tag-link-7 tag-link-position-1"
                         style={{ fontSize: "100%" }}
                       >
@@ -267,7 +267,7 @@ const BlogDetail = () => {
                       >
                         web design
                       </a>
-                    </div> */}
+                    </div>
                     <div className="clear" />
                   </div>
                 </div>
