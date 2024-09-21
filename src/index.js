@@ -10,11 +10,7 @@ import '@babel/polyfill';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const script = document.createElement('script');
-    script.src = '/assets/js/wp-content/mk-widgets.min.js';
-    script.id = 'mk-widgets-js';
-    // Append the script to the body
-    document.body.appendChild(script);
+
 
 root.render(
   <React.StrictMode>
