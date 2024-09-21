@@ -37,8 +37,7 @@ function App() {
         dispatch(fetchBlogs()),
         dispatch(fetchTeams())
       ]);
-      dispatch(setLoading(false));
-      localStorage.setItem('dataLoaded',true)
+      dispatch(setLoading(false)); 
     };
 
     fetchData();
