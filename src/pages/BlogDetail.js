@@ -209,10 +209,10 @@ const BlogDetail = () => {
                       </h4>
                       <div className="clear" />
                     </div>
-                    <div className="clear" />
+                    {/* <div className="clear" />
                     <div className="tagcloud">
                       <a
-                        href="https://techpartner.online/orbius/tag/blogger/"
+                        href=""
                         className="tag-cloud-link tag-link-7 tag-link-position-1"
                         style={{ fontSize: "100%" }}
                       >
@@ -267,7 +267,7 @@ const BlogDetail = () => {
                       >
                         web design
                       </a>
-                    </div>
+                    </div> */}
                     <div className="clear" />
                   </div>
                 </div>
