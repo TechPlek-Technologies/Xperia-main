@@ -15,7 +15,6 @@
     <link
       rel="preload"
       href="/assets/js/jquery/jquery.min.js?ver=3.7.1"
-      as="script"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -26,6 +25,21 @@
       type="text/css"
       media="all"
     />
+
+       <style>
+      @font-face {
+        font-family: "Poppins";
+        src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap")
+            format("woff2"),
+          url("path-to-woff") format("woff"),
+          url("path-to-ttf") format("truetype");
+        font-display: swap;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
 
     <link
       rel="stylesheet"
@@ -564,7 +578,7 @@
       defer
     ></script>
 
-    <script>
+<!--     <script>
       (function ($) {
         "use strict";
 
@@ -915,7 +929,7 @@
           });
         }
       })(jQuery);
-    </script>
+    </script> -->
 
     <script>
       function isSafari() {
