@@ -900,13 +900,13 @@
 
     <script>
       function isSafari() {
-        // Check if the user agent matches Safari but not Chrome or Android
+        console.log(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
         return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
       }
 
       document.addEventListener("DOMContentLoaded", function () {
         const currentTime = new Date().getTime();
-        const expirationTime = 3600000; // 1 hour in milliseconds
+        const expirationTime = 3600000;
         // Get the 'pageReloaded' data from localStorage
         const pageReloadedData = JSON.parse(
           window.localStorage.getItem("pageReloaded")
@@ -926,19 +926,12 @@
             })
           );
 
-          // Wait until the external script is loaded before reloading (only for non-Safari browsers)
-          if (!isSafari()) {
-            window.addEventListener("load", function () {
-              setTimeout(function () {
-                window.location.reload();
-              }, 3000); // 3000 milliseconds = 3 seconds
-            });
-          }
-        } else {
-          // If browser is Safari, remove 'pageReloaded' without reloading
-          if (isSafari()) {
-            window.localStorage.removeItem("pageReloaded");
-          }
+          // Wait until the external script is loaded before reloading
+          window.addEventListener("load", function () {
+            setTimeout(function () {
+              window.location.reload();
+            }, 3000); // 3000 milliseconds = 3 seconds
+          });
         }
       });
     </script>
