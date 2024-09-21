@@ -203,26 +203,6 @@
       media="all"
     />
 
-    <script>
-      if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-        const style = document.createElement("style");
-        style.innerHTML = `
-      @font-face {
-        font-family: 'Poppins';
-        src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap') format('woff2'),
-             url('path-to-woff') format('woff'),
-             url('path-to-ttf') format('truetype');
-        font-display: swap;
-      }
-
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-    `;
-        document.head.appendChild(style);
-      }
-    </script>
-
     <!-- inline js -->
   </head>
   <body>
