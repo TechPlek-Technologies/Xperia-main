@@ -203,12 +203,12 @@ const BlogDetail = () => {
               <div id="tag_cloud-1" className="widget widget_tag_cloud">
                 <div className="swm-sidebar-widget-box">
                   <div className="swm-widget-content">
-                    <div className="swm-sidebar-ttl">
+                    {/* <div className="swm-sidebar-ttl">
                       <h4>
                         <span>tags</span>
                       </h4>
                       <div className="clear" />
-                    </div>
+                    </div> */}
                     {/* <div className="clear" />
                     <div className="tagcloud">
                       <a

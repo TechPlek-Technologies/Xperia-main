@@ -52,21 +52,23 @@
     />
     <!--  -->
 
-    <!-- <style>
-      @font-face {
-        font-family: "Poppins";
-        src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap")
-            format("woff2"),
-          url("path-to-woff") format("woff"),
-          url("path-to-ttf") format("truetype");
-        font-display: swap;
+    <style>
+      @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+        @font-face {
+          font-family: "Poppins";
+          src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap")
+              format("woff2"),
+            url("path-to-woff") format("woff"),
+            url("path-to-ttf") format("truetype");
+          font-display: swap;
+        }
+    
+        body {
+          font-family: "Poppins", sans-serif;
+        }
       }
-
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-    </style> -->
-
+    </style>
+    
     <script
       type="text/javascript"
       src="/assets/js/jquery/jquery.min.js?ver=3.7.1"
