@@ -22,17 +22,23 @@ const About = () => {
     };
     fetchData();
   }, [pathname]);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
 
   return (
-    (
-      <Layout2>
-        {data && <Banner data={data} />}
-        {data && <TextContent data={data} />}
-        {/* <Projects /> */}
-        <BottomSection />
-        <Testimonial />
-      </Layout2>
-    )
+    <Layout2>
+      {data && <Banner data={data} />}
+      {data && <TextContent data={data} />}
+      {/* <Projects /> */}
+      <BottomSection />
+      <Testimonial />
+    </Layout2>
   );
 };
 

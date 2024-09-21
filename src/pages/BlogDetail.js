@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "../component2/wrapper/Layout";
 import Breadcrumb from "../component2/Blog/Breadcrumb";
@@ -22,7 +22,14 @@ const BlogDetail = () => {
 
   const data = blog?.filter((data) => data.slug === paramValue);
   const singleBlog = data[0];
-
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
   return (
     <Layout>
       <Breadcrumb title={singleBlog.blogTitle} />

@@ -18,10 +18,21 @@ const Awards = () => {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
   return (
     <Layout>
       <Breadcrumb />
-      <div id="content" className="swm-main-container swm-site-content swm-anim">
+      <div
+        id="content"
+        className="swm-main-container swm-site-content swm-anim"
+      >
         <div className="swm_site_content_wrap swm-container"></div>
         <div
           data-elementor-type="wp-page"

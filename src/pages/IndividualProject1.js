@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import Layout2 from "../component2/wrapper/Layout2";
 import Banner from "../component2/IndividualProjects1/Banner";
 import Content from "../component2/IndividualProjects1/Content";
@@ -19,6 +19,15 @@ const IndividualProject1 = () => {
     () => projectData?.find((data) => data.slug === paramValue),
     [projectData, paramValue]
   );
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
 
   // Early return if no data is found
   if (!data) {

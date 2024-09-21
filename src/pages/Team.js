@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TeamSection from "../component2/team/TeamSection";
 import { useSelector } from "react-redux";
 import Layout2 from "../component2/wrapper/Layout2";
 
 const Team = () => {
- 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
+
   const { teamData: data } = useSelector((state) => state.teams);
   return (
     <Layout2>
-      <div id="content" className="swm-main-container swm-site-content swm-anim">
+      <div
+        id="content"
+        className="swm-main-container swm-site-content swm-anim"
+      >
         <div className="swm_site_content_wrap swm-container"></div>
         <div
           data-elementor-type="wp-page"
           data-elementor-id="1259"
           className="elementor elementor-1259 elementor-1267"
         >
-            <div
+          <div
             className="elementor-element elementor-element-2158acdf e-con-full e-flex e-con e-parent"
             data-id="2158acdf"
             data-element_type="container"

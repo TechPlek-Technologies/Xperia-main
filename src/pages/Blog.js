@@ -22,6 +22,14 @@ const Blog = () => {
   const query = queryparam.get("category");
 
   useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
+  useEffect(() => {
     console.log("query", query);
     if (query) {
       const filteredData = blog.filter((item) => {

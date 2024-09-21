@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../component2/wrapper/Layout'
 import Banner from '../component2/contact/Banner'
 import Title from '../component2/contact/Title'
@@ -8,6 +8,14 @@ import GoogleMapComponent from '../component2/contact/GoogleMapComponent'
 import Layout2 from '../component2/wrapper/Layout2'
 
 const Locations = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
   return (
     <Layout2 type={"other"}>
   <div

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom"; // useLocation instead of window.location
 import Layout2 from "../component2/wrapper/Layout2";
 import Banner from "../component2/IndividualProjects/Banner";
@@ -35,6 +35,15 @@ const IndividualProject = () => {
       .replace(/\//g, "")
       .replace(/\b\w/g, (char) => char.toUpperCase());
   }, [pathname]);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "/assets/js/wp-content/mk-widgets.min.js";
+    script.id = "mk-widgets-js";
+    // Append the script to the body
+    document.body.appendChild(script);
+    // Cleanup function to remove the script when the component unmounts
+  }, []);
 
   if (!filteredData) {
     return (
