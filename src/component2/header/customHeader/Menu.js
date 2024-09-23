@@ -23,7 +23,7 @@ const MenuItem = ({ item, currentPath }) => {
         item.children.length > 0 ? "menu-item-has-children" : ""
       }`}
     >
-      <a href={item.href}>
+      <Link to={item.href}>
         <span
           style={{
             cursor: item.object === "custom" ? "default" : "pointer",
@@ -32,7 +32,7 @@ const MenuItem = ({ item, currentPath }) => {
           {item.label}{" "}
           {item.object === "custom" && <i class="fa fa-caret-down"></i>}
         </span>
-      </a>
+      </Link>
       {item.children.length > 0 && (
         <ul className="sub-menu">
           {item.children.map((child) => (
