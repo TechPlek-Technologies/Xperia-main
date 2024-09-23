@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const LogoSection = ({settingsData}) => {
   return (
@@ -10,14 +11,14 @@ const LogoSection = ({settingsData}) => {
     data-widget_type="image.default"
   >
     <div className="elementor-widget-container">
-      <a href="/">
+      <Link to="/">
         <img
           src={`https://api.xperiagroup.in${settingsData?.navbarLogo?.url}`}
           className="attachment-full size-full wp-image-1118"
           alt="navbar logo"
           style={{ width: "228px" }}
         />
-      </a>
+      </Link>
     </div>
   </div>
   )
