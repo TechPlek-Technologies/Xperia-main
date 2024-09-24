@@ -1,7 +1,29 @@
 import React from "react";
 import { domain } from "../../domain";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Form = () => {
+  const { settingsData } = useSelector((state) => state.settings);
+
+  const socialMediaIcons = [
+    {
+      link: settingsData?.instagram,
+      icon: "fab fa-instagram",
+    },
+    {
+      link: settingsData?.facebook,
+      icon: "fa-brands fa-facebook-f",
+    },
+    {
+      link: settingsData?.x,
+      icon: "fa-brands fa-linkedin",
+    },
+    {
+      link: settingsData?.youtube,
+      icon: "fa-brands fa-youtube",
+    },
+  ];
   return (
     <div
       className="elementor-element elementor-element-74f02eb9 e-flex e-con-boxed e-con e-parent"
@@ -39,7 +61,6 @@ const Form = () => {
                     src={`${domain}/assets/img/contact/contact-us.jpg`}
                     className="attachment-full size-full wp-image-1231"
                     alt=""
-                   
                     sizes="(max-width: 605px) 100vw, 605px"
                   />{" "}
                 </div>
@@ -84,50 +105,19 @@ const Form = () => {
                   >
                     <div className="elementor-widget-container">
                       <ul className="elementor-icon-list-items elementor-inline-items">
-                        <li className="elementor-icon-list-item elementor-inline-item">
-                          <a href="https://www.instagram.com/">
-                            <span className="elementor-icon-list-icon">
-                              <i
-                                aria-hidden="true"
-                                className="fab fa-instagram"
-                              />{" "}
-                            </span>
-                            <span className="elementor-icon-list-text" />
-                          </a>
-                        </li>
-                        <li className="elementor-icon-list-item elementor-inline-item">
-                          <a href="https://dribbble.com">
-                            <span className="elementor-icon-list-icon">
-                              <i
-                                aria-hidden="true"
-                                className="fab fa-dribbble"
-                              />{" "}
-                            </span>
-                            <span className="elementor-icon-list-text" />
-                          </a>
-                        </li>
-                        <li className="elementor-icon-list-item elementor-inline-item">
-                          <a href="https://www.behance.net/">
-                            <span className="elementor-icon-list-icon">
-                              <i
-                                aria-hidden="true"
-                                className="fab fa-behance"
-                              />{" "}
-                            </span>
-                            <span className="elementor-icon-list-text" />
-                          </a>
-                        </li>
-                        <li className="elementor-icon-list-item elementor-inline-item">
-                          <a href="https://pinterest.com/">
-                            <span className="elementor-icon-list-icon">
-                              <i
-                                aria-hidden="true"
-                                className="fab fa-pinterest"
-                              />{" "}
-                            </span>
-                            <span className="elementor-icon-list-text" />
-                          </a>
-                        </li>
+                        {socialMediaIcons.map((icons, index) => (
+                          <li
+                            className="elementor-icon-list-item elementor-inline-item"
+                            key={index}
+                          >
+                            <a href={icons.link}>
+                              <span className="elementor-icon-list-icon">
+                                <i className={icons.icon}></i>
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                    
                       </ul>
                     </div>
                   </div>

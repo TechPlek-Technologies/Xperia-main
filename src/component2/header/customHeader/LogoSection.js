@@ -11,14 +11,14 @@ const LogoSection = ({settingsData}) => {
     data-widget_type="image.default"
   >
     <div className="elementor-widget-container">
-      <Link to="/">
+      <a href="/">
         <img
           src={`https://api.xperiagroup.in${settingsData?.navbarLogo?.url}`}
           className="attachment-full size-full wp-image-1118"
           alt="navbar logo"
           style={{ width: "228px" }}
         />
-      </Link>
+      </a>
     </div>
   </div>
   )
