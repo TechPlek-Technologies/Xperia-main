@@ -58,7 +58,7 @@ const Form = () => {
                     decoding="async"
                     width={605}
                     height={605}
-                    src={`${domain}/assets/img/contact/xperia-logo.jpg`}
+                    src={`${domain}/assets/img/contact/xperia.png`}
                     className="attachment-full size-full wp-image-1231"
                     alt=""
                     sizes="(max-width: 605px) 100vw, 605px"
