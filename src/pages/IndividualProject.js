@@ -20,7 +20,11 @@ const IndividualProject = () => {
     if (!serviceData) return null;
 
     // Remove leading slash if exists
-    const formattedPathname = pathname.replace(/^\/+/, "");
+    let formattedPathname = pathname.replace(/^\/+/, "");
+
+    if (formattedPathname === "multiplex-and-cinema-advertisement") {
+      formattedPathname = "multiplex";
+    }
 
     // Find the object in serviceData where slug matches pathname
     return serviceData.find((item) => item.slug === formattedPathname);

@@ -4,15 +4,7 @@ import { useSelector } from "react-redux";
 import Layout2 from "../component2/wrapper/Layout2";
 
 const Team = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "/assets/js/wp-content/mk-widgets.min.js";
-    script.id = "mk-widgets-js";
-    // Append the script to the body
-    document.body.appendChild(script);
-    // Cleanup function to remove the script when the component unmounts
-  }, []);
-
+  
   const { teamData: data } = useSelector((state) => state.teams);
   return (
     <Layout2>

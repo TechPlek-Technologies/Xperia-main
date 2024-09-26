@@ -80,7 +80,7 @@ function App() {
             <Route path={"/out-of-home"} element={<IndividualProject />} />
             <Route path={"/multiplex"} element={<IndividualProject />} />
             <Route
-              path={"/cinema-advertising"}
+              path={"/multiplex-and-cinema-advertisement"}
               element={<IndividualProject />}
             />
             <Route
