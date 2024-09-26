@@ -84,6 +84,10 @@ function App() {
               element={<IndividualProject />}
             />
             <Route
+              path={"/cinema-advertisement"}
+              element={<IndividualProject />}
+            />
+            <Route
               path={"/events-and-promotions"}
               element={<IndividualProject />}
             />

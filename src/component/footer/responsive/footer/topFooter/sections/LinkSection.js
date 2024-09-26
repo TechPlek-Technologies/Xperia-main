@@ -14,7 +14,7 @@ const LinkSection = () => {
   ];
   const services = [
     { src: `${domain}/out-of-home`, name: "Out of Home" },
-    { src: `${domain}/multiplex-and-cinema-advertisement`, name: "Multiplex " },
+    { src: `${domain}/cinema-advertisement`, name: "Multiplex " },
     { src: `${domain}/events-and-promotions`, name: "Events & Promotions" },
     { src: `${domain}/content-design`, name: "Content Design" },
     { src: `${domain}/creative-retainership`, name: "Creative Retainership" },

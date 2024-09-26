@@ -64,7 +64,7 @@ export const menuData = [
         id: 1967,
         type: "post_type",
         object: "page",
-        href: "/multiplex-and-cinema-advertisement",
+        href: "/cinema-advertisement",
         label: "cinema advertisement",
         children: [],
       },

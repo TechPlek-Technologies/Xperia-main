@@ -22,7 +22,10 @@ const IndividualProject = () => {
     // Remove leading slash if exists
     let formattedPathname = pathname.replace(/^\/+/, "");
 
-    if (formattedPathname === "multiplex-and-cinema-advertisement") {
+    if (
+      formattedPathname === "multiplex-and-cinema-advertisement" ||
+      formattedPathname === "cinema-advertisement"
+    ) {
       formattedPathname = "multiplex";
     }
 
