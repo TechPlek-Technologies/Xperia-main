@@ -1,63 +1,31 @@
 import React from "react";
 
-const sampleData = [
-  {
-    id: 1,
-    link: "https://orbius.premiumthemes.in/portfolio-item/urban-blend-2/",
-    title: "urban blend",
-    subtitle: "photography",
-    imgSrc:
-      "https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf4.jpg",
-    imgAlt: "urban blend",
-  },
-  {
-    id: 2,
-    link: "https://orbius.premiumthemes.in/portfolio-item/nova-wade/",
-    title: "nova wade",
-    subtitle: "design",
-    imgSrc:
-      "https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf5.jpg",
-    imgAlt: "nova wade",
-  },
-  {
-    id: 3,
-    link: "https://orbius.premiumthemes.in/portfolio-item/bright-path-2/",
-    title: "bright path",
-    subtitle: "photography",
-    imgSrc:
-      "https://orbius.premiumthemes.in/wp-content/uploads/2024/03/pf6.jpg",
-    imgAlt: "bright path",
-  },
-  // Add more items as needed
-];
-
 const TeamSection = ({ data }) => {
-
   const splitArray = (data) => {
-    if(!data)return {matchedArray:[],otherArray:[]};
+    if (!data) return { matchedArray: [], otherArray: [] };
     // Normalize function to remove extra spaces and make the name case-insensitive
     const normalizeName = (name) => name.trim().toLowerCase();
-  
+
     // Desired names normalized
     const desiredNames = ["Madhav Joshi", "Saibal Gupta"].map(normalizeName);
-  
+
     // Split the array into two arrays
     const [matchedArray, otherArray] = data.reduce(
       (acc, item) => {
         const normalizedItemName = normalizeName(item.name);
-  
+
         // Check if the name matches either 'Madhav Joshi' or 'Saibal Gupta'
         if (desiredNames.includes(normalizedItemName)) {
-          acc[0].push(item);  // First array for matched names
+          acc[0].push(item); // First array for matched names
         } else {
-          acc[1].push(item);  // Second array for the rest
+          acc[1].push(item); // Second array for the rest
         }
-  
+
         return acc;
       },
       [[], []] // Initialize two empty arrays for matched and other objects
     );
-  
+
     return { matchedArray, otherArray };
   };
 
@@ -73,7 +41,10 @@ const TeamSection = ({ data }) => {
         <div className="elementor-element elementor-element-702a86e3 elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 join-items-no mk-portfolio-image-zoom-no mk-portfolio-c-width-fullwidth mk-pf-excerpt-category elementor-widget elementor-widget-mk_portfolio_modern">
           <div className="elementor-widget-container">
             <div className="mk-p-grid mk-portfolio-modern">
-              <div className="mk-grid-inner clear">
+              <div
+                className="mk-grid-inner clear"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 {matchedArray &&
                   matchedArray.map((item) => (
                     <article
@@ -85,24 +56,26 @@ const TeamSection = ({ data }) => {
                         marginBottom: "40px",
                       }}
                     >
+                      <div className="mk-team-position">{item.designation}</div>
+
                       <div className="mk-portfolio-wrap content-position--hover-over">
                         <div className="mk-portfolio-image">
-                          <a
-                            href={"#"}
-                            className="mk-portfolio-modern-overlay"
-                          ></a>
+                          <a className="mk-portfolio-modern-overlay"></a>
                           <div className="mk-portfolio-content">
-                            <div className="mk-portfolio-content-holder">
+                            <div
+                              className="mk-portfolio-content-holder"
+                              style={{ minHeight: "100px" }}
+                            >
                               <div className="mk-portfolio-title-subtitle ">
-                                <h3 className="mk-portfolio-title">
+                                {/* <h3 className="mk-portfolio-title">
                                   <a href={"#"} target="_self">
                                     {item.name}
                                   </a>
-                                </h3>
-                                <div className="mk-portfolio-subtitle remove_dot">
+                                </h3> */}
+                                {/* <div className="mk-portfolio-subtitle remove_dot">
                                   &mdash;{"  "}
                                   {item.designation}
-                                </div>
+                                </div> */}
                                 <div
                                   className="mk-portfolio-title"
                                   style={{
@@ -137,12 +110,18 @@ const TeamSection = ({ data }) => {
                           </a>
                         </div>
                       </div>
+                      <div className="mk-team-content swm-anim">
+                        <div className="mk-team-name">
+                          <h6 className="mk-team-name-tag">
+                            <a className="mk-team-link">{item.name}</a>
+                          </h6>
+                        </div>
+                      </div>
                     </article>
                   ))}
-                
               </div>
               <div className="mk-grid-inner clear">
-              {otherArray &&
+                {otherArray &&
                   otherArray.map((item) => (
                     <article
                       key={item.id}
@@ -153,24 +132,26 @@ const TeamSection = ({ data }) => {
                         marginBottom: "40px",
                       }}
                     >
+                      <div className="mk-team-position">{item.designation}</div>
+
                       <div className="mk-portfolio-wrap content-position--hover-over">
                         <div className="mk-portfolio-image">
-                          <a
-                            href={"#"}
-                            className="mk-portfolio-modern-overlay"
-                          ></a>
+                          <a className="mk-portfolio-modern-overlay"></a>
                           <div className="mk-portfolio-content">
-                            <div className="mk-portfolio-content-holder">
+                            <div
+                              className="mk-portfolio-content-holder"
+                              style={{ minHeight: "100px" }}
+                            >
                               <div className="mk-portfolio-title-subtitle ">
-                                <h3 className="mk-portfolio-title">
-                                  <a href={"#"} target="_self">
-                                    {item.name}
-                                  </a>
-                                </h3>
-                                <div className="mk-portfolio-subtitle remove_dot">
-                                  &mdash;{"  "}
-                                  {item.designation}
-                                </div>
+                                {/* <h3 className="mk-portfolio-title">
+                                <a href={"#"} target="_self">
+                                  {item.name}
+                                </a>
+                              </h3> */}
+                                {/* <div className="mk-portfolio-subtitle remove_dot">
+                                &mdash;{"  "}
+                                {item.designation}
+                              </div> */}
                                 <div
                                   className="mk-portfolio-title"
                                   style={{
@@ -203,6 +184,13 @@ const TeamSection = ({ data }) => {
                               sizes={`(max-width: 750px) 100vw, 820px`}
                             />
                           </a>
+                        </div>
+                      </div>
+                      <div className="mk-team-content swm-anim">
+                        <div className="mk-team-name">
+                          <h6 className="mk-team-name-tag">
+                            <a className="mk-team-link">{item.name}</a>
+                          </h6>
                         </div>
                       </div>
                     </article>
