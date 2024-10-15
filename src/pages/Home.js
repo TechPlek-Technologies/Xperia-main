@@ -11,7 +11,9 @@ import Team from "../component2/home/Team";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const [iframeHeight, setIframeHeight] = useState('800px');
+  const [iframeHeight, setIframeHeight] = useState('100vh');
+  const [key, setKey] = useState(Date.now()); // Unique key to force iframe reload
+
   useEffect(() => {
     // Disable scrolling when the component mounts
     document.body.style.overflow = 'hidden';
@@ -21,19 +23,26 @@ const Home = () => {
       document.body.style.overflow = 'auto';
     };
   }, []);
+
+  // Function to reload iframe (optional: add a button or other event to trigger this)
+  const reloadIframe = () => {
+    setKey(Date.now()); // Update key to force re-render of iframe
+  };
+
   return (
     <div>
-    <iframe
-      src="https://techpartner.online/orbius/"
-      style={{
-        width: '100%',
-        height: iframeHeight,
-        border: 'none',
-        overflow: 'hidden',
-      }}
-      title="WordPress Homepage"
-    />
-  </div>
+      <iframe
+        key={key}  // This ensures a new iframe instance every time the key changes
+        src="https://techpartner.online/orbius/"
+        style={{
+          width: '100%',
+          height: iframeHeight,
+          border: 'none',
+          overflow: 'hidden',
+        }}
+        title="WordPress Homepage"
+      />
+    </div>
   );
 };
 
