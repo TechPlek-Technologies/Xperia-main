@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "../component2/wrapper/Layout";
 import HomeBanner from "../component2/home/HomeBanner";
 import Services from "../component2/home/Services";
@@ -11,56 +11,29 @@ import Team from "../component2/home/Team";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const { serviceData } = useSelector((state) => state.service);
-
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
-  function getCurrentDimension() {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  }
-
+  const [iframeHeight, setIframeHeight] = useState('800px');
   useEffect(() => {
-    const updateDimension = () => {
-      setScreenSize(getCurrentDimension());
-    };
-    window.addEventListener("resize", updateDimension);
+    // Disable scrolling when the component mounts
+    document.body.style.overflow = 'hidden';
 
+    // Re-enable scrolling when the component unmounts
     return () => {
-      window.removeEventListener("resize", updateDimension);
+      document.body.style.overflow = 'auto';
     };
-  }, [screenSize]);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "/assets/js/wp-content/mk-widgets.min.js";
-    script.id = "mk-widgets-js";
-    // Append the script to the body
-    document.body.appendChild(script);
-    // Cleanup function to remove the script when the component unmounts
   }, []);
   return (
-    <>
-      <Layout>
-        <div
-          data-elementor-type="wp-page"
-          data-elementor-id={1255}
-          className="elementor elementor-1255"
-        >
-          <HomeBanner />
-
-          {/* { !isSafari() && screenSize.width > 980 ? <SafariServices services={serviceData}/> : <Services services={serviceData} />} */}
-          <Services services={serviceData} />
-          <AboutSection />
-          <Projects />
-          <Award />
-          <Team />
-          <Testimonial />
-          <Blog />
-        </div>
-      </Layout>
-    </>
+    <div>
+    <iframe
+      src="https://techpartner.online/orbius/"
+      style={{
+        width: '100%',
+        height: iframeHeight,
+        border: 'none',
+        overflow: 'hidden',
+      }}
+      title="WordPress Homepage"
+    />
+  </div>
   );
 };
 
